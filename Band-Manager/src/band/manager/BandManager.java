@@ -7,7 +7,7 @@ package band.manager;
 
 /**
  *
- * @author shaza
+ * @author Wendi
  */
 public class BandManager {
 
