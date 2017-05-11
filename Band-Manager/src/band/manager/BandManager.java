@@ -5,6 +5,8 @@
  */
 package band.manager;
 
+import byui.cit260.bandManager.model.Player;
+
 /**
  *
  * @author Wendi
@@ -15,7 +17,13 @@ public class BandManager {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       Player playerOne = new Player();
+       
+       playerOne.setManagerName("Fred Flinstone");
+       playerOne.setMoney(30);
+       
+       String playerInfo = playerOne.toString();
+       System.out.println(playerInfo);
     }
     
 }
