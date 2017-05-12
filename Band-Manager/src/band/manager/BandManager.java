@@ -42,7 +42,7 @@ public class BandManager {
        AuditionScene musicianStats = new AuditionScene();
        
        musicianStats.setBandPosition("Drummer");
-       musicianStats.setMusicianName("Has Cartwright");
+       musicianStats.setMusicianName("Hoss Cartwright");
        musicianStats.setStartingSkillLevel(30);
        musicianStats.setStartingIssue("Tends to break drum heads");
        
