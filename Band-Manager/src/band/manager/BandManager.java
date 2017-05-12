@@ -5,6 +5,7 @@
  */
 package band.manager;
 
+import byui.cit260.bandManager.model.AuditionScene;
 import byui.cit260.bandManager.model.BandMember;
 import byui.cit260.bandManager.model.Player;
 
@@ -35,6 +36,16 @@ public class BandManager {
        
        String memberBio = memberStats.toString();
        System.out.println(memberBio);
+       
+       AuditionScene musicianStats = new AuditionScene();
+       
+       musicianStats.setBandPosition("Drummer");
+       musicianStats.setMusicianName("Has Cartwright");
+       musicianStats.setStartingSkillLevel(30);
+       musicianStats.setStartingIssue("Tends to break drum heads");
+       
+       String musicianBio = musicianStats.toString();
+       System.out.println(musicianBio);
     }
     
 }
