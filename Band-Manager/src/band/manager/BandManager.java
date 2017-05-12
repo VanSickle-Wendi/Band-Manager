@@ -5,6 +5,7 @@
  */
 package band.manager;
 
+import byui.cit260.bandManager.model.BandMember;
 import byui.cit260.bandManager.model.Player;
 
 /**
@@ -24,6 +25,16 @@ public class BandManager {
        
        String playerInfo = playerOne.toString();
        System.out.println(playerInfo);
+       
+       BandMember memberStats = new BandMember();
+       
+       memberStats.setMemberName("Joe Hardy");
+       memberStats.setCurrentSkillLevel(25);
+       memberStats.setCurrentIssue("Stage Fright");
+       memberStats.setEquipmentPoints(25);
+       
+       String memberBio = memberStats.toString();
+       System.out.println(memberBio);
     }
     
 }
