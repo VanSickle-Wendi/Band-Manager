@@ -7,6 +7,7 @@ package band.manager;
 
 import byui.cit260.bandManager.model.AuditionScene;
 import byui.cit260.bandManager.model.BandMember;
+import byui.cit260.bandManager.model.Equipment;
 import byui.cit260.bandManager.model.Player;
 import byui.cit260.bandManager.model.RegularScene;
 
@@ -55,6 +56,15 @@ public class BandManager {
        
        String regSceneStats = regSceneInfo.toString();
        System.out.println(regSceneStats);
+       
+       Equipment inventoryData = new Equipment();
+       
+       inventoryData.setEquipmentType("Gibson Guitar");
+       inventoryData.setPrice(1800.00);
+       
+       String inventory = inventoryData.toString();
+       System.out.println(inventory);
+       
     }
     
 }
