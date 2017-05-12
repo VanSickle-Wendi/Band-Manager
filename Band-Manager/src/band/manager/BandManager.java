@@ -8,6 +8,7 @@ package band.manager;
 import byui.cit260.bandManager.model.AuditionScene;
 import byui.cit260.bandManager.model.BandMember;
 import byui.cit260.bandManager.model.Player;
+import byui.cit260.bandManager.model.RegularScene;
 
 /**
  *
@@ -46,6 +47,14 @@ public class BandManager {
        
        String musicianBio = musicianStats.toString();
        System.out.println(musicianBio);
+       
+       RegularScene regSceneInfo = new RegularScene();
+       
+       regSceneInfo.setRegularSceneDescription("Garage with the band equipment set up.");
+       regSceneInfo.setSymbol('@');
+       
+       String regSceneStats = regSceneInfo.toString();
+       System.out.println(regSceneStats);
     }
     
 }
