@@ -7,7 +7,11 @@ package band.manager;
 
 import byui.cit260.bandManager.model.AuditionScene;
 import byui.cit260.bandManager.model.BandMember;
+import byui.cit260.bandManager.model.BankScene;
 import byui.cit260.bandManager.model.Equipment;
+import byui.cit260.bandManager.model.Location;
+import byui.cit260.bandManager.model.Map;
+import byui.cit260.bandManager.model.PerformanceScene;
 import byui.cit260.bandManager.model.Player;
 import byui.cit260.bandManager.model.RegularScene;
 
@@ -65,6 +69,39 @@ public class BandManager {
        String inventory = inventoryData.toString();
        System.out.println(inventory);
        
+       BankScene currentBanking = new BankScene();
+       
+       currentBanking.setLoan(15000);
+       currentBanking.setBankAccount(25000);
+       currentBanking.setLoanPayment(1500);
+       currentBanking.setReceivePayment(5000);
+       currentBanking.setBandPayment(2500);
+       
+       String bankingInfo = currentBanking.toString();
+       System.out.println(bankingInfo);
+       
+       Map locationBank = new Map();
+       
+       locationBank.setDescription("Welcome to the bank.");
+       
+       String mapInfo = locationBank.toString();
+       System.out.println(mapInfo);
+       
+       Location locationOne = new Location();
+       
+       locationOne.setLocationNumber(01);
+       locationOne.setTimesVisited(01);
+       
+       String locationInfo = locationOne.toString();
+       System.out.println(locationInfo);
+       
+       PerformanceScene performanceOne = new PerformanceScene();
+       
+       performanceOne.setScore(75);
+       
+       String performanceInfo = performanceOne.toString();
+       System.out.println(performanceInfo);
+             
     }
     
 }
