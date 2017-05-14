@@ -14,7 +14,12 @@ import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.PerformanceScene;
 import byui.cit260.bandManager.model.Player;
 import byui.cit260.bandManager.model.RegularScene;
-
+import byui.cit260.bandManager.model.Band;
+import byui.cit260.bandManager.model.Game;
+import byui.cit260.bandManager.model.Instrument;
+import byui.cit260.bandManager.model.SpendingScene;
+import byui.cit260.bandManager.model.Vehicle;
+        
 /**
  *
  * @author Wendi
@@ -65,7 +70,7 @@ public class BandManager {
        
        inventoryData.setEquipmentType("Gibson Guitar");
        inventoryData.setPrice(1800.00);
-       
+               
        String inventory = inventoryData.toString();
        System.out.println(inventory);
        
@@ -101,7 +106,28 @@ public class BandManager {
        
        String performanceInfo = performanceOne.toString();
        System.out.println(performanceInfo);
-             
+       
+       Band bandMembers = new Band();
+       
+       bandMembers.setdrummer("Jack the Drummer");
+       bandMembers.setsinger("Adele the Singer");
+       bandMembers.setbassPlayer("Nick the bass player");
+       bandMembers.setguitarPlayer("Scar the Guitar Player");
+       bandMembers.setkeyboardPlayer("Glen the Pianist");
+      
+       String fullBand = bandMembers.toString();
+       System.out.println(fullBand);
+       
+       SpendingScene spendingOne = new SpendingScene();
+      
+       spendingOne.setAmount(300);
+       spendingTwo.setItemType(Guitar);
+       
+       String wallet = spendingOne.toString();
+       System.out.println(wallet);
+     
+       
+       
     }
     
 }
