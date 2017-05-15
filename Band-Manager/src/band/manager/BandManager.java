@@ -109,11 +109,11 @@ public class BandManager {
        
        Band bandMembers = new Band();
        
-       bandMembers.setdrummer("Jack the Drummer");
-       bandMembers.setsinger("Adele the Singer");
-       bandMembers.setbassPlayer("Nick the bass player");
-       bandMembers.setguitarPlayer("Scar the Guitar Player");
-       bandMembers.setkeyboardPlayer("Glen the Pianist");
+       bandMembers.setDrummer("Jack the Drummer");
+       bandMembers.setSinger("Adele the Singer");
+       bandMembers.setBassPlayer("Nick the bass player");
+       bandMembers.setGuitarPlayer("Scar the Guitar Player");
+       bandMembers.setKeyboardPlayer("Glen the Pianist");
       
        String fullBand = bandMembers.toString();
        System.out.println(fullBand);
@@ -121,12 +121,33 @@ public class BandManager {
        SpendingScene spendingOne = new SpendingScene();
       
        spendingOne.setAmount(300);
-       spendingTwo.setItemType(Guitar);
+       spendingOne.setItemType("Guitar");
        
        String wallet = spendingOne.toString();
        System.out.println(wallet);
      
+       Game gameOne = new Game();
        
+       gameOne.setTotalMoney(5000);
+       gameOne.setTotalPerformancePoints(15);
+       
+       String gameInfo = gameOne.toString();
+       System.out.println(gameInfo);
+       
+       Vehicle vehicleOne = new Vehicle();
+       
+       vehicleOne.setVehicleLevel(1);
+       
+       String garage = vehicleOne.toString();
+       
+       Instrument musicToolOne = new Instrument();
+       
+       musicToolOne.setInstrumentLevel(1);
+       
+       String musicBoxOne = musicToolOne.toString();
+       System.out.println(musicBoxOne);
+       
+     
        
     }
     
