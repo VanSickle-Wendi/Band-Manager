@@ -15,17 +15,17 @@ import java.util.Objects;
 public class SpendingScene implements Serializable {
     
     //class instance variables
-    private string itemType;
+    private String itemType;
     private double amount;
     
       public SpendingScene() {
     }
 
-    public string getItemType() {
+    public String getItemType() {
         return itemType;
     }
 
-    public void setItemType(string itemType) {
+    public void setItemType(String itemType) {
         this.itemType = itemType;
     }
 

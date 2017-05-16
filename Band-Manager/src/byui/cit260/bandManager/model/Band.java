@@ -14,11 +14,11 @@ import java.util.Objects;
 public class Band implements Serializable {
     
     // class instance variables
-    private string drummer;
-    private string singer;
-    private string guitarPlayer;
-    private string bassPlayer;
-    private string keyboardPlayer;
+    private String drummer;
+    private String singer;
+    private String guitarPlayer;
+    private String bassPlayer;
+    private String keyboardPlayer;
     private double vehiclePoints;
 
     public Band() {
@@ -26,43 +26,43 @@ public class Band implements Serializable {
     
     
 
-    public string getDrummer() {
+    public String getDrummer() {
         return drummer;
     }
 
-    public void setDrummer(string drummer) {
+    public void setDrummer(String drummer) {
         this.drummer = drummer;
     }
 
-    public string getSinger() {
+    public String getSinger() {
         return singer;
     }
 
-    public void setSinger(string singer) {
+    public void setSinger(String singer) {
         this.singer = singer;
     }
 
-    public string getGuitarPlayer() {
+    public String getGuitarPlayer() {
         return guitarPlayer;
     }
 
-    public void setGuitarPlayer(string guitarPlayer) {
+    public void setGuitarPlayer(String guitarPlayer) {
         this.guitarPlayer = guitarPlayer;
     }
 
-    public string getBassPlayer() {
+    public String getBassPlayer() {
         return bassPlayer;
     }
 
-    public void setBassPlayer(string bassPlayer) {
+    public void setBassPlayer(String bassPlayer) {
         this.bassPlayer = bassPlayer;
     }
 
-    public string getKeyboardPlayer() {
+    public String getKeyboardPlayer() {
         return keyboardPlayer;
     }
 
-    public void setKeyboardPlayer(string keyboardPlayer) {
+    public void setKeyboardPlayer(String keyboardPlayer) {
         this.keyboardPlayer = keyboardPlayer;
     }
 
