@@ -48,7 +48,9 @@ public class SpendingScene implements Serializable {
     @Override
     public String toString() {
         return "SpendingScene{" + "itemType=" + itemType + ", amount=" + amount + '}';
-    }   
+    }
+
+    
     
     @Override
     public boolean equals(Object obj) {

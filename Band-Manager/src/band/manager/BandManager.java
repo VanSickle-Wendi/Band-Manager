@@ -125,6 +125,28 @@ public class BandManager {
        
        String wallet = spendingOne.toString();
        System.out.println(wallet);   
+     
+       Game gameOne = new Game();
+       
+       gameOne.setTotalMoney(5000);
+       gameOne.setTotalPerformancePoints(15);
+       
+       String gameInfo = gameOne.toString();
+       System.out.println(gameInfo);
+       
+       Vehicle vehicleOne = new Vehicle();
+       
+       vehicleOne.setVehicleLevel(1);
+       
+       String garage = vehicleOne.toString();
+       System.out.println(garage);
+       
+       Instrument musicToolOne = new Instrument();
+       
+       musicToolOne.setInstrumentLevel(1);
+       
+       String musicBoxOne = musicToolOne.toString();
+       System.out.println(musicBoxOne);
        
     }
     

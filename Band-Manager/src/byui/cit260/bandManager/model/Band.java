@@ -23,8 +23,6 @@ public class Band implements Serializable {
 
     public Band() {
     }
-    
-    
 
     public String getDrummer() {
         return drummer;
@@ -123,7 +121,6 @@ public class Band implements Serializable {
         }
         return true;
     }
-
     public void setdrummer(String jack_the_Drummer) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -142,8 +139,6 @@ public class Band implements Serializable {
 
     public void setkeyboardPlayer(String glen_the_Pianist) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
+    }    
   
 }
