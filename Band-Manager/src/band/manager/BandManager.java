@@ -114,6 +114,7 @@ public class BandManager {
        bandMembers.setBassPlayer("Nick the bass player");
        bandMembers.setGuitarPlayer("Scar the Guitar Player");
        bandMembers.setKeyboardPlayer("Glen the Pianist");
+       bandMembers.setBandName("Captain Geech and the Shrimp Shack Shooters");
       
        String fullBand = bandMembers.toString();
        System.out.println(fullBand);
