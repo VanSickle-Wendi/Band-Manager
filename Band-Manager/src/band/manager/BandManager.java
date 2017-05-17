@@ -33,7 +33,7 @@ public class BandManager {
        Player playerOne = new Player();
        
        playerOne.setManagerName("Fred Flinstone");
-       playerOne.setMoney(30);
+       playerOne.setFinalScore(30);
        
        String playerInfo = playerOne.toString();
        System.out.println(playerInfo);
