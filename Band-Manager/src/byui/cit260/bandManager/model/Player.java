@@ -17,7 +17,7 @@ public class Player implements Serializable{
     
     // class instance variables
     private String managerName;
-    private double money;
+    private double finalScore;
 
     public Player() {
     }
@@ -31,25 +31,25 @@ public class Player implements Serializable{
         this.managerName = managerName;
     }
 
-    public double getMoney() {
-        return money;
+    public double getFinalScore() {
+        return finalScore;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
+    public void setFinalScore(double finalScore) {
+        this.finalScore = finalScore;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 61 * hash + Objects.hashCode(this.managerName);
-        hash = 61 * hash + (int) (Double.doubleToLongBits(this.money) ^ (Double.doubleToLongBits(this.money) >>> 32));
+        hash = 61 * hash + (int) (Double.doubleToLongBits(this.finalScore) ^ (Double.doubleToLongBits(this.finalScore) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "managerName=" + managerName + ", money=" + money + '}';
+        return "Player{" + "managerName=" + managerName + ", finalScore=" + finalScore + '}';
     }
     
 
@@ -65,7 +65,7 @@ public class Player implements Serializable{
             return false;
         }
         final Player other = (Player) obj;
-        if (Double.doubleToLongBits(this.money) != Double.doubleToLongBits(other.money)) {
+        if (Double.doubleToLongBits(this.finalScore) != Double.doubleToLongBits(other.finalScore)) {
             return false;
         }
         if (!Objects.equals(this.managerName, other.managerName)) {

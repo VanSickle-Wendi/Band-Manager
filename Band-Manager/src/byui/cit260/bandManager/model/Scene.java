@@ -12,21 +12,21 @@ import java.util.Objects;
  *
  * @author shaza
  */
-public class RegularScene implements Serializable {
+public class Scene implements Serializable {
     
     // class instance variables
-    private String regularSceneDescription;
+    private String sceneDescription;
     private char symbol;
 
-    public RegularScene() {
+    public Scene() {
     }
 
-    public String getRegularSceneDescription() {
-        return regularSceneDescription;
+    public String getSceneDescription() {
+        return sceneDescription;
     }
 
-    public void setRegularSceneDescription(String regularSceneDescription) {
-        this.regularSceneDescription = regularSceneDescription;
+    public void setSceneDescription(String sceneDescription) {
+        this.sceneDescription = sceneDescription;
     }
 
     public char getSymbol() {
@@ -40,14 +40,14 @@ public class RegularScene implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + Objects.hashCode(this.regularSceneDescription);
+        hash = 31 * hash + Objects.hashCode(this.sceneDescription);
         hash = 31 * hash + this.symbol;
         return hash;
     }
 
     @Override
     public String toString() {
-        return "RegularScene{" + "regularSceneDescription=" + regularSceneDescription + ", symbol=" + symbol + '}';
+        return "Scene{" + "sceneDescription=" + sceneDescription + ", symbol=" + symbol + '}';
     }
 
     @Override
@@ -61,11 +61,11 @@ public class RegularScene implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final RegularScene other = (RegularScene) obj;
+        final Scene other = (Scene) obj;
         if (this.symbol != other.symbol) {
             return false;
         }
-        if (!Objects.equals(this.regularSceneDescription, other.regularSceneDescription)) {
+        if (!Objects.equals(this.sceneDescription, other.sceneDescription)) {
             return false;
         }
         return true;

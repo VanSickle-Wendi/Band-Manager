@@ -13,7 +13,7 @@ import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.PerformanceScene;
 import byui.cit260.bandManager.model.Player;
-import byui.cit260.bandManager.model.RegularScene;
+import byui.cit260.bandManager.model.Scene;
 import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Instrument;
@@ -33,7 +33,7 @@ public class BandManager {
        Player playerOne = new Player();
        
        playerOne.setManagerName("Fred Flinstone");
-       playerOne.setMoney(30);
+       playerOne.setFinalScore(30);
        
        String playerInfo = playerOne.toString();
        System.out.println(playerInfo);
@@ -58,9 +58,9 @@ public class BandManager {
        String musicianBio = musicianStats.toString();
        System.out.println(musicianBio);
        
-       RegularScene regSceneInfo = new RegularScene();
+       Scene regSceneInfo = new Scene();
        
-       regSceneInfo.setRegularSceneDescription("Garage with the band equipment set up.");
+       regSceneInfo.setSceneDescription("Garage with the band equipment set up.");
        regSceneInfo.setSymbol('@');
        
        String regSceneStats = regSceneInfo.toString();
@@ -114,6 +114,7 @@ public class BandManager {
        bandMembers.setBassPlayer("Nick the bass player");
        bandMembers.setGuitarPlayer("Scar the Guitar Player");
        bandMembers.setKeyboardPlayer("Glen the Pianist");
+       bandMembers.setBandName("Captain Geech and the Shrimp Shack Shooters");
       
        String fullBand = bandMembers.toString();
        System.out.println(fullBand);
