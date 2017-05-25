@@ -12,13 +12,13 @@ import static org.junit.Assert.*;
  *
  * @author Crazian
  */
-public class BankingControlsTest {
+public class BankingControlTest {
     
-    public BankingControlsTest() {
+    public BankingControlTest() {
     }
 
     /**
-     * Test of calcLoanPayment method, of class BankingControls.
+     * Test of calcLoanPayment method, of class BankingControl.
      */
     @Test
     public void testCalcLoanPayment() {
@@ -28,7 +28,7 @@ public class BankingControlsTest {
         
         double loanBalance = 2000;
         double extraPrinciple = 1000;
-        BankingControls instance = new BankingControls();
+        BankingControl instance = new BankingControl();
         double expResult = 1050;
         double result = instance.calcLoanPayment(loanBalance, extraPrinciple);
         assertEquals(expResult, result, 0.0);

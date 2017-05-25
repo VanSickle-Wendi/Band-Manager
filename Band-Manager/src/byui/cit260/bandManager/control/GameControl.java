@@ -9,6 +9,6 @@ package byui.cit260.bandManager.control;
  *
  * @author Crazian
  */
-public class EquipmentControls {
+public class GameControl {
     
 }

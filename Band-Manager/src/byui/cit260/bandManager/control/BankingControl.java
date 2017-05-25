@@ -9,7 +9,7 @@ package byui.cit260.bandManager.control;
  *
  * @author Crazian
  */
-public class BankingControls {
+public class BankingControl {
     
     public double calcLoanPayment(double loanBalance,double extraPrinciple){
       
