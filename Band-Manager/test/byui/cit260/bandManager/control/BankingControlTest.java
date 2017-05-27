@@ -100,6 +100,82 @@ public class BankingControlTest {
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
     }
+  
+    /**
+     * Test of calcBandSalary method, of class BankingControl.
+     */
+    @Test
+    public void testCalcBandSalary() {
+        System.out.println("calcBandSalary");
+         // Test Case 1
+        System.out.println("\tTestCase1");
+        double venuePayment = 2500.00;
+        double equipmentCost = 600.00;
+        double hotelCost = 550.00;
+        double salaryPercentage = 0.35;
+        double bankAccount = 1000.00;
+        BankingControl instance = new BankingControl();
+        double expResult = 472.50;
+        double result = instance.calcBandSalary(venuePayment, equipmentCost, hotelCost, salaryPercentage, bankAccount);
+        assertEquals(expResult, result, 0.0001);
+        
+        // Test Case 2
+        System.out.println("\tTestCase2");
+        venuePayment = 3500.00;
+        equipmentCost = 425.00;
+        hotelCost = 969.00;
+        salaryPercentage = -.01;
+        bankAccount = 1000.00;
+        expResult = -999;
+        result = instance.calcBandSalary(venuePayment, equipmentCost, hotelCost, salaryPercentage, bankAccount);
+        assertEquals(expResult, result, 0.0001);
+
+        // Test Case 3
+        System.out.println("\tTestCase3");
+        venuePayment = 4300.00;
+        equipmentCost = 1850.00;
+        hotelCost = 435.00;
+        salaryPercentage = .51;
+        bankAccount = 1000.00;
+        expResult = -999;
+        result = instance.calcBandSalary(venuePayment, equipmentCost, hotelCost, salaryPercentage, bankAccount);
+        assertEquals(expResult, result, 0.0001);
+        
+        // Test Case 4
+        System.out.println("\tTestCase4");
+        venuePayment = 2200.00;
+        equipmentCost = 1900.00;
+        hotelCost = 500.00;
+        salaryPercentage = .20;
+        bankAccount = 1000.00;
+        expResult = -999;
+        result = instance.calcBandSalary(venuePayment, equipmentCost, hotelCost, salaryPercentage, bankAccount);
+        assertEquals(expResult, result, 0.0001);    
+        
+        // Test Case 5
+        System.out.println("\tTestCase5");
+        venuePayment = 24000.00;
+        equipmentCost = 14400.00;
+        hotelCost = 2100.00;
+        salaryPercentage = .45;
+        bankAccount = 2750.00;
+        expResult = -999;
+        result = instance.calcBandSalary(venuePayment, equipmentCost, hotelCost, salaryPercentage, bankAccount);
+        assertEquals(expResult, result, 0.0001);
+        
+        // Test Case 6
+        System.out.println("\tTestCase6");
+        venuePayment = 2300.00;
+        equipmentCost = 653.00;
+        hotelCost = 497.00;
+        salaryPercentage = 1.00;
+        bankAccount = 3000.00;
+        expResult = -999;
+        result = instance.calcBandSalary(venuePayment, equipmentCost, hotelCost, salaryPercentage, bankAccount);
+        assertEquals(expResult, result, 0.0001);
+        
+    }
+    
 
     /**
      * Test of calcNewVehicleCost method, of class BankingControl.
