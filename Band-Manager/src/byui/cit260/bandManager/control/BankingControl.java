@@ -31,5 +31,26 @@ public class BankingControl {
 
     } 
     
+    public double calcBandSalary(double venuePayment, double equipmentCost, 
+            double hotelCost, double salaryPercentage, double bankAccount){
+        
+        if(salaryPercentage < .20 || salaryPercentage > .50){
+            return -999; 
+        }
+
+        if(venuePayment < (equipmentCost + hotelCost)) {
+           return -999;
+        }
+  
+        double netIncome = (venuePayment) - (equipmentCost + hotelCost); 
+        double bandSalary =  netIncome * salaryPercentage; 
+
+        if (bandSalary  > bankAccount) {
+           return -999; 
+        }
+        else
+            return bandSalary;
+    
+    }
     
 }
