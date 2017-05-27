@@ -53,4 +53,23 @@ public class BankingControl {
     
     }
     
+       public double calcNewVehicleCost(double originalVehicleCost, double currentPerformancePoints, double newVehiclePrice){
+       
+        if (originalVehicleCost != 5000 || originalVehicleCost != 30000 || originalVehicleCost != 60000 || originalVehicleCost != 100000){
+       };
+        
+        if (currentPerformancePoints < 0){
+        };
+        
+        if (newVehiclePrice != 5000 || originalVehicleCost != 30000 || originalVehicleCost != 60000 || originalVehicleCost != 100000){
+        };
+        
+        double ppDiscounts = .00003;
+        
+        double discount = originalVehicleCost * (currentPerformancePoints * ppDiscounts);
+        
+        double newVehicleCost = newVehiclePrice - discount;
+        
+        return newVehicleCost;
+   } 
 }
