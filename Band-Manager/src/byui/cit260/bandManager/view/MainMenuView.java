@@ -5,6 +5,8 @@
  */
 package byui.cit260.bandManager.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author shaza
@@ -12,6 +14,7 @@ package byui.cit260.bandManager.view;
 public class MainMenuView {
     
     private String menu;
+    private String promptMessage;
     
     public MainMenuView() {
         this.menu = "\n"
@@ -24,6 +27,8 @@ public class MainMenuView {
                     + "\nS -- Save game"
                     + "\nQ -- Quit and Exit Game"
                     + "\n--------------------------------------------------";
+    
+        this.promptMessage = "\nPlease choose a Main Menu option: ";
     }
     
 
@@ -31,6 +36,7 @@ public class MainMenuView {
         
         boolean done = false; // set flag to not done
         do {
+            System.out.println(menu);
             // prompt for and get players name
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("Q")) // user wants to quit
@@ -43,13 +49,69 @@ public class MainMenuView {
     }
 
     private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() function called ***");
-        return "N";
+        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+        String value = ""; // value to be returned
+        boolean valid = false; // initialize to not valid
+        
+        while (!valid) { // loop while an invalid value is entered
+            System.out.println("\n" + this.promptMessage);
+            
+            value = keyboard.nextLine(); // get next line typed on keyboard
+            value = value.trim(); // trim off leading and trailing blanks
+            
+            if (value.length() < 1) { // value is blank
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+              
+            } 
+            valid = true; // End the loop
+        } 
+        return value; // return the value entered
+    }
+        public boolean doAction(String choice) {
+        
+            choice = choice.toUpperCase(); // convert choice to upper case
+            
+            switch (choice) {
+                case "N": // create and start a new game
+                    this.startNewGame();
+                    break;
+                case "L": // get and start a existing game
+                    this.startExistingGame();
+                    break;
+                case "H": // display the help menu
+                    this.displayHelpMenu();
+                    break;
+                case "S": // save the current game
+                    this.saveGame();
+                    break;
+                default:
+                    System.out.println("\n*** Invalid selection *** Try again");
+                    break;
+            }
+               
+        return false;
     }
 
-    private boolean doAction(String menuOption) {
-        System.out.println("\n*** doAction() function called ***");
-        return true;
+    private void startNewGame() {
+        System.out.println("*** startNewGame function called ***");
+    }
+
+    private void startExistingGame() {
+        System.out.println("*** startExistingGame function called ***");
+    }
+
+    private void saveGame() {
+        System.out.println("*** saveGame function called ***");
     }
     
+    private void displayHelpMenu() {
+        System.out.println("*** displayHelpMenu function called ***");
+    }
+   
 }
+
+
+    
+    
+
