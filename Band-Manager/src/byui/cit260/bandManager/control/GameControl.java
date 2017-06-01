@@ -5,10 +5,27 @@
  */
 package byui.cit260.bandManager.control;
 
+import band.manager.BandManager;
+import byui.cit260.bandManager.model.Player;
+
 /**
  *
  * @author Crazian
  */
 public class GameControl {
+
+    public static Player createPlayer(String playersName) {
+
+        if (playersName == null) {
+            return null;
+        }
+            
+        Player player = new Player();
+        player.setPlayersName(playersName);
+            
+        BandManager.setPlayer(player); // save the player
+            
+        return player;     
+    }
     
 }
