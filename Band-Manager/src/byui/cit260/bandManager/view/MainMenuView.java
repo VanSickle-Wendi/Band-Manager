@@ -5,6 +5,8 @@
  */
 package byui.cit260.bandManager.view;
 
+import band.manager.BandManager;
+import byui.cit260.bandManager.control.GameControl;
 import java.util.Scanner;
 
 /**
@@ -94,7 +96,12 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-        System.out.println("*** startNewGame function called ***");
+            // create new game
+        GameControl.createNewGame(BandManager.getPlayer());
+    
+        // display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
 
     private void startExistingGame() {
@@ -106,7 +113,10 @@ public class MainMenuView {
     }
     
     private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");
+        
+        // display the help menu
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayHelpMenuView();
     }
    
 }
