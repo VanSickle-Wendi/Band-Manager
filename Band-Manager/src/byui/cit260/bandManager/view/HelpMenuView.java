@@ -19,13 +19,13 @@ class HelpMenuView {
     public HelpMenuView() {
         this.menu = "\n"
                     + "\n-------------------------------------------------"
-                    + "\n| Help Menu |"
-                    + "\n--------------------------------------------------"
+                    + "\n| Help Menu                                     |"
+                    + "\n-------------------------------------------------"
                     + "\nG -- What is the goal of the game"
                     + "\nL -- How to make payments or pay off the loan"
                     + "\nU -- How to upgrade instruments/equipment"
                     + "\nQ -- Quit the Help Menu"
-                    + "\n--------------------------------------------------";
+                    + "\n-------------------------------------------------";
     
         this.promptMessage = "\nPlease choose a Help Menu option: ";
     }
@@ -92,14 +92,32 @@ class HelpMenuView {
     }
 
     private void goalOfGame() {
-        System.out.println("*** goalOfGame function called ***");
+        System.out.println("\n"
+                + "\n--------------------------------------------------"
+                + "\n The goal of the game is to take your band to     "
+                + "\n the highest star status while paying off your    "
+                + "\n loan and becoming a financial success yourself.  "
+                + "\n--------------------------------------------------"       
+        );
     }
 
     private void payOnLoan() {
-        System.out.println("*** payOnLoan function called ***");
+        System.out.println("\n"
+                + "\n--------------------------------------------------"
+                + "\n The process for paying on your loan has not been "
+                + "\n defined yet.                                     "
+                + "\n                                                  "
+                + "\n--------------------------------------------------"       
+        );  
     }
 
     private void upgradeInstruments() {
-        System.out.println("*** upgrade instruments function called ***");
+        System.out.println("\n"
+                + "\n--------------------------------------------------"
+                + "\n The process for upgrading instruments and        "
+                + "\n equipment has not been defined yet.              "
+                + "\n                                                  "
+                + "\n--------------------------------------------------"       
+        ); 
     }
 }
