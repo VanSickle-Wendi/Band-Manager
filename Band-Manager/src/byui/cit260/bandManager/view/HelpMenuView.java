@@ -104,9 +104,9 @@ class HelpMenuView {
     private void payOnLoan() {
         System.out.println("\n"
                 + "\n--------------------------------------------------"
-                + "\n The process for paying on your loan has not been "
-                + "\n defined yet.                                     "
-                + "\n                                                  "
+                + "\n Loan payments are due at the completion of each  "
+                + "\n level. If the band manager doesn’t have enough   "
+                + "\n money to cover their loan payment, game is lost. "
                 + "\n--------------------------------------------------"       
         );  
     }
@@ -114,9 +114,10 @@ class HelpMenuView {
     private void upgradeInstruments() {
         System.out.println("\n"
                 + "\n--------------------------------------------------"
-                + "\n The process for upgrading instruments and        "
-                + "\n equipment has not been defined yet.              "
-                + "\n                                                  "
+                + "\n After the band members are selected or a level is"
+                + "\n completed, the manager is able to upgrade the    "
+                + "\n band’s instruments or equipment using the Assets "
+                + "\n Menu.                                            "
                 + "\n--------------------------------------------------"       
         ); 
     }
