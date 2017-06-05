@@ -29,7 +29,6 @@ public class GameMenuView {
                 + "\nC -- Check into a New Hotel"
                 + "\nG -- Gig Performance"
                 + "\nV -- View Band Members and Status"
-                + "\nP -- Pay Band Salary"
                 + "\nQ -- Quit the Game Menu"
                 + "\n-------------------------------------------------";
 
@@ -104,9 +103,6 @@ public class GameMenuView {
             case "V": // View band members and status
                 this.bandMemberStatus();
                 break;
-            case "P": // Pay band Salary
-                this.payBandSalary();
-                break;
             case "Q": // Quit
                 return true;
             default:
@@ -149,7 +145,4 @@ public class GameMenuView {
         System.out.println("*** bandMemberStatus function called ***");
     }
 
-    private void payBandSalary() {
-        System.out.println("*** payBandSalary function called ***");
-    }
 }
