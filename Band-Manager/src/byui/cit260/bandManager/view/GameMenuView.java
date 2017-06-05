@@ -118,7 +118,9 @@ public class GameMenuView {
     }
 
     private void viewAssetMenu() {
-        System.out.println("*** viewAssetMenu function called ***");
+        // display the asset menu
+        AssetMenuView assetMenu = new AssetMenuView();
+        assetMenu.displayAssetMenuView();
     }
 
     private void viewBankMenu() {
