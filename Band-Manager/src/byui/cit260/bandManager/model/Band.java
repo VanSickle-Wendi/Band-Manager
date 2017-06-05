@@ -7,12 +7,13 @@ package byui.cit260.bandManager.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Crazian
  */
 public class Band implements Serializable {
-    
+
     // class instance variables
     private String drummer;
     private String singer;
@@ -24,9 +25,7 @@ public class Band implements Serializable {
 
     public Band() {
     }
-    
-    
-    
+
     public String getDrummer() {
         return drummer;
     }
@@ -100,8 +99,6 @@ public class Band implements Serializable {
     public String toString() {
         return "Band{" + "drummer=" + drummer + ", singer=" + singer + ", guitarPlayer=" + guitarPlayer + ", bassPlayer=" + bassPlayer + ", keyboardPlayer=" + keyboardPlayer + ", vehiclePoints=" + vehiclePoints + ", bandName=" + bandName + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -138,7 +135,5 @@ public class Band implements Serializable {
         }
         return true;
     }
-    
-    
-    
+
 }

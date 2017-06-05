@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author shaza
  */
 public class BandMember implements Serializable {
+
     private String memberName;
     private double currentSkillLevel;
     private String currentIssue;
@@ -20,7 +21,7 @@ public class BandMember implements Serializable {
 
     public BandMember() {
     }
-    
+
     public String getMemberName() {
         return memberName;
     }
@@ -94,7 +95,5 @@ public class BandMember implements Serializable {
         }
         return true;
     }
-    
-    
-    
+
 }

@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author Wendi
  */
-public class PerformanceScene implements Serializable{
-    
+public class PerformanceScene implements Serializable {
+
     // class instance variables
     private double score;
 
@@ -56,5 +56,5 @@ public class PerformanceScene implements Serializable{
         }
         return true;
     }
-    
+
 }

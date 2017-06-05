@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author shaza
  */
 public class Scene implements Serializable {
-    
+
     // class instance variables
     private String sceneDescription;
     private char symbol;
@@ -70,5 +70,5 @@ public class Scene implements Serializable {
         }
         return true;
     }
-    
+
 }

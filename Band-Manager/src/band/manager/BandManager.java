@@ -20,18 +20,18 @@ import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.SpendingScene;
 import byui.cit260.bandManager.model.Vehicle;
 import byui.cit260.bandManager.view.StartProgramView;
-        
+
 /**
  *
  * @author Wendi
  */
 public class BandManager {
-    
+
     private static Game currentGame = null;
     private static Player player = null;
-    
+
     public static void main(String[] args) {
-        
+
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
     }

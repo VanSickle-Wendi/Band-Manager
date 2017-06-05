@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author Wendi
  */
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     // class instance variables
     private String description;
 
@@ -38,7 +38,7 @@ public class Map implements Serializable{
     @Override
     public String toString() {
         return "Map{" + "description=" + description + '}';
-    }   
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -57,9 +57,5 @@ public class Map implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
-    
+
 }

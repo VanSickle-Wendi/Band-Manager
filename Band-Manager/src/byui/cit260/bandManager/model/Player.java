@@ -8,20 +8,18 @@ package byui.cit260.bandManager.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-
 /**
  *
  * @author shaza
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     // class instance variables
     private String playersName;
     private double finalScore;
 
     public Player() {
     }
-       
 
     public String getPlayersName() {
         return playersName;
@@ -51,7 +49,6 @@ public class Player implements Serializable{
     public String toString() {
         return "Player{" + "playersName=" + playersName + ", finalScore=" + finalScore + '}';
     }
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -73,10 +70,5 @@ public class Player implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
-    
-    
+
 }

@@ -14,39 +14,39 @@ import java.util.Scanner;
  * @author shaza
  */
 public class MainMenuView {
-    
+
     private String menu;
     private String promptMessage;
-    
+
     public MainMenuView() {
         this.menu = "\n"
-                    + "\n-------------------------------------------------"
-                    + "\n| Main Menu                                     |"
-                    + "\n-------------------------------------------------"
-                    + "\nN -- Start new game"
-                    + "\nL -- Load a saved game"
-                    + "\nH -- Help on how to play the game"
-                    + "\nS -- Save game"
-                    + "\nQ -- Quit and Exit Game"
-                    + "\n-------------------------------------------------";
-    
+                + "\n-------------------------------------------------"
+                + "\n| Main Menu                                     |"
+                + "\n-------------------------------------------------"
+                + "\nN -- Start new game"
+                + "\nL -- Load a saved game"
+                + "\nH -- Help on how to play the game"
+                + "\nS -- Save game"
+                + "\nQ -- Quit and Exit Game"
+                + "\n-------------------------------------------------";
+
         this.promptMessage = "\nPlease choose a Main Menu option: ";
     }
-    
 
     public void displayMainMenuView() {
-        
+
         boolean done = false; // set flag to not done
         do {
             System.out.println(menu);
             // prompt for and get menu option
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("Q")) // user wants to quit
+            {
                 return; //exit the game
-            
+            }
             // do the requested action and display the next view
             done = this.doAction(menuOption);
-            
+
         } while (!done);
     }
 
@@ -54,51 +54,52 @@ public class MainMenuView {
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         String value = ""; // value to be returned
         boolean valid = false; // initialize to not valid
-        
+
         while (!valid) { // loop while an invalid value is entered
             System.out.println("\n" + this.promptMessage);
-            
+
             value = keyboard.nextLine(); // get next line typed on keyboard
             value = value.trim(); // trim off leading and trailing blanks
-            
+
             if (value.length() < 1) { // value is blank
                 System.out.println("\nInvalid value: value can not be blank");
                 continue;
-              
-            } 
+
+            }
             valid = true; // End the loop
-        } 
+        }
         return value; // return the value entered
     }
-        public boolean doAction(String choice) {
-        
-            choice = choice.toUpperCase(); // convert choice to upper case
-            
-            switch (choice) {
-                case "N": // create and start a new game
-                    this.startNewGame();
-                    break;
-                case "L": // get and start a existing game
-                    this.startExistingGame();
-                    break;
-                case "H": // display the help menu
-                    this.displayHelpMenu();
-                    break;
-                case "S": // save the current game
-                    this.saveGame();
-                    break;
-                default:
-                    System.out.println("\n*** Invalid selection *** Try again");
-                    break;
-            }
-               
+
+    public boolean doAction(String choice) {
+
+        choice = choice.toUpperCase(); // convert choice to upper case
+
+        switch (choice) {
+            case "N": // create and start a new game
+                this.startNewGame();
+                break;
+            case "L": // get and start a existing game
+                this.startExistingGame();
+                break;
+            case "H": // display the help menu
+                this.displayHelpMenu();
+                break;
+            case "S": // save the current game
+                this.saveGame();
+                break;
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+                break;
+        }
+
         return false;
     }
 
     private void startNewGame() {
-            // create new game
+        // create new game
         GameControl.createNewGame(BandManager.getPlayer());
-    
+
         // display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
@@ -111,17 +112,12 @@ public class MainMenuView {
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
     }
-    
+
     private void displayHelpMenu() {
-        
+
         // display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.displayHelpMenuView();
     }
-   
+
 }
-
-
-    
-    
-

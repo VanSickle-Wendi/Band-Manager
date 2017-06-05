@@ -11,15 +11,15 @@ import java.io.Serializable;
  *
  * @author Crazian
  */
-public class Game implements Serializable{
-    
+public class Game implements Serializable {
+
     // class instance variables
     private double totalMoney;
     private double totalPerformancePoints;
 
     public Game() {
     }
-    
+
     public double getTotalMoney() {
         return totalMoney;
     }
@@ -49,8 +49,6 @@ public class Game implements Serializable{
         return "Game{" + "totalMoney=" + totalMoney + ", totalPerformancePoints=" + totalPerformancePoints + '}';
     }
 
-    
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -71,8 +69,5 @@ public class Game implements Serializable{
         }
         return true;
     }
- 
-    
-    
-    
+
 }

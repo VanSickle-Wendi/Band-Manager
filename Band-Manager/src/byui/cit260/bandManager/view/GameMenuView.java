@@ -12,8 +12,8 @@ package byui.cit260.bandManager.view;
 public class GameMenuView {
 
     void displayMenu() {
-            System.out.println("\n*** display Menu called ***");
-        
+        System.out.println("\n*** display Menu called ***");
+
     }
-    
+
 }

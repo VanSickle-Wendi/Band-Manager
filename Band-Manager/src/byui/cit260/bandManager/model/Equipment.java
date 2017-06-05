@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author shaza
  */
 public class Equipment implements Serializable {
-    
+
     // class instance variables
     private String equipmentType;
     private double price;
@@ -49,7 +49,7 @@ public class Equipment implements Serializable {
     public String toString() {
         return "Equipment{" + "equipmentType=" + equipmentType + ", price=" + price + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -70,5 +70,5 @@ public class Equipment implements Serializable {
         }
         return true;
     }
-    
+
 }

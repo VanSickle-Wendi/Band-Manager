@@ -11,14 +11,14 @@ import java.io.Serializable;
  *
  * @author Crazian
  */
-public class Instrument implements Serializable{
-    
+public class Instrument implements Serializable {
+
     // class instance variables
-    private double instrumentLevel; 
+    private double instrumentLevel;
 
     public Instrument() {
     }
-   
+
     public double getInstrumentLevel() {
         return instrumentLevel;
     }
@@ -56,6 +56,5 @@ public class Instrument implements Serializable{
         }
         return true;
     }
-    
-    
+
 }

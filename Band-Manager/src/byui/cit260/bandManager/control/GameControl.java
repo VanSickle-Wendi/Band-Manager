@@ -19,17 +19,17 @@ public class GameControl {
         if (playersName == null) {
             return null;
         }
-            
+
         Player player = new Player();
         player.setPlayersName(playersName);
-            
+
         BandManager.setPlayer(player); // save the player
-            
-        return player;     
+
+        return player;
     }
 
     public static void createNewGame(Player player) {
         System.out.println("\n*** createNewGame stub called ***");
     }
-    
+
 }

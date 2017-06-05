@@ -13,12 +13,12 @@ import java.util.Objects;
  * @author Crazian
  */
 public class SpendingScene implements Serializable {
-    
+
     //class instance variables
     private String itemType;
     private double amount;
-    
-      public SpendingScene() {
+
+    public SpendingScene() {
     }
 
     public String getItemType() {
@@ -50,8 +50,6 @@ public class SpendingScene implements Serializable {
         return "SpendingScene{" + "itemType=" + itemType + ", amount=" + amount + '}';
     }
 
-    
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -73,9 +71,4 @@ public class SpendingScene implements Serializable {
         return true;
     }
 
-    
-    
-  
-    
-    
 }

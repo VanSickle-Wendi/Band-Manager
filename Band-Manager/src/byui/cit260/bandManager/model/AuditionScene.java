@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author shaza
  */
 public class AuditionScene implements Serializable {
-    
+
     //class instance variables
     private String bandPosition;
     private String musicianName;
@@ -96,5 +96,5 @@ public class AuditionScene implements Serializable {
         }
         return true;
     }
-    
+
 }

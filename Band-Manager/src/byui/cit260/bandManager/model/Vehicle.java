@@ -12,14 +12,12 @@ import java.io.Serializable;
  * @author Crazian
  */
 public class Vehicle implements Serializable {
-    
+
     // class instance variables
     private double vehicleLevel;
 
     public Vehicle() {
     }
-    
-    
 
     public double getVehicleLevel() {
         return vehicleLevel;
@@ -41,8 +39,6 @@ public class Vehicle implements Serializable {
         return "Vehicle{" + "vehicleLevel=" + vehicleLevel + '}';
     }
 
-    
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -60,7 +56,5 @@ public class Vehicle implements Serializable {
         }
         return true;
     }
-    
-    
-    
+
 }

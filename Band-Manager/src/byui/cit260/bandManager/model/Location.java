@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author Wendi
  */
-public class Location implements Serializable{
-    
+public class Location implements Serializable {
+
     // class instance variables
     private double locationNumber;
     private double timesVisited;
@@ -47,7 +47,7 @@ public class Location implements Serializable{
     @Override
     public String toString() {
         return "Location{" + "locationNumber=" + locationNumber + ", timesVisited=" + timesVisited + '}';
-    } 
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -69,7 +69,5 @@ public class Location implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

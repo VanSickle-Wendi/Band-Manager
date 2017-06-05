@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author Wendi
  */
 public class BankScene implements Serializable {
-    
+
     // class instance variables
     private double loan;
     private double bankAccount;
@@ -108,6 +108,5 @@ public class BankScene implements Serializable {
         }
         return true;
     }
-    
-    
+
 }
