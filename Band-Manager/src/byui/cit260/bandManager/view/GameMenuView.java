@@ -128,7 +128,9 @@ public class GameMenuView {
     }
 
     private void holdAuditions() {
-        System.out.println("*** holdAuditions function called ***");
+        // display the audition menu
+        AuditionMenuView auditionMenu = new AuditionMenuView();
+        auditionMenu.displayAuditionMenuView();
     }
 
     private void travelToNewLocation() {
