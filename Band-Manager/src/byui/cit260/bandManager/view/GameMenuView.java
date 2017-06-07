@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.view;
 
+import byui.cit260.bandManager.model.Game;
 import java.util.Scanner;
 
 /**
@@ -15,6 +16,7 @@ public class GameMenuView {
 
     private String menu;
     private String promptMessage;
+    private Game game;    
 
     public GameMenuView() {
         this.menu = "\n"
@@ -36,6 +38,10 @@ public class GameMenuView {
 
     }
 
+    public void setGame(Game game) {
+        this.game = game;
+    }
+    
     public void displayGameMenuView() {
 
         boolean done = false; // set flag to not done
@@ -132,7 +138,8 @@ public class GameMenuView {
     private void holdAuditions() {
         // display the audition menu
         AuditionMenuView auditionMenu = new AuditionMenuView();
-        auditionMenu.displayAuditionMenuView();
+        auditionMenu.setGame(game);        
+        auditionMenu.displayAuditionMenuView(); 
     }
 
     private void travelToNewLocation() {

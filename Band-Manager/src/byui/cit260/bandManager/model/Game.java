@@ -6,6 +6,7 @@
 package byui.cit260.bandManager.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -14,11 +15,21 @@ import java.io.Serializable;
 public class Game implements Serializable {
 
     // class instance variables
+    private Band theBand;
     private double totalMoney;
     private double totalPerformancePoints;
 
     public Game() {
+        theBand = new Band();
     }
+    
+    public Band getTheBand() {
+        return theBand;
+    }
+
+    public void setTheBand(Band theBand) {
+        this.theBand = theBand;
+    }  
 
     public double getTotalMoney() {
         return totalMoney;
@@ -38,15 +49,16 @@ public class Game implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.totalMoney) ^ (Double.doubleToLongBits(this.totalMoney) >>> 32));
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.totalPerformancePoints) ^ (Double.doubleToLongBits(this.totalPerformancePoints) >>> 32));
+        int hash = 3;
+        hash = 67 * hash + Objects.hashCode(this.theBand);
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.totalMoney) ^ (Double.doubleToLongBits(this.totalMoney) >>> 32));
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.totalPerformancePoints) ^ (Double.doubleToLongBits(this.totalPerformancePoints) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "totalMoney=" + totalMoney + ", totalPerformancePoints=" + totalPerformancePoints + '}';
+        return "Game{" + "theBand=" + theBand + ", totalMoney=" + totalMoney + ", totalPerformancePoints=" + totalPerformancePoints + '}';
     }
 
     @Override
@@ -65,6 +77,9 @@ public class Game implements Serializable {
             return false;
         }
         if (Double.doubleToLongBits(this.totalPerformancePoints) != Double.doubleToLongBits(other.totalPerformancePoints)) {
+            return false;
+        }
+        if (!Objects.equals(this.theBand, other.theBand)) {
             return false;
         }
         return true;

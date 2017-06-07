@@ -7,6 +7,7 @@ package byui.cit260.bandManager.view;
 
 import band.manager.BandManager;
 import byui.cit260.bandManager.control.GameControl;
+import byui.cit260.bandManager.model.Game;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,7 @@ public class MainMenuView {
 
     private String menu;
     private String promptMessage;
+    private Game game;
 
     public MainMenuView() {
         this.menu = "\n"
@@ -98,10 +100,11 @@ public class MainMenuView {
 
     private void startNewGame() {
         // create new game
-        GameControl.createNewGame(BandManager.getPlayer());
+        game = GameControl.createNewGame(BandManager.getPlayer());
 
         // display the game menu
         GameMenuView gameMenu = new GameMenuView();
+        gameMenu.setGame(game);
         gameMenu.displayGameMenuView();
     }
 

@@ -6,6 +6,7 @@
 package byui.cit260.bandManager.control;
 
 import band.manager.BandManager;
+import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Player;
 
 /**
@@ -28,8 +29,11 @@ public class GameControl {
         return player;
     }
 
-    public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub called ***");
+    public static Game createNewGame(Player player) {
+        Game game = new Game();
+        
+        //game.setPlayer(player); TODO create setPlayer() on Game class
+        return game;
     }
 
 }

@@ -5,6 +5,10 @@
  */
 package byui.cit260.bandManager.view;
 
+import byui.cit260.bandManager.control.AuditionControl;
+import byui.cit260.bandManager.control.PerformanceControl;
+import byui.cit260.bandManager.model.BandMember;
+import byui.cit260.bandManager.model.Game;
 import java.util.Scanner;
 
 /**
@@ -15,6 +19,8 @@ public class AuditionMenuView {
     
     private String menu;
     private String promptMessage;
+    private AuditionControl auditionControl;
+    private Game game;
 
     public AuditionMenuView() {
         this.menu = "\n"
@@ -30,9 +36,16 @@ public class AuditionMenuView {
                 + "\nQ -- Quit the Audition Menu"
                 + "\n-------------------------------------------------";     
         
-        this.promptMessage = "\nChoose a band member to audition: ";        
+        this.promptMessage = "\nChoose a band member to audition: ";  
+        
+        auditionControl = new AuditionControl();
         
     } 
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+    
     
     public void displayAuditionMenuView() {
 
@@ -105,24 +118,74 @@ public class AuditionMenuView {
         return false;
     }    
 
+    private String getUserInput(String prompt) {
+        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+        String value = ""; // value to be returned
+        boolean valid = false; // initialize to not valid
+
+        while (!valid) { // loop while an invalid value is entered
+            System.out.println("\n" + prompt);
+            value = keyboard.nextLine(); // get next line typed on keyboard
+            value = value.trim(); // trim off leading and trailing blanks
+
+            if (value.length() < 1) { // value is blank
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+            break; // end the loop
+        }
+
+        return value; // return the value entered
+    }    
+    
     private void auditionDrummer() {
-        System.out.println("*** auditionDrummer function called ***");
+        String drummersName = getUserInput("What is your drummer's name?"); 
+        String drummersIssue = getUserInput("What is your drummer's issue?");
+        
+        BandMember drummer = auditionControl.createBandMember("Drummer", drummersName, drummersIssue);
+        game.getTheBand().setDrummer(drummer);
+    
+        System.out.println(drummer);
     }
 
     private void auditionSinger() {
-        System.out.println("*** auditionSinger function called ***");
+        String singersName = getUserInput("What is your singer's name?"); 
+        String singersIssue = getUserInput("What is your singer's issue?");
+        
+        BandMember singer = auditionControl.createBandMember("Singer", singersName, singersIssue);
+        game.getTheBand().setSinger(singer);
+
+        System.out.println(singer);
     }
 
     private void auditionGuitarPlayer() {
-        System.out.println("*** auditionGuitarPlayer function called ***");
+        String guitarPlayersName = getUserInput("What is your guitar player's name?"); 
+        String guitarPlayersIssue = getUserInput("What is your guitar player's issue?");
+        
+        BandMember guitarPlayer = auditionControl.createBandMember("Guitar Player", guitarPlayersName, guitarPlayersIssue);
+        game.getTheBand().setGuitarPlayer(guitarPlayer);
+
+        System.out.println(guitarPlayer);
     }
 
     private void auditionBassPlayer() {
-        System.out.println("*** auditionBassPlayer function called ***");
+        String bassPlayersName = getUserInput("What is your bass player's name?"); 
+        String bassPlayersIssue = getUserInput("What is your bass player's issue?");
+        
+        BandMember bassPlayer = auditionControl.createBandMember("Bass Player", bassPlayersName, bassPlayersIssue);
+        game.getTheBand().setBassPlayer(bassPlayer);
+
+        System.out.println(bassPlayer);
     }
 
     private void auditionKeyboardPlayer() {
-        System.out.println("*** auditionKeyboardPlayer function called ***");
+        String keyboardPlayersName = getUserInput("What is your keyboard player's name?"); 
+        String keyboardPlayersIssue = getUserInput("What is your keyboard player's issue?");
+        
+        BandMember keyboardPlayer = auditionControl.createBandMember("Keyboard Player", keyboardPlayersName, keyboardPlayersIssue);
+        game.getTheBand().setKeyboardPlayer(keyboardPlayer);
+
+        System.out.println(keyboardPlayer);
     }
 
     private void calculateBandAuditionPoints() {

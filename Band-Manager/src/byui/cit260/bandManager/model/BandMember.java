@@ -14,60 +14,82 @@ import java.util.Objects;
  */
 public class BandMember implements Serializable {
 
-    private String memberName;
-    private double currentSkillLevel;
-    private String currentIssue;
-    private double equipmentPoints;
+    private String bandPosition;
+    private String musicianName;
+    private String issueDescription;
+    private double skillLevel;
+    private double instrumentQuality;
+    private double issueCost;
 
     public BandMember() {
     }
 
-    public String getMemberName() {
-        return memberName;
+    public String getBandPosition() {
+        return bandPosition;
     }
 
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
+    public void setBandPosition(String bandPosition) {
+        this.bandPosition = bandPosition;
     }
 
-    public double getCurrentSkillLevel() {
-        return currentSkillLevel;
+    public String getMusicianName() {
+        return musicianName;
     }
 
-    public void setCurrentSkillLevel(double currentSkillLevel) {
-        this.currentSkillLevel = currentSkillLevel;
+    public void setMusicianName(String musicianName) {
+        this.musicianName = musicianName;
     }
 
-    public String getCurrentIssue() {
-        return currentIssue;
+    public String getIssueDescription() {
+        return issueDescription;
     }
 
-    public void setCurrentIssue(String currentIssue) {
-        this.currentIssue = currentIssue;
+    public void setIssueDescription(String issueDescription) {
+        this.issueDescription = issueDescription;
     }
 
-    public double getEquipmentPoints() {
-        return equipmentPoints;
+    public double getSkillLevel() {
+        return skillLevel;
     }
 
-    public void setEquipmentPoints(double equipmentPoints) {
-        this.equipmentPoints = equipmentPoints;
+    public void setSkillLevel(double skillLevel) {
+        this.skillLevel = skillLevel;
+    }
+
+    public double getInstrumentQuality() {
+        return instrumentQuality;
+    }
+
+    public void setInstrumentQuality(double instrumentQuality) {
+        this.instrumentQuality = instrumentQuality;
+    }
+
+    public double getIssueCost() {
+        return issueCost;
+    }
+
+    public void setIssueCost(double issueCost) {
+        this.issueCost = issueCost;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 71 * hash + Objects.hashCode(this.memberName);
-        hash = 71 * hash + (int) (Double.doubleToLongBits(this.currentSkillLevel) ^ (Double.doubleToLongBits(this.currentSkillLevel) >>> 32));
-        hash = 71 * hash + Objects.hashCode(this.currentIssue);
-        hash = 71 * hash + (int) (Double.doubleToLongBits(this.equipmentPoints) ^ (Double.doubleToLongBits(this.equipmentPoints) >>> 32));
+        hash = 83 * hash + Objects.hashCode(this.bandPosition);
+        hash = 83 * hash + Objects.hashCode(this.musicianName);
+        hash = 83 * hash + Objects.hashCode(this.issueDescription);
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.skillLevel) ^ (Double.doubleToLongBits(this.skillLevel) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.instrumentQuality) ^ (Double.doubleToLongBits(this.instrumentQuality) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.issueCost) ^ (Double.doubleToLongBits(this.issueCost) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "BandMember{" + "memberName=" + memberName + ", currentSkillLevel=" + currentSkillLevel + ", currentIssue=" + currentIssue + ", equipmentPoints=" + equipmentPoints + '}';
+        return "BandMember{" + "bandPosition=" + bandPosition + ", musicianName=" + musicianName + ", issueDescription=" + issueDescription + ", skillLevel=" + skillLevel + ", instrumentQuality=" + instrumentQuality + ", issueCost=" + issueCost + '}';
     }
+    
+    
 
     @Override
     public boolean equals(Object obj) {
@@ -81,19 +103,25 @@ public class BandMember implements Serializable {
             return false;
         }
         final BandMember other = (BandMember) obj;
-        if (Double.doubleToLongBits(this.currentSkillLevel) != Double.doubleToLongBits(other.currentSkillLevel)) {
+        if (Double.doubleToLongBits(this.skillLevel) != Double.doubleToLongBits(other.skillLevel)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.equipmentPoints) != Double.doubleToLongBits(other.equipmentPoints)) {
+        if (Double.doubleToLongBits(this.instrumentQuality) != Double.doubleToLongBits(other.instrumentQuality)) {
             return false;
         }
-        if (!Objects.equals(this.memberName, other.memberName)) {
+        if (Double.doubleToLongBits(this.issueCost) != Double.doubleToLongBits(other.issueCost)) {
             return false;
         }
-        if (!Objects.equals(this.currentIssue, other.currentIssue)) {
+        if (!Objects.equals(this.bandPosition, other.bandPosition)) {
+            return false;
+        }
+        if (!Objects.equals(this.musicianName, other.musicianName)) {
+            return false;
+        }
+        if (!Objects.equals(this.issueDescription, other.issueDescription)) {
             return false;
         }
         return true;
     }
-
+    
 }
