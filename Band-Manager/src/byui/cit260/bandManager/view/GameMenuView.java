@@ -124,7 +124,9 @@ public class GameMenuView {
     }
 
     private void viewBankMenu() {
-        System.out.println("*** viewBankMenu function called ***");
+        // display the Bank menu
+        BankMenuView bankMenu = new BankMenuView();
+        bankMenu.displayBankMenuView();
     }
 
     private void holdAuditions() {
