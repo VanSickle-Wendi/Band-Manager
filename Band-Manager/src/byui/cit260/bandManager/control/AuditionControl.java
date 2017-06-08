@@ -25,7 +25,7 @@ public class AuditionControl {
     //Create the createBandMember() function with BandMember as the return type
     public BandMember createBandMember(String bandPosition, String musicianName, String issueDescription) {
         BandMember member = new BandMember(); //Create an instance of BandMember and save in member variable
-        
+    
         member.setBandPosition(bandPosition);
         member.setMusicianName(musicianName);
         member.setIssueDescription(issueDescription);
@@ -44,15 +44,15 @@ public class AuditionControl {
        // change randomSkillLevel to 250 or 500 or 750 or 1000      
         if (randomSkillLevel == 1) {
             randomSkillLevel = 250;
-        }
+        }else
         
         if (randomSkillLevel == 2) {
             randomSkillLevel = 500;        
-        }      
+        }else    
         
         if (randomSkillLevel == 3) {
             randomSkillLevel = 750; 
-        }
+        }else
         
         if (randomSkillLevel == 4) {
             randomSkillLevel = 1000; 
