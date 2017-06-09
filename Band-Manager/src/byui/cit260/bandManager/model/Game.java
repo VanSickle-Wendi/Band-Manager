@@ -22,14 +22,14 @@ public class Game implements Serializable {
     public Game() {
         theBand = new Band();
     }
-    
+
     public Band getTheBand() {
         return theBand;
     }
 
     public void setTheBand(Band theBand) {
         this.theBand = theBand;
-    }  
+    }
 
     public double getTotalMoney() {
         return totalMoney;

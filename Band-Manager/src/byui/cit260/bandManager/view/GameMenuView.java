@@ -16,7 +16,7 @@ public class GameMenuView {
 
     private String menu;
     private String promptMessage;
-    private Game game;    
+    private Game game;
 
     public GameMenuView() {
         this.menu = "\n"
@@ -41,7 +41,7 @@ public class GameMenuView {
     public void setGame(Game game) {
         this.game = game;
     }
-    
+
     public void displayGameMenuView() {
 
         boolean done = false; // set flag to not done
@@ -138,8 +138,8 @@ public class GameMenuView {
     private void holdAuditions() {
         // display the audition menu
         AuditionMenuView auditionMenu = new AuditionMenuView();
-        auditionMenu.setGame(game);        
-        auditionMenu.displayAuditionMenuView(); 
+        auditionMenu.setGame(game);
+        auditionMenu.displayAuditionMenuView();
     }
 
     private void travelToNewLocation() {

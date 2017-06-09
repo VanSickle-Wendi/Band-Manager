@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Wendi
  */
 public class AssetMenuView {
-    
+
     private String menu;
     private String promptMessage;
 
@@ -26,12 +26,12 @@ public class AssetMenuView {
                 + "\nV -- Purchase / Upgrade Vehicle"
                 + "\nP -- View Performance Points"
                 + "\nQ -- Quit the Asset Menu"
-                + "\n-------------------------------------------------";     
-        
-        this.promptMessage = "\nPlease choose an Asset Menu option: ";        
-        
-    } 
-    
+                + "\n-------------------------------------------------";
+
+        this.promptMessage = "\nPlease choose an Asset Menu option: ";
+
+    }
+
     public void displayAssetMenuView() {
 
         boolean done = false; // set flag to not done
@@ -48,7 +48,7 @@ public class AssetMenuView {
 
         } while (!done);
     }
-    
+
     private String getMenuOption() {
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         String value = ""; // value to be returned
@@ -95,7 +95,7 @@ public class AssetMenuView {
         }
 
         return false;
-    }    
+    }
 
     private void viewCurrentAssets() {
         System.out.println("*** viewCurrentAssets function called ***");
@@ -112,5 +112,5 @@ public class AssetMenuView {
     private void viewPerformancePoints() {
         System.out.println("*** viewPerformancePoints function called ***");
     }
-    
+
 }

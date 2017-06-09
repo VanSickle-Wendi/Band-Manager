@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @author Wendi
  */
 public class AuditionMenuView {
-    
+
     private String menu;
     private String promptMessage;
     private AuditionControl auditionControl;
@@ -34,19 +34,18 @@ public class AuditionMenuView {
                 + "\nK -- Audition a Keyboard Player"
                 + "\nC -- Calculate Audition Points"
                 + "\nQ -- Quit the Audition Menu"
-                + "\n-------------------------------------------------";     
-        
-        this.promptMessage = "\nChoose a band member to audition: ";  
-        
+                + "\n-------------------------------------------------";
+
+        this.promptMessage = "\nChoose a band member to audition: ";
+
         auditionControl = new AuditionControl();
-        
-    } 
+
+    }
 
     public void setGame(Game game) {
         this.game = game;
     }
-    
-    
+
     public void displayAuditionMenuView() {
 
         boolean done = false; // set flag to not done
@@ -63,7 +62,7 @@ public class AuditionMenuView {
 
         } while (!done);
     }
-    
+
     private String getMenuOption() {
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         String value = ""; // value to be returned
@@ -107,7 +106,7 @@ public class AuditionMenuView {
                 break;
             case "C": // Calculate Audition Points
                 this.calculateBandAuditionPoints();
-                break;                
+                break;
             case "Q": // Quit
                 return true;
             default:
@@ -116,7 +115,7 @@ public class AuditionMenuView {
         }
 
         return false;
-    }    
+    }
 
     private String getUserInput(String prompt) {
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
@@ -136,22 +135,22 @@ public class AuditionMenuView {
         }
 
         return value; // return the value entered
-    }    
-    
+    }
+
     private void auditionDrummer() {
-        String drummersName = getUserInput("What is your drummer's name?"); 
+        String drummersName = getUserInput("What is your drummer's name?");
         String drummersIssue = getUserInput("What is your drummer's issue?");
-        
+
         BandMember drummer = auditionControl.createBandMember("Drummer", drummersName, drummersIssue);
         game.getTheBand().setDrummer(drummer);
-    
+
         System.out.println(drummer);
     }
 
     private void auditionSinger() {
-        String singersName = getUserInput("What is your singer's name?"); 
+        String singersName = getUserInput("What is your singer's name?");
         String singersIssue = getUserInput("What is your singer's issue?");
-        
+
         BandMember singer = auditionControl.createBandMember("Singer", singersName, singersIssue);
         game.getTheBand().setSinger(singer);
 
@@ -159,9 +158,9 @@ public class AuditionMenuView {
     }
 
     private void auditionGuitarPlayer() {
-        String guitarPlayersName = getUserInput("What is your guitar player's name?"); 
+        String guitarPlayersName = getUserInput("What is your guitar player's name?");
         String guitarPlayersIssue = getUserInput("What is your guitar player's issue?");
-        
+
         BandMember guitarPlayer = auditionControl.createBandMember("Guitar Player", guitarPlayersName, guitarPlayersIssue);
         game.getTheBand().setGuitarPlayer(guitarPlayer);
 
@@ -169,9 +168,9 @@ public class AuditionMenuView {
     }
 
     private void auditionBassPlayer() {
-        String bassPlayersName = getUserInput("What is your bass player's name?"); 
+        String bassPlayersName = getUserInput("What is your bass player's name?");
         String bassPlayersIssue = getUserInput("What is your bass player's issue?");
-        
+
         BandMember bassPlayer = auditionControl.createBandMember("Bass Player", bassPlayersName, bassPlayersIssue);
         game.getTheBand().setBassPlayer(bassPlayer);
 
@@ -179,9 +178,9 @@ public class AuditionMenuView {
     }
 
     private void auditionKeyboardPlayer() {
-        String keyboardPlayersName = getUserInput("What is your keyboard player's name?"); 
+        String keyboardPlayersName = getUserInput("What is your keyboard player's name?");
         String keyboardPlayersIssue = getUserInput("What is your keyboard player's issue?");
-        
+
         BandMember keyboardPlayer = auditionControl.createBandMember("Keyboard Player", keyboardPlayersName, keyboardPlayersIssue);
         game.getTheBand().setKeyboardPlayer(keyboardPlayer);
 
@@ -191,6 +190,5 @@ public class AuditionMenuView {
     private void calculateBandAuditionPoints() {
         System.out.println("*** calculateBandAuditionPoints function called ***");
     }
-    
-}
 
+}

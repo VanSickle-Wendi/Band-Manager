@@ -31,7 +31,7 @@ public class GameControl {
 
     public static Game createNewGame(Player player) {
         Game game = new Game();
-        
+
         //game.setPlayer(player); TODO create setPlayer() on Game class
         return game;
     }
