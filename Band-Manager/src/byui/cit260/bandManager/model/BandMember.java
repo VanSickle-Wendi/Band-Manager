@@ -88,8 +88,6 @@ public class BandMember implements Serializable {
     public String toString() {
         return "BandMember{" + "bandPosition=" + bandPosition + ", musicianName=" + musicianName + ", issueDescription=" + issueDescription + ", skillLevel=" + skillLevel + ", instrumentQuality=" + instrumentQuality + ", issueCost=" + issueCost + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -123,5 +121,5 @@ public class BandMember implements Serializable {
         }
         return true;
     }
-    
+
 }

@@ -136,7 +136,9 @@ public class BankMenuView {
     }
 
     private void payBand() {
-        System.out.println("*** payBand function called ***");
+        // display the pay band view
+        PayBandView bandSalary = new PayBandView();
+        bandSalary.displayPayBandView();
     }
 
     private void takeLoan() {

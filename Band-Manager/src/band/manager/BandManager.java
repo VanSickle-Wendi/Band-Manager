@@ -5,7 +5,6 @@
  */
 package band.manager;
 
-
 import byui.cit260.bandManager.model.BandMember;
 import byui.cit260.bandManager.model.BankScene;
 import byui.cit260.bandManager.model.Equipment;
