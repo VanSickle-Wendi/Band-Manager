@@ -32,7 +32,7 @@ public class BankMenuView {
                 + "\nQ -- Quit the Bank Menu"
                 + "\n-------------------------------------------------";
 
-        this.promptMessage = "\nPlease choose an Bank Menu option: ";
+        this.promptMessage = "\nPlease choose a Bank Menu option: ";
 
         bankControl = new BankingControl(); //Imported
 

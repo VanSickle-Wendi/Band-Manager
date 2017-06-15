@@ -82,7 +82,7 @@ public class MainMenuView extends MenuView {
 
         // display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 
 }
