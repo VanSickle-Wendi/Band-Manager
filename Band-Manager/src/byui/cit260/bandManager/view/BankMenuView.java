@@ -20,7 +20,7 @@ public class BankMenuView extends MenuView {
     private Game game;
 
     public BankMenuView() {
-        super   ("\n"
+           super( "\n"
                 + "\n-------------------------------------------------"
                 + "\n| Bank Menu                                      |"
                 + "\n-------------------------------------------------"

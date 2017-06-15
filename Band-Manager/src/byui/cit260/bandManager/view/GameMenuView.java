@@ -12,14 +12,14 @@ import java.util.Scanner;
  *
  * @author Crazian
  */
-public class GameMenuView {
+public class GameMenuView extends MenuView {
 
     private String menu;
     private String promptMessage;
     private Game game;
 
     public GameMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n| Game Menu                                      |"
                 + "\n-------------------------------------------------"
@@ -32,7 +32,7 @@ public class GameMenuView {
                 + "\nG -- Gig Performance"
                 + "\nV -- View Band Members and Status"
                 + "\nQ -- Quit the Game Menu"
-                + "\n-------------------------------------------------";
+                + "\n-------------------------------------------------");
 
         this.promptMessage = "\nPlease choose a Game Menu option: ";
 
@@ -42,49 +42,11 @@ public class GameMenuView {
         this.game = game;
     }
 
-    public void displayGameMenuView() {
+    public boolean doAction(String value) {
 
-        boolean done = false; // set flag to not done
-        do {
-            System.out.println(menu);
-            // prompt for and get menu option
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-            {
-                return; //exit the game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
+        value = value.toUpperCase(); // convert choice to upper case
 
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; // initialize to not valid
-
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
-
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-
-            }
-            valid = true; // End the loop
-        }
-        return value; // return the value entered
-    }
-
-    public boolean doAction(String choice) {
-
-        choice = choice.toUpperCase(); // convert choice to upper case
-
-        switch (choice) {
+        switch (value) {
             case "M": // View Map
                 this.viewMap();
                 break;
