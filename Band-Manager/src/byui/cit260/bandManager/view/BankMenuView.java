@@ -13,15 +13,14 @@ import java.util.Scanner;
  *
  * @author Crazian
  */
-public class BankMenuView {
+public class BankMenuView extends MenuView {
 
-    private String menu;
     private String promptMessage;
     private BankingControl bankControl;
     private Game game;
 
     public BankMenuView() {
-        this.menu = "\n"
+        super   ("\n"
                 + "\n-------------------------------------------------"
                 + "\n| Bank Menu                                      |"
                 + "\n-------------------------------------------------"
@@ -30,7 +29,7 @@ public class BankMenuView {
                 + "\nL -- Check loan status/make payment"
                 + "\nP -- Pay Band Salary"
                 + "\nQ -- Quit the Bank Menu"
-                + "\n-------------------------------------------------";
+                + "\n-------------------------------------------------");
 
         this.promptMessage = "\nPlease choose a Bank Menu option: ";
 
@@ -41,50 +40,13 @@ public class BankMenuView {
     public void setGame(Game game) {
         this.game = game;
     }
+    
+    @Override
+    public boolean doAction(String value) {
 
-    public void displayBankMenuView() {
+        value = value.toUpperCase(); // convert choice to upper case
 
-        boolean done = false; // set flag to not done
-        do {
-            System.out.println(menu);
-            // prompt for and get menu option
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-            {
-                return; //exit the game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; // initialize to not valid
-
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
-
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-
-            }
-            valid = true; // End the loop
-        }
-        return value; // return the value entered
-    }
-
-    public boolean doAction(String choice) {
-
-        choice = choice.toUpperCase(); // convert choice to upper case
-
-        switch (choice) {
+        switch (value) {
             case "B": // View Bank Account Contents
                 this.viewBankAccount();
                 break;
@@ -105,26 +67,6 @@ public class BankMenuView {
         }
 
         return false;
-    }
-
-    private String getUserInput(int prompt) {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; // initialize to not valid
-
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + prompt);
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break; // end the loop
-        }
-
-        return value; // return the value entered
     }
 
     private void viewBankAccount() {
