@@ -132,7 +132,7 @@ public class GameMenuView {
     private void viewBankMenu() {
         // display the Bank menu
         BankMenuView bankMenu = new BankMenuView();
-        bankMenu.displayBankMenuView();
+        bankMenu.display();
     }
 
     private void holdAuditions() {
