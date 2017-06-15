@@ -126,7 +126,7 @@ public class GameMenuView {
     private void viewAssetMenu() {
         // display the asset menu
         AssetMenuView assetMenu = new AssetMenuView();
-        assetMenu.displayAssetMenuView();
+        assetMenu.display();
     }
 
     private void viewBankMenu() {
