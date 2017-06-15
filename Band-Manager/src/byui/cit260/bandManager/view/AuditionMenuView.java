@@ -33,9 +33,8 @@ public class AuditionMenuView extends MenuView {
                 + "\nK -- Audition a Keyboard Player"
                 + "\nC -- Calculate Audition Points"
                 + "\nQ -- Quit the Audition Menu"
-                + "\n-------------------------------------------------");
-
-        this.promptMessage = "\nChoose a band member to audition: ";
+                + "\n-------------------------------------------------"
+                + "\nChoose a band member to audition: ");
 
         auditionControl = new AuditionControl();
 

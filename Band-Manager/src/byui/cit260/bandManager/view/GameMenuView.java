@@ -32,9 +32,8 @@ public class GameMenuView extends MenuView {
                 + "\nG -- Gig Performance"
                 + "\nV -- View Band Members and Status"
                 + "\nQ -- Quit the Game Menu"
-                + "\n-------------------------------------------------");
-
-        this.promptMessage = "\nPlease choose a Game Menu option: ";
+                + "\n-------------------------------------------------"
+                + "\nPlease choose a Game Menu option: ");
 
     }
 
@@ -42,6 +41,7 @@ public class GameMenuView extends MenuView {
         this.game = game;
     }
 
+    @Override
     public boolean doAction(String value) {
 
         value = value.toUpperCase(); // convert choice to upper case

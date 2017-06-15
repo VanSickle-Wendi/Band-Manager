@@ -24,9 +24,8 @@ public class HelpMenuView extends MenuView {
                 + "\nL -- How to make payments or pay off the loan"
                 + "\nU -- How to upgrade instruments/equipment"
                 + "\nQ -- Quit the Help Menu"
-                + "\n-------------------------------------------------");
-
-        this.promptMessage = "\nPlease choose a Help Menu option: ";
+                + "\n-------------------------------------------------"
+                + "\nPlease choose a Help Menu option: ");
     }
     
     @Override

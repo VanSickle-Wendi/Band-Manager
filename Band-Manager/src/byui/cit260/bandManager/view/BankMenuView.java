@@ -29,9 +29,8 @@ public class BankMenuView extends MenuView {
                 + "\nL -- Check loan status/make payment"
                 + "\nP -- Pay Band Salary"
                 + "\nQ -- Quit the Bank Menu"
-                + "\n-------------------------------------------------");
-
-        this.promptMessage = "\nPlease choose a Bank Menu option: ";
+                + "\n-------------------------------------------------"
+                + "\nPlease choose a Bank Menu option: ");
 
         bankControl = new BankingControl(); //Imported
 

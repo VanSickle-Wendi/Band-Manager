@@ -20,7 +20,7 @@ public class MainMenuView extends MenuView {
     private Game game;
 
     public MainMenuView() {
-            super("\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n| Main Menu                                     |"
                 + "\n-------------------------------------------------"
@@ -29,9 +29,8 @@ public class MainMenuView extends MenuView {
                 + "\nH -- Help on how to play the game"
                 + "\nS -- Save game"
                 + "\nQ -- Quit and Exit Game"
-                + "\n-------------------------------------------------");
-
-        this.promptMessage = "\nPlease choose a Main Menu option: ";
+                + "\n-------------------------------------------------"
+                + "\nPlease choose a Main Menu option: ");
     }
 
     @Override

@@ -25,9 +25,8 @@ public class AssetMenuView extends MenuView {
                 + "\nV -- Purchase / Upgrade Vehicle"
                 + "\nP -- View Performance Points"
                 + "\nQ -- Quit the Asset Menu"
-                + "\n-------------------------------------------------");
-
-        this.promptMessage = "\nPlease choose an Asset Menu option: ";
+                + "\n-------------------------------------------------"
+                + "\nPlease choose an Asset Menu option: ");
 
     }
 
