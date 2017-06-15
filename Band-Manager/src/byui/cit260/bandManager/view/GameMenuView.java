@@ -139,7 +139,7 @@ public class GameMenuView {
         // display the audition menu
         AuditionMenuView auditionMenu = new AuditionMenuView();
         auditionMenu.setGame(game);
-        auditionMenu.displayAuditionMenuView();
+        auditionMenu.display();
     }
 
     private void travelToNewLocation() {
