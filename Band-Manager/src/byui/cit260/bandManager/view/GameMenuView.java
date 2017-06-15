@@ -80,6 +80,7 @@ public class GameMenuView {
         return value; // return the value entered
     }
 
+    
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); // convert choice to upper case

@@ -45,6 +45,7 @@ public class AuditionMenuView extends MenuView {
         this.game = game;
     }
 
+    @Override
     public boolean doAction(String value) {
 
         value = value.toUpperCase(); // convert choice to upper case

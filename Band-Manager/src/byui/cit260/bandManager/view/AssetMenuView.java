@@ -31,6 +31,7 @@ public class AssetMenuView extends MenuView {
 
     }
 
+    @Override
     public boolean doAction(String value) {
 
         value = value.toUpperCase(); // convert choice to upper case
