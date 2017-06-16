@@ -13,21 +13,12 @@ import java.util.Scanner;
  *
  * @author shaza
  */
-public class StartProgramView {
+public class StartProgramView extends MenuView {
 
-    private String promptMessage;
+    //private String promptMessage;
 
     public StartProgramView() {
-
-        this.promptMessage = "\nPlease enter your name: ";
-
-        this.displayBanner();
-    }
-
-    private void displayBanner() {
-
-        System.out.println(
-                "\n                 Band Manager Game                            "
+            super("\n                 Band Manager Game                            "
                 + "\n**************************************************************"
                 + "\n*                                                            *"
                 + "\n* In this game you will take on the role of a band           *"
@@ -63,48 +54,13 @@ public class StartProgramView {
                 + "\n* ‘the big star party.’ Your accountant is there and         *"
                 + "\n* tells you your net worth and star status.                  *"
                 + "\n**************************************************************"
-        );
+                + "\n"
+                + "\nPlease enter your name: ");
 
     }
 
-    public void displayStartProgramView() {
-
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String playersName = this.getPlayersName();
-            if (playersName.toUpperCase().equals("Q")) // user wants to quit
-            {
-                return; // exit the game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(playersName);
-
-        } while (!done);
-    }
-
-    private String getPlayersName() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-        boolean valid = false; // initialize to not valid
-
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
-
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break; // end the loop
-        }
-
-        return value; // return the value entered
-    }
-
-    private boolean doAction(String playersName) {
+    @Override
+    public boolean doAction(String playersName) {
 
         if (playersName.length() < 2) {
             System.out.println("\nInvalid players name: "

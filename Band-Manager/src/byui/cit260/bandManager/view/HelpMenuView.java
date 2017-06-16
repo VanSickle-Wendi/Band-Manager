@@ -25,6 +25,7 @@ public class HelpMenuView extends MenuView {
                 + "\nU -- How to upgrade instruments/equipment"
                 + "\nQ -- Quit the Help Menu"
                 + "\n-------------------------------------------------"
+                + "\n"
                 + "\nPlease choose a Help Menu option: ");
     }
     

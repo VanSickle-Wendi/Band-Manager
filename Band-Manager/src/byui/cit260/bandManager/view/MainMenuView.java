@@ -30,6 +30,7 @@ public class MainMenuView extends MenuView {
                 + "\nS -- Save game"
                 + "\nQ -- Quit and Exit Game"
                 + "\n-------------------------------------------------"
+                + "\n"
                 + "\nPlease choose a Main Menu option: ");
     }
 

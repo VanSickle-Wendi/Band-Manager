@@ -34,6 +34,7 @@ public class AuditionMenuView extends MenuView {
                 + "\nC -- Calculate Audition Points"
                 + "\nQ -- Quit the Audition Menu"
                 + "\n-------------------------------------------------"
+                + "\n"
                 + "\nChoose a band member to audition: ");
 
         auditionControl = new AuditionControl();

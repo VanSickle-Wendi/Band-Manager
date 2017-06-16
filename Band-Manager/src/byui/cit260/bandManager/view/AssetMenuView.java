@@ -26,6 +26,7 @@ public class AssetMenuView extends MenuView {
                 + "\nP -- View Performance Points"
                 + "\nQ -- Quit the Asset Menu"
                 + "\n-------------------------------------------------"
+                + "\n"
                 + "\nPlease choose an Asset Menu option: ");
 
     }

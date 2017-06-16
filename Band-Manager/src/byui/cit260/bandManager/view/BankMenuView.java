@@ -30,6 +30,7 @@ public class BankMenuView extends MenuView {
                 + "\nP -- Pay Band Salary"
                 + "\nQ -- Quit the Bank Menu"
                 + "\n-------------------------------------------------"
+                + "\n"
                 + "\nPlease choose a Bank Menu option: ");
 
         bankControl = new BankingControl(); //Imported

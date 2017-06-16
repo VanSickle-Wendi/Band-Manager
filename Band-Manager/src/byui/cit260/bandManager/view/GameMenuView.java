@@ -33,6 +33,7 @@ public class GameMenuView extends MenuView {
                 + "\nV -- View Band Members and Status"
                 + "\nQ -- Quit the Game Menu"
                 + "\n-------------------------------------------------"
+                + "\n"
                 + "\nPlease choose a Game Menu option: ");
 
     }
