@@ -9,44 +9,33 @@ import java.util.Scanner;
 
 /**
  *
- * @author Wendi
+ * @author shaza
  */
-public abstract class MenuView implements ViewInterface {
-    
-    protected String promptMessage;
-    
-    public MenuView() {
+public abstract class InteractiveView implements ViewInterface {
+
+    public InteractiveView() {
+
     }
-    
-    public MenuView(String message) {
-        this.promptMessage = message;
-    }
-    
+
     @Override
     public void display() {
 
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get menu option
-            String value = this.getInput();
-            if (value.toUpperCase().equals("Q")) // user wants to quit
-            {
-                return; //exit the game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(value);
-
-        } while (!done);
     }
 
     @Override
     public String getInput() {
+
+        return null; 
+    }
+    
+    @Override
+    public String getInput(String prompt) {
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = null; // value to be returned
+        String value = ""; // value to be returned
         boolean valid = false; // initialize to not valid
 
         while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
+            System.out.println("\n" + prompt);
 
             value = keyboard.nextLine(); // get next line typed on keyboard
             value = value.trim(); // trim off leading and trailing blanks
@@ -56,14 +45,16 @@ public abstract class MenuView implements ViewInterface {
                 continue;
 
             }
-            valid = true; // End the loop Brother Anderson suggested this instead of break
+            valid = true; // End the loop
         }
         return value; // return the value entered
-    }    
+    }
     
-    @Override
-    public String getInput(String prompt) {
-
-        return null;
-}
+   /* public double getDouble(String prompt) {
+        String number = getInput(prompt);
+        
+        return Double.parseDouble(number);
+        
+        
+    }*/
 }

@@ -80,7 +80,7 @@ public class BankMenuView extends MenuView {
     private void payBand() {
         // display the pay band view
         PayBandView bandSalary = new PayBandView();
-        bandSalary.displayPayBandView();
+        bandSalary.display();
     }
 
     private void takeLoan() {
