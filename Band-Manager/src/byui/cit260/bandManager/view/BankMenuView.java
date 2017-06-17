@@ -74,7 +74,8 @@ public class BankMenuView extends MenuView {
     }
 
     private void checkLoanStatusPayLoan() {
-        System.out.println("*** checkLoanStatusPayLoan function called ***");
+        LoanPaymentView loanPay = new LoanPaymentView();
+        loanPay.display();
     }
 
     private void payBand() {
