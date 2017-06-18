@@ -13,16 +13,12 @@ import java.util.Scanner;
  * @author shaza
  */
 public class HotelCheckInView extends InteractiveView {
+    
+    private String display;
 
     public HotelCheckInView() {
 
-        this.displayBanner();
-
-    }
-
-    private void displayBanner() {
-
-        System.out.println("\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  You are at the Hotel                         |"
                 + "\n-------------------------------------------------"
