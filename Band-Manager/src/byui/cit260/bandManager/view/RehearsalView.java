@@ -15,12 +15,15 @@ import java.util.Scanner;
  * @author Wendi
  */
 public class RehearsalView extends InteractiveView {
-    
-    private String display;    
+        
     private Game game;    
 
     public RehearsalView() {
-            super("\n"
+        this.displayBanner();
+    }
+    
+    private void displayBanner(){
+        System.out.println("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  Welcome to rehearsal as a full band!          |"
                 + "\n-------------------------------------------------"
