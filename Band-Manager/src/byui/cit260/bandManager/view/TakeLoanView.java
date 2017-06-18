@@ -13,16 +13,12 @@ import java.util.Scanner;
  * @author Crazian
  */
 public class TakeLoanView extends InteractiveView {
+    private String display;
+    
 
     public TakeLoanView() {
 
-        this.displayBanner();
-
-    }
-
-    private void displayBanner() {
-
-        System.out.println("\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  It's time to get a loan                      |"
                 + "\n-------------------------------------------------"
