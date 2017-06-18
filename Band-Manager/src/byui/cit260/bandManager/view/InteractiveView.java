@@ -12,11 +12,16 @@ import java.util.Scanner;
  * @author shaza
  */
 public abstract class InteractiveView implements ViewInterface {
+    
+    protected String display;    
 
     public InteractiveView() {
-
     }
 
+    public InteractiveView(String interactiveMessage) {
+        display = interactiveMessage;
+    }
+    
     @Override
     public void display() {
 
