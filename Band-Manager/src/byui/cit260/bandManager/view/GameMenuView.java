@@ -110,7 +110,8 @@ public class GameMenuView extends MenuView {
     }
 
     private void checkInHotel() {
-        System.out.println("*** checkInHotel function called ***");
+        HotelCheckInView checkIn = new HotelCheckInView();
+        checkIn.display();
     }
 
     private void gigPerformance() {

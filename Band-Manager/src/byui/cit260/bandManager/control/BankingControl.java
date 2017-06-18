@@ -72,4 +72,17 @@ public class BankingControl {
 
         return newVehicleCost;
     }
+
+    public double calcHotelCost(double roomcharge, double bankAccount, double quantity) {
+
+        if (roomcharge > bankAccount) {
+
+            return -999;
+
+        }
+        double newAccountBalance = (bankAccount) - (quantity * roomcharge);
+        return newAccountBalance;
+
+    }
+
 }
