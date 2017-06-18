@@ -49,4 +49,8 @@ public class PerformanceControl {
 
         return auditionPoints;
     }
+    
+    public void firstRehearsal() {
+        System.out.println("*** firstRehearsal function called ***");
+    }    
 }
