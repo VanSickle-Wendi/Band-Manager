@@ -16,17 +16,11 @@ import java.util.Scanner;
  */
 public class RehearsalView extends InteractiveView {
     
+    private String display;    
     private Game game;    
 
     public RehearsalView() {
-
-        this.displayBanner();
-
-    }
-
-    private void displayBanner() {
-
-        System.out.println("\n"
+            super("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  Welcome to rehearsal as a full band!          |"
                 + "\n-------------------------------------------------"
