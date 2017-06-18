@@ -13,12 +13,16 @@ import java.util.Scanner;
  * @author shaza
  */
 public class PayBandView extends InteractiveView {
-    
-    private String display;
 
     public PayBandView() {
 
-        super("\n"
+        this.displayBanner();
+
+    }
+
+    private void displayBanner() {
+
+        System.out.println("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  It's time to pay the band                     |"
                 + "\n-------------------------------------------------"
@@ -28,10 +32,12 @@ public class PayBandView extends InteractiveView {
         );
     }
 
+    @Override
     public void display() {
         doAction(null);
     }
 
+    @Override
     public boolean doAction(String value) {
         // prompt user for 5 inputs, change the user input from String to double
         double venuePayment = Double.parseDouble(getInput("How much did you get paid?"));

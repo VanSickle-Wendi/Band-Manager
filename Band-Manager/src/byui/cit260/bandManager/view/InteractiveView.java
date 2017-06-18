@@ -13,13 +13,15 @@ import java.util.Scanner;
  */
 public abstract class InteractiveView implements ViewInterface {
     
-    protected String display;    
+    protected String display;
 
     public InteractiveView() {
-    }
 
-    public InteractiveView(String interactiveMessage) {
-        display = interactiveMessage;
+    }
+    
+        public InteractiveView(String interactiveMessage) {
+            display = interactiveMessage;
+
     }
     
     @Override
