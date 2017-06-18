@@ -85,16 +85,10 @@ public class BankMenuView extends MenuView {
     }
 
     private void takeLoan() {
-        int loanAmount = -1;
-        Scanner userInput = new Scanner(System.in);
-        while (loanAmount < 500 || loanAmount > 25000) {
-            System.out.println("Please enter a number that is between $500.00 and $25000.00");
-            while (!userInput.hasNextInt()) {
-                userInput.next();
-            }
-            loanAmount = userInput.nextInt();
+        TakeLoanView loan = new TakeLoanView();
+        loan.display();
         }
 
     }
 
-}
+
