@@ -52,5 +52,8 @@ public class PerformanceControl {
     
     public void firstRehearsal() {
         System.out.println("*** firstRehearsal function called ***");
+    } 
+    public void radioInterviewResult() {
+        System.out.println("*** radioInterviewResult function called ***");
     }    
 }
