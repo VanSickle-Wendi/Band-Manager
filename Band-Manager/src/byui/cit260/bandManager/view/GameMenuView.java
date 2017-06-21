@@ -28,6 +28,7 @@ public class GameMenuView extends MenuView {
                 + "\nB -- Bank Menu"
                 + "\nH -- Hold Auditions"
                 + "\nR -- Rehearsal"
+                + "\nI -- Radio Interview "
                 + "\nT -- Travel to a New Location"
                 + "\nC -- Check into a New Hotel"
                 + "\nG -- Gig Performance"
@@ -63,7 +64,10 @@ public class GameMenuView extends MenuView {
                 break;
             case "R": // Hold Auditions
                 this.rehearsal();
-                break;                
+                break;         
+            case "I": // Hold Auditions
+                this.radio();
+                break; 
             case "T": // Travel to New Location
                 this.travelToNewLocation();
                 break;
@@ -115,6 +119,12 @@ public class GameMenuView extends MenuView {
         onlyRehearsal.display();
     }   
 
+    private void radio() {
+        // display the RehearsalView
+        RadioInterview onlyRadio = new RadioInterview();
+        onlyRadio.display();
+    }   
+    
     private void travelToNewLocation() {
         System.out.println("*** travelToNewLocation function called ***");
     }
