@@ -12,18 +12,18 @@ import java.util.Scanner;
  * @author shaza
  */
 public abstract class InteractiveView implements ViewInterface {
-    
+
     protected String display;
 
     public InteractiveView() {
 
     }
-    
-        public InteractiveView(String interactiveMessage) {
-            display = interactiveMessage;
 
+    public InteractiveView(String message) {
+        this.display = message;
+        System.out.println(message);
     }
-    
+
     @Override
     public void display() {
 
@@ -32,9 +32,9 @@ public abstract class InteractiveView implements ViewInterface {
     @Override
     public String getInput() {
 
-        return null; 
+        return null;
     }
-    
+
     @Override
     public String getInput(String prompt) {
         Scanner keyboard = new Scanner(System.in); // get infile for keyboard
@@ -56,8 +56,8 @@ public abstract class InteractiveView implements ViewInterface {
         }
         return value; // return the value entered
     }
-    
-   /* public double getDouble(String prompt) {
+
+    /* public double getDouble(String prompt) {
         String number = getInput(prompt);
         
         return Double.parseDouble(number);
