@@ -6,6 +6,7 @@
 package byui.cit260.bandManager.view;
 
 import byui.cit260.bandManager.control.BankingControl;
+import byui.cit260.bandManager.model.Game;
 import java.util.Scanner;
 
 /**
@@ -13,6 +14,8 @@ import java.util.Scanner;
  * @author shaza
  */
 public class LoanPaymentView extends InteractiveView {
+
+    private Game game;
 
     public LoanPaymentView() {
 
@@ -31,7 +34,12 @@ public class LoanPaymentView extends InteractiveView {
                 + "\n-------------------------------------------------"
         );
     }
-
+    
+    public void setGame(Game game) {
+        this.game = game;
+    }  
+    
+    @Override
     public void display() {
         doAction(null);
     }

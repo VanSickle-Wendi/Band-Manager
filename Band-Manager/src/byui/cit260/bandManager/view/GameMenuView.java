@@ -34,7 +34,8 @@ public class GameMenuView extends MenuView {
                 + "\nS -- Star Party"                 
                 + "\nN -- Travel to a New Location"
                 + "\nC -- Check into a New Hotel"
-                + "\nG -- Gig Performance"
+                + "\nG -- Big Gig Performance"
+                + "\nJ -- Small Gig Performance"
                 + "\nV -- View Band Members and Status"
                 + "\nQ -- Quit the Game Menu"
                 + "\n-------------------------------------------------"
@@ -86,9 +87,12 @@ public class GameMenuView extends MenuView {
             case "C": // Check into hotel
                 this.checkInHotel();
                 break;
-            case "G": // Gig Performance
-                this.gigPerformance();
+            case "G": // Biggig Performance
+                this.bigGigPerformance();
                 break;
+            case "J": // SmallGig Performance
+                this.smallGigPerformance();
+                break;    
             case "V": // View band members and status
                 this.bandMemberStatus();
                 break;
@@ -164,8 +168,13 @@ public class GameMenuView extends MenuView {
         checkIn.display();
     }
 
-    private void gigPerformance() {
-        System.out.println("*** gigPerformance function called ***");
+    private void smallGigPerformance() {
+        SmallGigView checkIn = new SmallGigView();
+        checkIn.display();
+    }
+     private void bigGigPerformance() {
+        BigGigView checkIn = new BigGigView();
+        checkIn.display();
     }
 
     private void bandMemberStatus() {

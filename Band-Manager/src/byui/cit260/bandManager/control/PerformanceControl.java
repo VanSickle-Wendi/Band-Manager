@@ -62,4 +62,12 @@ public class PerformanceControl {
     public void movieResults() {
         System.out.println("*** movieResult function called ***");
     }
+
+    public void smallgGigResult() {
+         System.out.println("*** smallGig function called ***");
+    }
+
+    public void bigGigResult() {
+        System.out.println("*** Gig function called ***");
+    }
 }
