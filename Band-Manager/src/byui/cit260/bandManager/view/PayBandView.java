@@ -14,15 +14,10 @@ import java.util.Scanner;
  */
 public class PayBandView extends InteractiveView {
 
+
     public PayBandView() {
 
-        this.displayBanner();
-
-    }
-
-    private void displayBanner() {
-
-        System.out.println("\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  It's time to pay the band                     |"
                 + "\n-------------------------------------------------"

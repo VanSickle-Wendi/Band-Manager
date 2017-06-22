@@ -13,16 +13,9 @@ import java.util.Scanner;
  * @author shaza
  */
 public class HotelCheckInView extends InteractiveView {
-
     public HotelCheckInView() {
 
-        this.displayBanner();
-
-    }
-
-    private void displayBanner() {
-
-        System.out.println("\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  You are at the Hotel                         |"
                 + "\n-------------------------------------------------"
@@ -44,7 +37,7 @@ public class HotelCheckInView extends InteractiveView {
         double quantity = Double.parseDouble(getInput("How many rooms would you like to rent?"));
         double roomCharge = Double.parseDouble(getInput("Enter the cost of the rooms you would like to rent."));
         double bankAccount = Double.parseDouble(getInput("How much is in your bank account?"));
-       
+
         // new instance of BankingControl class
         BankingControl hotel = new BankingControl();
 
@@ -52,11 +45,12 @@ public class HotelCheckInView extends InteractiveView {
 
         if (payHotelCost == -999) {
             System.out.println("\nYou don't have enough for that purchase, try again.");
-            
-        }else
-            System.out.println("\nYou have " + payHotelCost + "left in your bank account");
-        
-        return true;
+
+        } else {
+            System.out.println("\nYou have " + payHotelCost + " left in your bank account");
         }
+
+        return true;
+    }
 
 }
