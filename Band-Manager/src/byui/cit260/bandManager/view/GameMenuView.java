@@ -29,7 +29,9 @@ public class GameMenuView extends MenuView {
                 + "\nH -- Hold Auditions"
                 + "\nR -- Rehearsal"
                 + "\nI -- Radio Interview"
-                + "\nT -- TV Appearance"                
+                + "\nT -- TV Appearance"
+                + "\nF -- Movie Cameo"
+                + "\nS -- Star Party"                 
                 + "\nN -- Travel to a New Location"
                 + "\nC -- Check into a New Hotel"
                 + "\nG -- Gig Performance"
@@ -71,6 +73,12 @@ public class GameMenuView extends MenuView {
                 break;
             case "T": // TV Appearance
                 this.tv();
+                break;
+            case "F": // Movie Cameo
+                this.movie();
+                break;
+            case "S": // Star Party
+                this.star();
                 break;                 
             case "N": // Travel to New Location
                 this.travelToNewLocation();
@@ -124,16 +132,28 @@ public class GameMenuView extends MenuView {
     }   
 
     private void radio() {
-        // display the RehearsalView
+        // display the RadioInterview
         RadioInterview onlyRadio = new RadioInterview();
         onlyRadio.display();
     }
     
     private void tv() {
-        // display the RehearsalView
+        // display the TVAppearanceView
         TVAppearanceView onlyTV = new TVAppearanceView();
         onlyTV.display();
-    }    
+    } 
+    
+    private void movie() {
+        // display the MovieCameoView
+        MovieCameoView onlyMovie = new MovieCameoView();
+        onlyMovie.display();
+    }
+    
+    private void star() {
+        // display the StarPartyView
+        StarPartyView onlyStar = new StarPartyView();
+        onlyStar.display();
+    }     
     
     private void travelToNewLocation() {
         System.out.println("*** travelToNewLocation function called ***");

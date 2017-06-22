@@ -59,4 +59,7 @@ public class PerformanceControl {
     public void tvAppearanceResult() {
         System.out.println("*** tvAppearanceResult function called ***");
     }
+    public void movieResults() {
+        System.out.println("*** movieResult function called ***");
+    }
 }

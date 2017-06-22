@@ -21,7 +21,7 @@ public class TVAppearanceView extends InteractiveView {
     public TVAppearanceView() {
         super("\n"
                 + "\n--------------------------------------------------"
-                + "\n|  Welcome to you TV Appearance!                  |"
+                + "\n|  Welcome to your TV Appearance!                 |"
                 + "\n--------------------------------------------------"
                 + "\n   This is the bands big chance to be seen by     "
                 + "\n   millions. Is everyone ready for their close up?"

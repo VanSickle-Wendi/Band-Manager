@@ -36,4 +36,8 @@ public class GameControl {
         return game;
     }
 
+    public void finalNetWorth() {
+        System.out.println("*** finalNetWorth function called ***");
+    }
+
 }
