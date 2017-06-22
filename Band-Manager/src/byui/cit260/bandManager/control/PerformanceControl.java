@@ -56,4 +56,7 @@ public class PerformanceControl {
     public void radioInterviewResult() {
         System.out.println("*** radioInterviewResult function called ***");
     }    
+    public void tvAppearanceResult() {
+        System.out.println("*** tvAppearanceResult function called ***");
+    }
 }

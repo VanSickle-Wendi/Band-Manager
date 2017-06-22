@@ -28,10 +28,12 @@ public class HotelCheckInView extends InteractiveView {
         );
     }
 
+    @Override
     public void display() {
         doAction(null);
     }
 
+    @Override
     public boolean doAction(String value) {
         // prompt user for 5 inputs, change the user input from String to double
         double quantity = Double.parseDouble(getInput("How many rooms would you like to rent?"));
