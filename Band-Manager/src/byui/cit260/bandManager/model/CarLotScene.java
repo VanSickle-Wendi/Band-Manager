@@ -12,16 +12,15 @@ import java.io.Serializable;
  * @author Crazian
  */
 public class CarLotScene implements Serializable {
-    
-    
+
     public CarLotScene() {
-        
-    Vehicle[] LevelOneVehicle = new Vehicle[3];
-    
-    LevelOneVehicle[0] = new Vehicle (VehicleType.LevelOneVehicle, "Volkswagen Bus", 5000.00, 30);
-    LevelOneVehicle[1] = new Vehicle(VehicleType.LevelOneVehicle, "Conversion Van", 5000.00, 30);
-    LevelOneVehicle[2] = new Vehicle(VehicleType.LevelOneVehicle, "Mini Van", 5000.00, 30);
-        
+
+        Vehicle[] LevelOneVehicle = new Vehicle[3];
+
+        LevelOneVehicle[0] = new Vehicle(VehicleType.LevelOneVehicle, "Volkswagen Bus", 5000.00, 30);
+        LevelOneVehicle[1] = new Vehicle(VehicleType.LevelOneVehicle, "Conversion Van", 5000.00, 30);
+        LevelOneVehicle[2] = new Vehicle(VehicleType.LevelOneVehicle, "Mini Van", 5000.00, 30);
+
     }
-    
+
 }

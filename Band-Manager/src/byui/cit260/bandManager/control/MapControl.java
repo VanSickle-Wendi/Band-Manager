@@ -44,7 +44,7 @@ public class MapControl {
         locations[22] = new Location("Level 4 Small Gig");
         locations[23] = new Location("Level 4 Small Gig");
         locations[24] = new Location("Star Party");        
-        
+               
         //assignScenesToLocations(locations);
         
         return map;
