@@ -104,7 +104,7 @@ public class AuditionMenuView extends MenuView {
         String drummersIssue = getUserInput("What is your drummer's issue?");
 
         BandMember drummer = auditionControl.createBandMember("Drummer", drummersName, drummersIssue);
-        game.getTheBand().setDrummer(drummer);
+        game.getBand().setDrummer(drummer);
 
         System.out.println(drummer);
     }
@@ -114,7 +114,7 @@ public class AuditionMenuView extends MenuView {
         String singersIssue = getUserInput("What is your singer's issue?");
 
         BandMember singer = auditionControl.createBandMember("Singer", singersName, singersIssue);
-        game.getTheBand().setSinger(singer);
+        game.getBand().setSinger(singer);
 
         System.out.println(singer);
     }
@@ -124,7 +124,7 @@ public class AuditionMenuView extends MenuView {
         String guitarPlayersIssue = getUserInput("What is your guitar player's issue?");
 
         BandMember guitarPlayer = auditionControl.createBandMember("Guitar Player", guitarPlayersName, guitarPlayersIssue);
-        game.getTheBand().setGuitarPlayer(guitarPlayer);
+        game.getBand().setGuitarPlayer(guitarPlayer);
 
         System.out.println(guitarPlayer);
     }
@@ -134,7 +134,7 @@ public class AuditionMenuView extends MenuView {
         String bassPlayersIssue = getUserInput("What is your bass player's issue?");
 
         BandMember bassPlayer = auditionControl.createBandMember("Bass Player", bassPlayersName, bassPlayersIssue);
-        game.getTheBand().setBassPlayer(bassPlayer);
+        game.getBand().setBassPlayer(bassPlayer);
 
         System.out.println(bassPlayer);
     }
@@ -144,7 +144,7 @@ public class AuditionMenuView extends MenuView {
         String keyboardPlayersIssue = getUserInput("What is your keyboard player's issue?");
 
         BandMember keyboardPlayer = auditionControl.createBandMember("Keyboard Player", keyboardPlayersName, keyboardPlayersIssue);
-        game.getTheBand().setKeyboardPlayer(keyboardPlayer);
+        game.getBand().setKeyboardPlayer(keyboardPlayer);
 
         System.out.println(keyboardPlayer);
     }

@@ -15,20 +15,38 @@ import java.util.Objects;
 public class Game implements Serializable {
 
     // class instance variables
-    private Band theBand;
+    private Player player;
+    private Band band;
+    private Map map;
     private double totalMoney;
     private double totalPerformancePoints;
 
     public Game() {
-        theBand = new Band();
+        band = new Band();
     }
 
-    public Band getTheBand() {
-        return theBand;
+    public Player getPlayer() {
+        return player;
     }
 
-    public void setTheBand(Band theBand) {
-        this.theBand = theBand;
+    public void setPlayer(Player player) {
+        this.player = player;
+    }    
+
+    public Band getBand() {
+        return band;
+    }
+
+    public void setBand(Band band) {
+        this.band = band;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
 
     public double getTotalMoney() {
@@ -50,7 +68,7 @@ public class Game implements Serializable {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 67 * hash + Objects.hashCode(this.theBand);
+        hash = 67 * hash + Objects.hashCode(this.band);
         hash = 67 * hash + (int) (Double.doubleToLongBits(this.totalMoney) ^ (Double.doubleToLongBits(this.totalMoney) >>> 32));
         hash = 67 * hash + (int) (Double.doubleToLongBits(this.totalPerformancePoints) ^ (Double.doubleToLongBits(this.totalPerformancePoints) >>> 32));
         return hash;
@@ -58,7 +76,7 @@ public class Game implements Serializable {
 
     @Override
     public String toString() {
-        return "Game{" + "theBand=" + theBand + ", totalMoney=" + totalMoney + ", totalPerformancePoints=" + totalPerformancePoints + '}';
+        return "Game{" + "band=" + band + ", totalMoney=" + totalMoney + ", totalPerformancePoints=" + totalPerformancePoints + '}';
     }
 
     @Override
@@ -79,7 +97,7 @@ public class Game implements Serializable {
         if (Double.doubleToLongBits(this.totalPerformancePoints) != Double.doubleToLongBits(other.totalPerformancePoints)) {
             return false;
         }
-        if (!Objects.equals(this.theBand, other.theBand)) {
+        if (!Objects.equals(this.band, other.band)) {
             return false;
         }
         return true;

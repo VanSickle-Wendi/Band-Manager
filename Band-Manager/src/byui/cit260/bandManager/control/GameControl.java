@@ -7,6 +7,7 @@ package byui.cit260.bandManager.control;
 
 import band.manager.BandManager;
 import byui.cit260.bandManager.model.Game;
+import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.Player;
 
 /**
@@ -31,10 +32,20 @@ public class GameControl {
 
     public static Game createNewGame(Player player) {
         Game game = new Game();
+        BandManager.setCurrentGame(game); // save in BandMangager
+        
+        game.setPlayer(player); // save player in game        
 
-        //game.setPlayer(player); TODO create setPlayer() on Game class
+        // Create Instrument list and save in the game
+        // Create Vehicle list and save in the game   
+        
+
+        Map map = MapControl.createMap();
+        game.setMap(map);
+       
         return game;
     }
+    
 
     public void finalNetWorth() {
         System.out.println("*** finalNetWorth function called ***");

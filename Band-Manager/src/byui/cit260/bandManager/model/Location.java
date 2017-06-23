@@ -14,11 +14,27 @@ import java.io.Serializable;
 public class Location implements Serializable {
 
     // class instance variables
+    private String name;
     private double locationNumber;
     private double timesVisited;
+    private Scene scene;
+    private Band band;
 
     public Location() {
     }
+
+    public Location(String locationName) {
+        // convenience constructor
+        name = locationName;
+    }
+    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }    
 
     public double getLocationNumber() {
         return locationNumber;
@@ -35,6 +51,22 @@ public class Location implements Serializable {
     public void setTimesVisited(double timesVisited) {
         this.timesVisited = timesVisited;
     }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Band getBand() {
+        return band;
+    }
+
+    public void setBand(Band band) {
+        this.band = band;
+    }    
 
     @Override
     public int hashCode() {
