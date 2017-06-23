@@ -13,48 +13,52 @@ import java.io.Serializable;
  */
 public class Vehicle implements Serializable {
 
-    // class instance variables
-    private double vehicleLevel;
+    VehicleType type;
+    String description;
+    double price;
+    double performancePoints;
 
-    public Vehicle() {
+    // Constructor
+    public Vehicle(VehicleType typeOf, String descriptionOf, double priceOf,
+            double performPoints) {
+        
+        type = typeOf;
+        description = descriptionOf;
+        price = priceOf;
+        performancePoints = performPoints;
+
     }
 
-    public double getVehicleLevel() {
-        return vehicleLevel;
+    public VehicleType getType() {
+        return type;
     }
 
-    public void setVehicleLevel(double vehicleLevel) {
-        this.vehicleLevel = vehicleLevel;
+    public void setType(VehicleType type) {
+        this.type = type;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.vehicleLevel) ^ (Double.doubleToLongBits(this.vehicleLevel) >>> 32));
-        return hash;
+    public String getDescription() {
+        return description;
     }
 
-    @Override
-    public String toString() {
-        return "Vehicle{" + "vehicleLevel=" + vehicleLevel + '}';
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Vehicle other = (Vehicle) obj;
-        if (Double.doubleToLongBits(this.vehicleLevel) != Double.doubleToLongBits(other.vehicleLevel)) {
-            return false;
-        }
-        return true;
+    public double getPrice() {
+        return price;
     }
 
-}
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getPerformancePoints() {
+        return performancePoints;
+    }
+
+    public void setPerformancePoints(double performancePoints) {
+        this.performancePoints = performancePoints;
+    }
+  }
+
