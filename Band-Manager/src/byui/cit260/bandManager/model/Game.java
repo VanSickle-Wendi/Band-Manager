@@ -20,6 +20,8 @@ public class Game implements Serializable {
     private Map map;
     private double totalMoney;
     private double totalPerformancePoints;
+    private MusicStoreScene[] instruments;
+    private CarLotScene[] vehicles;
 
     public Game() {
         band = new Band();
@@ -65,6 +67,26 @@ public class Game implements Serializable {
         this.totalPerformancePoints = totalPerformancePoints;
     }
 
+    public MusicStoreScene[] getInstruments() {
+        return instruments;
+    }
+
+    public void setInstruments(MusicStoreScene[] instruments) {
+        this.instruments = instruments;
+    }
+
+    public CarLotScene[] getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(CarLotScene[] vehicles) {
+        this.vehicles = vehicles;
+    }
+
+
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 3;

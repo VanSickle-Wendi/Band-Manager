@@ -6,8 +6,11 @@
 package byui.cit260.bandManager.control;
 
 import band.manager.BandManager;
+import byui.cit260.bandManager.model.CarLotScene;
 import byui.cit260.bandManager.model.Game;
+import byui.cit260.bandManager.model.InstrumentType;
 import byui.cit260.bandManager.model.Map;
+import byui.cit260.bandManager.model.MusicStoreScene;
 import byui.cit260.bandManager.model.Player;
 
 /**
@@ -37,13 +40,31 @@ public class GameControl {
         game.setPlayer(player); // save player in game        
 
         // Create Instrument list and save in the game
-        // Create Vehicle list and save in the game   
+        MusicStoreScene[] instrumentList = GameControl.MusicStoreScene();
+        game.setInstruments(instrumentList);
+
+        // Create Vehicle list and save in the game  
+        
+        CarLotScene[] vehicleList = GameControl.CarLotScene();
+        game.setVehicles(vehicleList);
         
 
         Map map = MapControl.createMap();
         game.setMap(map);
+        
+        // move actors to starting position in the map. Do we need this? p15
        
         return game;
+    }
+   
+    public static MusicStoreScene[] MusicStoreScene() {
+        System.out.println("called MusicStoreScene");
+        return null;
+    }
+    
+    public static CarLotScene[] CarLotScene() {
+        System.out.println("called CarLotScene");
+        return null;
     }
     
 
