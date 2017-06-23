@@ -13,48 +13,52 @@ import java.io.Serializable;
  */
 public class Instrument implements Serializable {
 
-    // class instance variables
-    private double instrumentLevel;
+    InstrumentType type;
+    String description;
+    double price;
+    double performancePoints;
 
-    public Instrument() {
+    // Constructor
+    public Instrument(InstrumentType typeOf, String descriptionOf, double priceOf,
+            double performPoints) {
+        
+        type = typeOf;
+        description = descriptionOf;
+        price = priceOf;
+        performancePoints = performPoints;
+
     }
 
-    public double getInstrumentLevel() {
-        return instrumentLevel;
+    public InstrumentType getType() {
+        return type;
     }
 
-    public void setInstrumentLevel(double instrumentLevel) {
-        this.instrumentLevel = instrumentLevel;
+    public void setType(InstrumentType type) {
+        this.type = type;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.instrumentLevel) ^ (Double.doubleToLongBits(this.instrumentLevel) >>> 32));
-        return hash;
+    public String getDescription() {
+        return description;
     }
 
-    @Override
-    public String toString() {
-        return "Instrument{" + "instrumentLevel=" + instrumentLevel + '}';
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Instrument other = (Instrument) obj;
-        if (Double.doubleToLongBits(this.instrumentLevel) != Double.doubleToLongBits(other.instrumentLevel)) {
-            return false;
-        }
-        return true;
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getPerformancePoints() {
+        return performancePoints;
+    }
+
+    public void setPerformancePoints(double performancePoints) {
+        this.performancePoints = performancePoints;
     }
 
 }

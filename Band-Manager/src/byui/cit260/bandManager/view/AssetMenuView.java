@@ -64,7 +64,8 @@ public class AssetMenuView extends MenuView {
     }
 
     private void purchaseUpgradeInstruments() {
-        System.out.println("*** purchaseUpgradeInstruments function called ***");
+        BuyInstrumentView buyIt = new BuyInstrumentView();
+        buyIt.display();
     }
 
     private void purchaseUpgradeVehicle() {
