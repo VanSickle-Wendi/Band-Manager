@@ -49,12 +49,16 @@ public class GameControl {
         game.setVehicles(vehicleList);
         
 
-        Map map = MapControl.createMap();
-        game.setMap(map);
+       // Map map = MapControl.createMap();
+        //game.setMap(map);
         
         // move actors to starting position in the map. Do we need this? p15
        
         return game;
+    }
+    public static void createMap(Game game) {
+        Map map = MapControl.createMap();
+        game.setMap(map);    
     }
    
     public static MusicStoreScene[] MusicStoreScene() {

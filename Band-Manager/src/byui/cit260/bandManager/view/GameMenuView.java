@@ -107,7 +107,8 @@ public class GameMenuView extends MenuView {
     }
 
     private void viewMap() {
-        System.out.println("*** viewMap function called ***");
+        MapView showMap = new MapView();
+        showMap.displayMap();
     }
 
     private void viewAssetMenu() {
