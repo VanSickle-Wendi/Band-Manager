@@ -12,63 +12,29 @@ import java.util.Objects;
  *
  * @author shaza
  */
-public class Scene implements Serializable {
+public abstract class Scene {
 
     // class instance variables
-    private String sceneDescription;
-    private char symbol;
+    private String description;
+   // private char symbol;
 
     public Scene() {
     }
 
-    public String getSceneDescription() {
-        return sceneDescription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setSceneDescription(String sceneDescription) {
-        this.sceneDescription = sceneDescription;
+    public void setSceneDescription(String description) {
+        this.description = description;
     }
 
-    public char getSymbol() {
+   /* public char getSymbol() {
         return symbol;
     }
 
     public void setSymbol(char symbol) {
         this.symbol = symbol;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 31 * hash + Objects.hashCode(this.sceneDescription);
-        hash = 31 * hash + this.symbol;
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "Scene{" + "sceneDescription=" + sceneDescription + ", symbol=" + symbol + '}';
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Scene other = (Scene) obj;
-        if (this.symbol != other.symbol) {
-            return false;
-        }
-        if (!Objects.equals(this.sceneDescription, other.sceneDescription)) {
-            return false;
-        }
-        return true;
-    }
+    }*/
 
 }

@@ -56,8 +56,8 @@ public class Location implements Serializable {
         return scene;
     }
 
-    public void setScene(Scene scene) {
-        this.scene = scene;
+    public void setScene(Scene locationScene) {
+        this.scene = locationScene;
     }
 
     public Band getBand() {

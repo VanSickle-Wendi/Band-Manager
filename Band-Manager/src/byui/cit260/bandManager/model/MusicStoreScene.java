@@ -19,8 +19,8 @@ public class MusicStoreScene implements Serializable {
         Instrument[] drums = new Instrument[4];
         drums[0] = new Instrument(InstrumentType.Drums, "Yamaha Stage", 499.99, 10);
         drums[1] = new Instrument(InstrumentType.Drums, "Pearl Masters", 749.50, 20);
-        drums[0] = new Instrument(InstrumentType.Drums, "Tama Silverstar", 1099.99, 40);
-        drums[1] = new Instrument(InstrumentType.Drums, "DW Performance", 1665.98, 80);
+        drums[2] = new Instrument(InstrumentType.Drums, "Tama Silverstar", 1099.99, 40);
+        drums[3] = new Instrument(InstrumentType.Drums, "DW Performance", 1665.98, 80);
     }
 
 }

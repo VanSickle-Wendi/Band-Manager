@@ -16,6 +16,7 @@ public class Map implements Serializable {
 
     // class instance variables
     private String description;
+    private Location[] locations;    
 
     public Map() {
     }
@@ -26,6 +27,14 @@ public class Map implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Location[] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[] locations) {
+        this.locations = locations;
     }
 
     @Override

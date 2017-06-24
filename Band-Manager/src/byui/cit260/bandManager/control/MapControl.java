@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.control;
 
+import byui.cit260.bandManager.model.AuditionScene;
 import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Map;
 
@@ -45,9 +46,17 @@ public class MapControl {
         locations[23] = new Location("Level 4 Small Gig");
         locations[24] = new Location("Star Party");        
                
-        //assignScenesToLocations(locations);
+       // assignScenesToLocations(locations);
         
         return map;
     }    
-
+   /* private static void assignScenesToLocations(Location[] locations) {
+        locations[0].setScene(new AuditionScene());
+       /* locations[1].setScene(new City2Scene());
+        locations[2].setScene(new City3Scene());
+        locations[3].setScene(new City4Scene());
+        locations[4].setScene(new City5Scene());*/
+   // }
+    
+    
 }

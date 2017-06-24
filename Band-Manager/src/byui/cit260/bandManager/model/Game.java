@@ -47,8 +47,8 @@ public class Game implements Serializable {
         return map;
     }
 
-    public void setMap(Map map) {
-        this.map = map;
+    public void setMap(Map newMap) {
+        this.map = newMap;
     }
 
     public double getTotalMoney() {
