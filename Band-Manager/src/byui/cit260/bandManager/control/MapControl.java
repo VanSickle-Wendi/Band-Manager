@@ -5,9 +5,16 @@
  */
 package byui.cit260.bandManager.control;
 
+import byui.cit260.bandManager.model.AppearanceScene;
 import byui.cit260.bandManager.model.AuditionScene;
+import byui.cit260.bandManager.model.BankScene;
+import byui.cit260.bandManager.model.BigGigScene;
+import byui.cit260.bandManager.model.CarLotScene;
+import byui.cit260.bandManager.model.HotelScene;
 import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Map;
+import byui.cit260.bandManager.model.MusicStoreScene;
+import byui.cit260.bandManager.model.SmallGigScene;
 
 /**
  *
@@ -52,11 +59,31 @@ public class MapControl {
         return map;
     }    
     private static void assignScenesToLocations(Location[] locations) {
-        locations[0].setScene(new AuditionScene());
-       /* locations[1].setScene(new City2Scene());
-        locations[2].setScene(new City3Scene());
-        locations[3].setScene(new City4Scene());
-        locations[4].setScene(new City5Scene());*/
+        locations[0].setScene(new BankScene());
+        locations[1].setScene(new AuditionScene());
+        locations[2].setScene(new AuditionScene());
+        locations[3].setScene(new AuditionScene());
+        locations[4].setScene(new AuditionScene());
+        locations[5].setScene(new AuditionScene());
+        locations[6].setScene(new CarLotScene());
+        locations[7].setScene(new MusicStoreScene());
+        locations[8].setScene(new HotelScene());
+        locations[9].setScene(new HotelScene());
+        locations[10].setScene(new HotelScene());
+        locations[11].setScene(new HotelScene());
+        locations[12].setScene(new AppearanceScene());
+        locations[13].setScene(new SmallGigScene());
+        locations[14].setScene(new BigGigScene());
+        locations[15].setScene(new AppearanceScene());
+        locations[16].setScene(new SmallGigScene());
+        locations[17].setScene(new BigGigScene());
+        locations[18].setScene(new AppearanceScene());
+        locations[19].setScene(new SmallGigScene());
+        locations[20].setScene(new BigGigScene());
+        locations[21].setScene(new AppearanceScene());
+        locations[22].setScene(new SmallGigScene());
+        locations[23].setScene(new BigGigScene());
+        locations[24].setScene(new AppearanceScene());        
     }
     
     

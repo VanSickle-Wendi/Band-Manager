@@ -15,18 +15,18 @@ import java.util.Objects;
 public abstract class Scene {
 
     // class instance variables
-    private String description;
+    private String sceneDescription;
    // private char symbol;
 
     public Scene() {
     }
 
-    public String getDescription() {
-        return description;
+    public String getSceneDescription() {
+        return sceneDescription;
     }
 
     public void setSceneDescription(String description) {
-        this.description = description;
+        this.sceneDescription = description;
     }
 
    /* public char getSymbol() {

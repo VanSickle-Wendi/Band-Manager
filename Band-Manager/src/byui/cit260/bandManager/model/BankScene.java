@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author Wendi
  */
-public class BankScene implements Serializable {
+public class BankScene extends Scene implements Serializable {
 
     // class instance variables
     private double loan;
@@ -21,6 +21,7 @@ public class BankScene implements Serializable {
     private double bandPayment;
 
     public BankScene() {
+        setSceneDescription("Welcome to the Bank.");        
     }
 
     public double getLoan() {

@@ -11,9 +11,11 @@ import java.io.Serializable;
  *
  * @author Crazian
  */
-public class CarLotScene implements Serializable {
+public class CarLotScene extends Scene implements Serializable {
 
     public CarLotScene() {
+        
+        setSceneDescription("Welcome to the Car Lot.");        
 
         Vehicle[] LevelOneVehicle = new Vehicle[3];
 

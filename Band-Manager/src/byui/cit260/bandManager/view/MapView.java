@@ -26,8 +26,8 @@ public class MapView {
         Location[] locations = map.getLocations();
         
         for (int i=0; i < locations.length; i++){
-            System.out.println("Location " + locations[i].getName() + "! ");
-                             //  + locations[i].getScene().getDescription());
+            System.out.println("Location " + locations[i].getName() + "! "
+                               + locations[i].getScene().getSceneDescription());
         }
     }
     

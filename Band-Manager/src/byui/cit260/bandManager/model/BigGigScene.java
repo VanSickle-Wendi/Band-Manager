@@ -9,11 +9,11 @@ package byui.cit260.bandManager.model;
  *
  * @author Wendi
  */
-public class AuditionScene extends Scene {
-
-    public AuditionScene() {
-        setSceneDescription("Audition Drummer, Singer, Guitar Player, Bass Player, Keyboard Player");
+public class BigGigScene extends Scene {
+    
+    public BigGigScene() {
+        setSceneDescription("You've made to the Big Gig");
    
-   }
+   }    
     
 }

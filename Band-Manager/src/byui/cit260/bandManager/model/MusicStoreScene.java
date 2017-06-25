@@ -11,10 +11,12 @@ import java.io.Serializable;
  *
  * @author shaza
  */
-public class MusicStoreScene implements Serializable {
+public class MusicStoreScene extends Scene implements Serializable {
     
 
     public MusicStoreScene() {
+        
+        setSceneDescription("Welcome to the Music Store.");        
 
         Instrument[] drums = new Instrument[4];
         drums[0] = new Instrument(InstrumentType.Drums, "Yamaha Stage", 499.99, 10);
