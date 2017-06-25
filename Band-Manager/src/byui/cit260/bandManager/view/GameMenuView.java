@@ -27,11 +27,12 @@ public class GameMenuView extends MenuView {
                 + "\nA -- Asset Menu"
                 + "\nB -- Bank Menu"
                 + "\nH -- Hold Auditions"
+                + "\nZ -- Music Store"
                 + "\nR -- Rehearsal"
                 + "\nI -- Radio Interview"
                 + "\nT -- TV Appearance"
                 + "\nF -- Movie Cameo"
-                + "\nS -- Star Party"                 
+                + "\nS -- Star Party"
                 + "\nN -- Travel to a New Location"
                 + "\nC -- Check into a New Hotel"
                 + "\nG -- Big Gig Performance"
@@ -66,9 +67,12 @@ public class GameMenuView extends MenuView {
             case "H": // Hold Auditions
                 this.holdAuditions();
                 break;
+            case "Z": // Hold Auditions
+                this.goToMusicStore();
+                break;
             case "R": // Hold Auditions
                 this.rehearsal();
-                break;         
+                break;
             case "I": // Radio Interview
                 this.radio();
                 break;
@@ -80,7 +84,7 @@ public class GameMenuView extends MenuView {
                 break;
             case "S": // Star Party
                 this.star();
-                break;                 
+                break;
             case "N": // Travel to New Location
                 this.travelToNewLocation();
                 break;
@@ -92,7 +96,7 @@ public class GameMenuView extends MenuView {
                 break;
             case "J": // SmallGig Performance
                 this.smallGigPerformance();
-                break;    
+                break;
             case "V": // View band members and status
                 this.bandMemberStatus();
                 break;
@@ -104,14 +108,15 @@ public class GameMenuView extends MenuView {
         }
 
         return false;
-    }
+    }            
 
     private void viewMap() {
         MapView showMap = new MapView();
         showMap.displayMap();
     }
 
-    private void viewAssetMenu() {
+
+private void viewAssetMenu() {
         // display the asset menu
         AssetMenuView assetMenu = new AssetMenuView();
         assetMenu.display();
@@ -129,37 +134,43 @@ public class GameMenuView extends MenuView {
         auditionMenu.setGame(game);
         auditionMenu.display();
     }
-    
+
+    private void goToMusicStore() {
+        // display the Bank menu
+        MusicStoreMenuView musicMenu = new MusicStoreMenuView();
+        musicMenu.display();
+    }
+
     private void rehearsal() {
         // display the RehearsalView
         RehearsalView onlyRehearsal = new RehearsalView();
         onlyRehearsal.display();
-    }   
+    }
 
     private void radio() {
         // display the RadioInterview
         RadioInterview onlyRadio = new RadioInterview();
         onlyRadio.display();
     }
-    
+
     private void tv() {
         // display the TVAppearanceView
         TVAppearanceView onlyTV = new TVAppearanceView();
         onlyTV.display();
-    } 
-    
+    }
+
     private void movie() {
         // display the MovieCameoView
         MovieCameoView onlyMovie = new MovieCameoView();
         onlyMovie.display();
     }
-    
+
     private void star() {
         // display the StarPartyView
         StarPartyView onlyStar = new StarPartyView();
         onlyStar.display();
-    }     
-    
+    }
+
     private void travelToNewLocation() {
         System.out.println("*** travelToNewLocation function called ***");
     }
@@ -173,7 +184,8 @@ public class GameMenuView extends MenuView {
         SmallGigView checkIn = new SmallGigView();
         checkIn.display();
     }
-     private void bigGigPerformance() {
+
+    private void bigGigPerformance() {
         BigGigView checkIn = new BigGigView();
         checkIn.display();
     }

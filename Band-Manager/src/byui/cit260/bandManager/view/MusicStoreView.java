@@ -11,8 +11,9 @@ import byui.cit260.bandManager.control.BankingControl;
  *
  * @author shaza
  */
-public class BuyInstrumentView extends InteractiveView {
-    public BuyInstrumentView() {
+public class MusicStoreView extends InteractiveView {
+
+    public MusicStoreView() {
 
         super("\n"
                 + "\n-------------------------------------------------"
@@ -37,10 +38,10 @@ public class BuyInstrumentView extends InteractiveView {
     public boolean doAction(String value) {
         // prompt user for 5 inputs, change the user input from String to double
         String buyDrums = (getInput("Which drum set would you like to buy?"));
-        
-                System.out.println("\n" + buyDrums + " is a good choice");
-                
-                return true;
+
+        System.out.println("\n" + buyDrums + " is a good choice");
+
+        return true;
 
     }
 

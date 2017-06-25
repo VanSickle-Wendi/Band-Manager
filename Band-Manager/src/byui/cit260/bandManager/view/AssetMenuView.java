@@ -64,7 +64,7 @@ public class AssetMenuView extends MenuView {
     }
 
     private void purchaseUpgradeInstruments() {
-        BuyInstrumentView buyIt = new BuyInstrumentView();
+        MusicStoreView buyIt = new MusicStoreView();
         buyIt.display();
     }
 
