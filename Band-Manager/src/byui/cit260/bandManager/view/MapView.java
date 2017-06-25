@@ -20,15 +20,15 @@ public class MapView {
     }
     
     public void displayMap() {
-       System.out.println("***displayMap stub function called***");
-       /* Game game = BandManager.getCurrentGame();
+       //System.out.println("***displayMap stub function called***");
+       Game game = BandManager.getCurrentGame();
         Map map = game.getMap();
         Location[] locations = map.getLocations();
         
         for (int i=0; i < locations.length; i++){
-            System.out.println("Location " + locations[1].getName() + "! "
-                               + locations[i].getScene().getDescription());
-        }*/
+            System.out.println("Location " + locations[i].getName() + "! ");
+                             //  + locations[i].getScene().getDescription());
+        }
     }
     
 }

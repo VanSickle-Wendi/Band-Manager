@@ -49,8 +49,7 @@ public class GameControl {
         game.setVehicles(vehicleList);
         
 
-       // Map map = MapControl.createMap();
-        //game.setMap(map);
+        createMap(game);
         
         // move actors to starting position in the map. Do we need this? p15
        
