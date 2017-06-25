@@ -44,7 +44,8 @@ public class MapControl {
         locations[21] = new Location("Movie Cameo");
         locations[22] = new Location("Level 4 Small Gig");
         locations[23] = new Location("Level 4 Small Gig");
-        locations[24] = new Location("Star Party");        
+        locations[24] = new Location("Star Party");
+        map.setLocations(locations);
                
         assignScenesToLocations(locations);
         
