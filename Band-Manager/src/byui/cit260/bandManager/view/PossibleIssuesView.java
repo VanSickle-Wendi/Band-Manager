@@ -13,16 +13,15 @@ import byui.cit260.bandManager.model.Issues;
  * @author Wendi
  */
 public class PossibleIssuesView extends InteractiveView {
-
+        private Issues[] issueList = new Issues[4];
+    
     public PossibleIssuesView() {
         super("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  Here is a list of possible issues.            |"
                 + "\n-------------------------------------------------");
 
-        
-        Issues[] issueList = new Issues[4];
-        
+                
         issueList[0] = new Issues(" Won't eat brown M & M's");
         issueList[1] = new Issues(" Trashes hotel rooms");
         issueList[2] = new Issues(" Refuses to wear anything but black");
@@ -30,9 +29,9 @@ public class PossibleIssuesView extends InteractiveView {
 
         // Display array here
         for(Issues s: issueList) {
-            System.out.println(s.getIssueDescription());            
+            System.out.println(s.getIssueDescription()); 
         }
-    }
+    }    
 
     @Override
     public void display() {
@@ -52,6 +51,20 @@ public class PossibleIssuesView extends InteractiveView {
                 + "\n Let's put the list in alphabetical order."
                 + "\n");
 
+            // Sort  array here TODO Move this to the IdeaControl class
+            for (int i = 1; i < issueList.length; i++)
+                for (int j=issueList.length-1; j >= i; j--) {
+                    if (issueList[j-1].getIssueDescription().compareTo(issueList[j].getIssueDescription()) > 1) {
+                        Issues k = issueList[j-1];
+                        issueList[j-1] = issueList[j];
+                        issueList[j] = k;
+                    }
+                }
+        
+        for (Issues sorted: issueList) {
+        System.out.println(sorted.getIssueDescription());
+        }        
+               
         IdeaControl issueFunction = new IdeaControl();               
         issueFunction.alphabetizeIssues();
         return false;
