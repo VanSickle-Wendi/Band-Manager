@@ -18,8 +18,8 @@ import java.util.Scanner;
  */
 public class MusicStoreMenuView extends MenuView {
 
-    private String promptMessage;
-    private MusicStoreScene scene = new MusicStoreScene();
+    //private String promptMessage;
+    private final MusicStoreScene scene = new MusicStoreScene();
 
     public MusicStoreMenuView() {
         super("\n"
@@ -49,16 +49,16 @@ public class MusicStoreMenuView extends MenuView {
                 this.viewListOfDrums(scene.getDrums());
                 break;
             case "G": // Purchase / Upgrade Vehicle
-                this.viewListofGuitars();
+                this.viewListofGuitars(scene.getGuitar());
                 break;
             case "B": // View Performance Points
-                this.viewListOfBassGuitars();
+                this.viewListOfBassGuitars(scene.getBass());
                 break;
             case "K": // View Performance Points
-                this.viewListOfKeyboards();
+                this.viewListOfKeyboards(scene.getKeyboard());
                 break;
             case "M": // View Performance Points
-                this.viewListOfMicrophones();
+                this.viewListOfMicrophones(scene.getMic());
                 break;
             case "I": // Purchase / Upgrade Instruments
                 this.purchaseUpgradeInstruments();
@@ -77,7 +77,7 @@ public class MusicStoreMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
-        System.out.println("\n         List of Instruments");
+        System.out.println("\n         List of Drums");
         line = new StringBuilder("                                     ");
         line.insert(0, "Instrument Type");
         line.insert(20, "Description");
@@ -100,20 +100,109 @@ public class MusicStoreMenuView extends MenuView {
 
     }
 
-    private void viewListofGuitars() {
-        System.out.println("*** viewListofGuitars function called ***");
+    private void viewListofGuitars(Instrument[] guitars) {
+        StringBuilder line;
+
+        // Display header
+        System.out.println("\n         List of Guitars");
+        line = new StringBuilder("                                     ");
+        line.insert(0, "Instrument Type");
+        line.insert(20, "Description");
+        line.insert(40, "Price");
+        line.insert(50, "Performance Points");
+        System.out.println(line.toString());
+
+        // for each loop to display the guitars    
+        for (Instrument guitar : guitars) {
+            line = new StringBuilder("                                 ");
+            line.insert(0, guitar.getType());
+            line.insert(20, guitar.getDescription());
+            line.insert(40, guitar.getPrice());
+            line.insert(50, guitar.getPerformancePoints());
+
+            // Display the line
+            System.out.println(line.toString());
+
+        }
     }
 
-    private void viewListOfBassGuitars() {
-        System.out.println("*** viewListOfBassGuitars function called ***");
+    private void viewListOfBassGuitars(Instrument[] bass) {
+        StringBuilder line;
+
+        // Display header
+        System.out.println("\n         List of Bass Guitars");
+        line = new StringBuilder("                                     ");
+        line.insert(0, "Instrument Type");
+        line.insert(20, "Description");
+        line.insert(40, "Price");
+        line.insert(50, "Performance Points");
+        System.out.println(line.toString());
+
+        // for each loop to display bass guitars    
+        for (Instrument bassG : bass) {
+            line = new StringBuilder("                                 ");
+            line.insert(0, bassG.getType());
+            line.insert(20, bassG.getDescription());
+            line.insert(40, bassG.getPrice());
+            line.insert(50, bassG.getPerformancePoints());
+
+            // Display the line
+            System.out.println(line.toString());
+
+        }
     }
 
-    private void viewListOfKeyboards() {
-        System.out.println("*** viewListOfKeyboards function called ***");
+    private void viewListOfKeyboards(Instrument[] keyboards) {
+        StringBuilder line;
+
+        // Display header
+        System.out.println("\n         List of Keyboards");
+        line = new StringBuilder("                                     ");
+        line.insert(0, "Instrument Type");
+        line.insert(20, "Description");
+        line.insert(40, "Price");
+        line.insert(50, "Performance Points");
+        System.out.println(line.toString());
+
+        // for each loop to display the keyboards    
+        for (Instrument keyboard : keyboards) {
+            line = new StringBuilder("                                 ");
+            line.insert(0, keyboard.getType());
+            line.insert(20, keyboard.getDescription());
+            line.insert(40, keyboard.getPrice());
+            line.insert(50, keyboard.getPerformancePoints());
+
+            // Display the line
+            System.out.println(line.toString());
+
+        }
     }
 
-    private void viewListOfMicrophones() {
-        System.out.println("*** viewListOfMicrophones function called ***");
+    private void viewListOfMicrophones(Instrument[] microphones) {
+        StringBuilder line;
+
+        // Display header
+        System.out.println("\n         List of Microphones");
+        line = new StringBuilder("                                     ");
+        line.insert(0, "Instrument Type");
+        line.insert(20, "Description");
+        line.insert(40, "Price");
+        line.insert(50, "Performance Points");
+        System.out.println(line.toString());
+
+        // for each loop to display the mics    
+        for (Instrument mics : microphones) {
+            line = new StringBuilder("                                 ");
+            line.insert(0, mics.getType());
+            line.insert(20, mics.getDescription());
+            line.insert(40, mics.getPrice());
+            line.insert(50, mics.getPerformancePoints());
+
+            // Display the line
+            System.out.println(line.toString());
+
+        }
+
     }
 
     private void purchaseUpgradeInstruments() {
