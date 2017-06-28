@@ -19,6 +19,7 @@ import java.util.Scanner;
 public class MusicStoreMenuView extends MenuView {
 
     private String promptMessage;
+    private MusicStoreScene scene = new MusicStoreScene();
 
     public MusicStoreMenuView() {
         super("\n"
@@ -45,7 +46,7 @@ public class MusicStoreMenuView extends MenuView {
 
         switch (value) {
             case "D": // View Current Assets
-                this.viewListOfDrums();
+                this.viewListOfDrums(scene.getDrums());
                 break;
             case "G": // Purchase / Upgrade Vehicle
                 this.viewListofGuitars();
@@ -72,12 +73,10 @@ public class MusicStoreMenuView extends MenuView {
         return false;
     }
 
-    private void viewListOfDrums() {
+    private void viewListOfDrums(Instrument[] drums) {
         StringBuilder line;
 
-        Game game = BandManager.getCurrentGame();
-        MusicStoreScene[] instrument = game.getInstruments();
-
+        // Display header
         System.out.println("\n         List of Instruments");
         line = new StringBuilder("                                     ");
         line.insert(0, "Instrument Type");
@@ -86,13 +85,13 @@ public class MusicStoreMenuView extends MenuView {
         line.insert(50, "Performance Points");
         System.out.println(line.toString());
 
-        // for each instrument item
-        for (MusicStoreScene item : instrument) {
+        // for each loop to display the drums    
+        for (Instrument drum : drums) {
             line = new StringBuilder("                                 ");
-            line.insert(0, item.getType());
-            line.insert(23, item.getDescription());
-            line.insert(33, item.getPrice());
-            line.insert(43, item.getPerformancePoints());
+            line.insert(0, drum.getType());
+            line.insert(20, drum.getDescription());
+            line.insert(40, drum.getPrice());
+            line.insert(50, drum.getPerformancePoints());
 
             // Display the line
             System.out.println(line.toString());
