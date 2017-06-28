@@ -38,6 +38,7 @@ public class GameMenuView extends MenuView {
                 + "\nG -- Big Gig Performance"
                 + "\nJ -- Small Gig Performance"
                 + "\nV -- View Band Members and Status"
+                + "\nL -- Lists of Ideas"                
                 + "\nQ -- Quit the Game Menu"
                 + "\n-------------------------------------------------"
                 + "\n"
@@ -100,6 +101,9 @@ public class GameMenuView extends MenuView {
             case "V": // View band members and status
                 this.bandMemberStatus();
                 break;
+            case "L": // Ideas for the game
+                this.listsOfIdeas();
+                break;                  
             case "Q": // Quit
                 return true;
             default:
@@ -193,5 +197,9 @@ private void viewAssetMenu() {
     private void bandMemberStatus() {
         System.out.println("*** bandMemberStatus function called ***");
     }
+    private void listsOfIdeas() {
+        IdeaMenuView ideaMenu = new IdeaMenuView();
+        ideaMenu.display();
+    }       
 
 }
