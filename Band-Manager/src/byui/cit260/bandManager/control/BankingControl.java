@@ -5,20 +5,26 @@
  */
 package byui.cit260.bandManager.control;
 
+import byui.cit260.bandManager.exceptions.BankControlException;
+
 /**
  *
  * @author Crazian
  */
 public class BankingControl {
 
-    public double calcLoanPayment(double loanBalance, double extraPrinciple) {
+    public double calcLoanPayment(double loanBalance, double extraPrinciple) throws BankControlException {
 
         if (loanBalance < 0 || loanBalance > 25000) {
-            return -999;
+           // return -999;
+           throw new BankControlException("Loan balance must be more than 0 and less than"
+                   + "25000");
         }
 
         if (extraPrinciple < 0 || extraPrinciple > 25000) {
-            return -999;
+            //return -999;
+            throw new BankControlException("Extra Principle must be greater that 0 or "
+                    + "less than 25000");
         }
 
         double rate = .10;
