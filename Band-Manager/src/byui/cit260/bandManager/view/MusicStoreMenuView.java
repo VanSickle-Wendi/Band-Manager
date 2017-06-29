@@ -186,8 +186,8 @@ public class MusicStoreMenuView extends MenuView {
         line = new StringBuilder("                                     ");
         line.insert(0, "Instrument Type");
         line.insert(20, "Description");
-        line.insert(40, "Price");
-        line.insert(50, "Performance Points");
+        line.insert(35, "Price");
+        line.insert(45, "Performance Points");
         System.out.println(line.toString());
 
         // for each loop to display the mics    
@@ -195,8 +195,8 @@ public class MusicStoreMenuView extends MenuView {
             line = new StringBuilder("                                 ");
             line.insert(0, mics.getType());
             line.insert(20, mics.getDescription());
-            line.insert(40, mics.getPrice());
-            line.insert(50, mics.getPerformancePoints());
+            line.insert(35, mics.getPrice());
+            line.insert(45, mics.getPerformancePoints());
 
             // Display the line
             System.out.println(line.toString());

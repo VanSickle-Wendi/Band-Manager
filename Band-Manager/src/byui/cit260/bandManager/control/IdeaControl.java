@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.control;
 
+import byui.cit260.bandManager.model.BandNames;
 import byui.cit260.bandManager.model.Issues;
 import byui.cit260.bandManager.view.PossibleIssuesView;
 
@@ -26,6 +27,21 @@ public class IdeaControl {
                     }
                 }
         }
+    }
+
+    public static void sortAlphaBackwards(BandNames[] bandNameList) {
+        
+        // Alphabetize the BandNames[]
+        for (int i = 1; i < bandNameList.length; i++) {
+                for (int j=bandNameList.length-1; j >= i; j--) {
+                    if (bandNameList[j-1].getNamesOfBands().compareTo(bandNameList[j].getNamesOfBands()) < 1) {
+                        BandNames k = bandNameList[j-1];
+                        bandNameList[j-1] = bandNameList[j];
+                        bandNameList[j] = k;
+                    }
+                }
+        }
+        
     }
 
 }
