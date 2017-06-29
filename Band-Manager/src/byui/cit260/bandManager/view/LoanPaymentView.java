@@ -6,8 +6,11 @@
 package byui.cit260.bandManager.view;
 
 import byui.cit260.bandManager.control.BankingControl;
+import byui.cit260.bandManager.exceptions.BankControlException;
 import byui.cit260.bandManager.model.Game;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -50,10 +53,17 @@ public class LoanPaymentView extends InteractiveView {
         double extraPrinciple = Double.parseDouble(getInput("How much extra principle ?"));
 
         // new instance of BankingControl class
-        BankingControl payLoan = new BankingControl();
+        BankingControl payLoan = new BankingControl();   
+        
+        try {
+            double makeLoanPayment;
+            makeLoanPayment = payLoan.calcLoanPayment(loanBalance, extraPrinciple);
+            System.out.println("\nYour loan payment is " + makeLoanPayment);
+        } catch (BankControlException bce) {
+            System.out.println(bce.getMessage());
+            
+        }
 
-        double makeLoanPayment = payLoan.calcLoanPayment(loanBalance, extraPrinciple);
-        System.out.println("\nYour loan payment is " + makeLoanPayment);
 
         return true;
     }
