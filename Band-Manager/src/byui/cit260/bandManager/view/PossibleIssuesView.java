@@ -15,7 +15,7 @@ import byui.cit260.bandManager.model.Issues;
 public class PossibleIssuesView extends InteractiveView {
 
     private Issues[] issueList = new Issues[4];
-    private IdeaControl sortFunction;
+    //private IdeaControl sortFunction;
 
     public PossibleIssuesView() {
         super("\n"
@@ -23,7 +23,7 @@ public class PossibleIssuesView extends InteractiveView {
                 + "\n|  Here is a list of possible issues.            |"
                 + "\n-------------------------------------------------");
 
-        sortFunction = new IdeaControl();
+      //  sortFunction = new IdeaControl();
 
         issueList[0] = new Issues(" Won't eat brown M & M's");
         issueList[1] = new Issues(" Trashes hotel rooms");
