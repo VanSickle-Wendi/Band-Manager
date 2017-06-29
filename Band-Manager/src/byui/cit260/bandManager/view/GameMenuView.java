@@ -28,6 +28,7 @@ public class GameMenuView extends MenuView {
                 + "\nB -- Bank Menu"
                 + "\nH -- Hold Auditions"
                 + "\nZ -- Music Store"
+                + "\nK -- Car Lot"
                 + "\nR -- Rehearsal"
                 + "\nI -- Radio Interview"
                 + "\nT -- TV Appearance"
@@ -70,6 +71,9 @@ public class GameMenuView extends MenuView {
                 break;
             case "Z": // Hold Auditions
                 this.goToMusicStore();
+                break;
+            case "K": // Hold Auditions
+                this.goToCarLot();
                 break;
             case "R": // Hold Auditions
                 this.rehearsal();
@@ -144,7 +148,11 @@ private void viewAssetMenu() {
         MusicStoreMenuView musicMenu = new MusicStoreMenuView();
         musicMenu.display();
     }
-
+    
+    private void goToCarLot() {
+        CarLotMenuView carMenu = new CarLotMenuView();
+        carMenu.display();
+    }
     private void rehearsal() {
         // display the RehearsalView
         RehearsalView onlyRehearsal = new RehearsalView();
