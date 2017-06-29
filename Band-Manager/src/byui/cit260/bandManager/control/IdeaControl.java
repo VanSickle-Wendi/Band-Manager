@@ -13,28 +13,19 @@ import byui.cit260.bandManager.view.PossibleIssuesView;
  * @author Wendi
  */
 public class IdeaControl {
-    
-    private Issues[] issueList;
 
-    public void alphabetizeIssues() {
-        System.out.println("\n ***AlphabetizeIssues stub function called***"); 
-       
-            // Sort  array here TODO Figure out how to make this code work from here
-            /*for (int i = 1; i < issueList.length; i++)
+    public static void alphabetizeIssues(Issues[] issueList) {
+
+        // Alphabetize the Issues[]
+        for (int i = 1; i < issueList.length; i++) {
                 for (int j=issueList.length-1; j >= i; j--) {
                     if (issueList[j-1].getIssueDescription().compareTo(issueList[j].getIssueDescription()) > 1) {
                         Issues k = issueList[j-1];
                         issueList[j-1] = issueList[j];
                         issueList[j] = k;
                     }
-                }       
-       
+                }
+        }
+    }
 
-        for (Issues sorted: issueList) {
-        System.out.println(sorted.getIssueDescription());
-        } */       
-
-    }    
-
-    
 }
