@@ -72,7 +72,8 @@ public class IdeaMenuView extends MenuView {
     }
 
     private void possibleBandNames() {
-        System.out.println("*** possibleBandNames function called ***");
+        PossibleBandNamesView names = new PossibleBandNamesView();
+        names.display();
     }
 
     private void possibleRadioShows() {
