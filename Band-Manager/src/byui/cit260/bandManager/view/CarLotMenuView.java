@@ -30,7 +30,7 @@ public class CarLotMenuView extends MenuView {
                 + "\nB -- See what we have on lot Two"
                 + "\nC -- See what we have on lot Three"
                 + "\nD -- See what we have on lot Four"
-                + "\nQ -- Leave Music Store"
+                + "\nQ -- Leave Car Lot"
                 + "\n-------------------------------------------------"
                 + "\n"
                 + "\nPlease choose a Car Lot Menu option: ");
