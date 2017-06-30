@@ -37,35 +37,70 @@ public class LoanPaymentView extends InteractiveView {
                 + "\n-------------------------------------------------"
         );
     }
-    
+
     public void setGame(Game game) {
         this.game = game;
-    }  
-    
+    }
+
     @Override
     public void display() {
         doAction(null);
     }
 
     public boolean doAction(String value) {
-        // prompt user for 5 inputs, change the user input from String to double
-        double loanBalance = Double.parseDouble(getInput("How much is your loan balance?"));
-        double extraPrinciple = Double.parseDouble(getInput("How much extra principle ?"));
+        //  double makeLoanPayment;
+        double loanBalance = 0;
+        double extraPrinciple = 0;
+        int x = 1;
+        int y = 1;
+        int z = 1;
 
-        // new instance of BankingControl class
-        BankingControl payLoan = new BankingControl();   
-        
-        try {
-            double makeLoanPayment;
-            makeLoanPayment = payLoan.calcLoanPayment(loanBalance, extraPrinciple);
-            System.out.println("\nYour loan payment is " + makeLoanPayment);
-        } catch (BankControlException bce) {
-            System.out.println(bce.getMessage());
+        do {
+            try {
+                // prompt user for 5 inputs, change the user input from String to double
+                loanBalance = Double.parseDouble(getInput("How much is your loan balance?"));
+                x = 2;
+
+            } catch (NumberFormatException nf) {
+
+                System.out.println("\nYou must enter a valid number."
+                        + "Try again or enter Q to quit.");
+            }
+        } while (x == 1);
+
+        do {
+            try {
+
+                extraPrinciple = Double.parseDouble(getInput("How much extra principle ?"));
+                y = 2;
+
+            } catch (NumberFormatException nf) {
+
+                System.out.println("\nYou must enter a valid number."
+                        + "Try again or enter Q to quit.");
+            }
+        } while (y == 1);
+
+            // new instance of BankingControl class
+            BankingControl payLoan = new BankingControl();
             
+           do {
+            try {
+                double makeLoanPayment;
+                makeLoanPayment = payLoan.calcLoanPayment(loanBalance, extraPrinciple);
+                System.out.println("\nYour loan payment is " + makeLoanPayment);
+                z = 2;
+                
+            } catch (BankControlException bce) {
+                System.out.println(bce.getMessage());
+
+            }
+           } while (z == 1);
+           
+    
+
+            return true;
         }
 
 
-        return true;
     }
-
-}
