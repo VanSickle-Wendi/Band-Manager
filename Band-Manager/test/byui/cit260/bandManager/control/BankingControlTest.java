@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.control;
 
+import byui.cit260.bandManager.exceptions.BankControlException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -21,7 +22,7 @@ public class BankingControlTest {
      * Test of calcLoanPayment method, of class BankingControl.
      */
     @Test
-    public void testCalcLoanPayment() {
+    public void testCalcLoanPayment() throws BankControlException {
         System.out.println("calcLoanPayment");
         // Test Case 1
         System.out.println("\tTestCase1");
