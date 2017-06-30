@@ -64,8 +64,7 @@ public class LoanPaymentView extends InteractiveView {
 
                 } catch (NumberFormatException nf) {
 
-                    System.out.println("\nYou must enter a valid number."
-                            + "Try again or enter Q to quit.");
+                    System.out.println("\nYou must enter a valid number.");
                 }
             } while (x == 1);
 

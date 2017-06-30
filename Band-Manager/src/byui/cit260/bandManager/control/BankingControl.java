@@ -18,13 +18,14 @@ public class BankingControl {
         if (loanBalance < 0 || loanBalance > 25000) {
            // return -999;
            throw new BankControlException("Loan balance must be more than 0 and less than"
-                   + "25000");
+                   + " 25000. Try again.");
         }
 
         if (extraPrinciple < 0 || extraPrinciple > 25000) {
             //return -999;
-            throw new BankControlException("Extra Principle must be greater that 0 or "
-                    + "less than 25000");
+            throw new BankControlException("Extra Principle must be greater than 0 or "
+                    + "less than 25000. "
+                    + "\nTry again, starting with loan balance.");
         }
 
         double rate = .10;
