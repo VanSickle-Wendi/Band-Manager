@@ -48,59 +48,55 @@ public class LoanPaymentView extends InteractiveView {
     }
 
     public boolean doAction(String value) {
-        //  double makeLoanPayment;
+
         double loanBalance = 0;
         double extraPrinciple = 0;
         int x = 1;
         int y = 1;
         int z = 1;
 
-        do {
-            try {
-                // prompt user for 5 inputs, change the user input from String to double
-                loanBalance = Double.parseDouble(getInput("How much is your loan balance?"));
-                x = 2;
+        while (z == 1) {
+            do {
+                try {
+                    // prompt user for 5 inputs, change the user input from String to double
+                    loanBalance = Double.parseDouble(getInput("How much is your loan balance?"));
+                    x = 2;
 
-            } catch (NumberFormatException nf) {
+                } catch (NumberFormatException nf) {
 
-                System.out.println("\nYou must enter a valid number."
-                        + "Try again or enter Q to quit.");
-            }
-        } while (x == 1);
+                    System.out.println("\nYou must enter a valid number."
+                            + "Try again or enter Q to quit.");
+                }
+            } while (x == 1);
 
-        do {
-            try {
+            do {
+                try {
 
-                extraPrinciple = Double.parseDouble(getInput("How much extra principle ?"));
-                y = 2;
+                    extraPrinciple = Double.parseDouble(getInput("How much extra principle ?"));
+                    y = 2;
 
-            } catch (NumberFormatException nf) {
+                } catch (NumberFormatException nf) {
 
-                System.out.println("\nYou must enter a valid number."
-                        + "Try again or enter Q to quit.");
-            }
-        } while (y == 1);
+                    System.out.println("\nYou must enter a valid number.");
+                }
+            } while (y == 1);
 
             // new instance of BankingControl class
             BankingControl payLoan = new BankingControl();
-            
-           do {
+
             try {
                 double makeLoanPayment;
                 makeLoanPayment = payLoan.calcLoanPayment(loanBalance, extraPrinciple);
                 System.out.println("\nYour loan payment is " + makeLoanPayment);
                 z = 2;
-                
+
             } catch (BankControlException bce) {
                 System.out.println(bce.getMessage());
 
             }
-           } while (z == 1);
-           
-    
-
-            return true;
         }
 
-
+        return true;
     }
+
+}
