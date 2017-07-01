@@ -37,24 +37,32 @@ public class MusicStoreView extends InteractiveView {
     public boolean doAction(String value) {
         double instrumentPrice = 0;
         double bankAccount = 0;
+        int a = 1;
+        int b = 1;
         
         //Format bank balance to 2 decimal places 
         DecimalFormat df = new DecimalFormat("#.00");     
         
         // prompt user for instrument price, change the user input from String to double
+        do {
         try {
         instrumentPrice = Double.parseDouble(getInput("How much does the instrument "
                 + "you would like to purchase cost?"));
+            a = 2;
         } catch (NumberFormatException nf) { 
                     System.out.println("\nYou must enter a valid number.");            
-        } 
+        }
+        } while (a == 1);
         
         // prompt user for bank account balance, change the user input from String to double
+        do {
         try {        
         bankAccount = Double.parseDouble(getInput("How much is in your bank account?")); 
+            b = 2;
         } catch (NumberFormatException nf) { 
                     System.out.println("\nYou must enter a valid number.");            
-        }        
+        }
+        } while (b == 1);
 
         // new instance of EquipmentControl class
         EquipmentControl purchase = new EquipmentControl();
