@@ -35,7 +35,7 @@ public class MusicStoreMenuView extends MenuView {
                 + "\nQ -- Leave Music Store"
                 + "\n-------------------------------------------------"
                 + "\n"
-                + "\nPlease choose an Music Store Menu option: ");
+                + "\nPlease choose a Music Store Menu option: ");
 
     }
 

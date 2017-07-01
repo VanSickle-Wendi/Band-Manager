@@ -6,6 +6,8 @@
 package byui.cit260.bandManager.view;
 
 import byui.cit260.bandManager.control.BankingControl;
+import byui.cit260.bandManager.control.EquipmentControl;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -19,12 +21,8 @@ public class MusicStoreView extends InteractiveView {
                 + "\n-------------------------------------------------"
                 + "\n|  You are at the Music Store                   |"
                 + "\n-------------------------------------------------"
-                + "\n  Pick an instrument to buy                      "
-                + "\n                                                 "
-                + "\n  Yamaha Stage                        | $499.99 |"
-                + "\n  Pearl Masters                       | $749.50 |"
-                + "\n  Party Suite with 3 bedrooms:        |$109999  |"
-                + "\n  DW Performance                      |$1665.98 |"
+                + "\n  If you haven't decided on an instrument to     "
+                + "\n  purchase, please view the instrument lists.    "
                 + "\n-------------------------------------------------"
         );
     }
@@ -36,10 +34,19 @@ public class MusicStoreView extends InteractiveView {
 
     @Override
     public boolean doAction(String value) {
-        // prompt user for 5 inputs, change the user input from String to double
-        String buyDrums = (getInput("Which drum set would you like to buy?"));
+        //Format 
+        DecimalFormat df = new DecimalFormat("#.00");         
+        // prompt user for inputs, change the user input from String to double
+        double instrumentPrice = Double.parseDouble(getInput("How much does the instrument "
+                + "you would like to purchase cost?"));
+        double bankAccount = Double.parseDouble(getInput("How much is in your bank account?"));        
 
-        System.out.println("\n" + buyDrums + " is a good choice");
+        // new instance of EquipmentControl class
+        EquipmentControl purchase = new EquipmentControl();
+
+        double bankBalanceAfterPurchase = purchase.calcPurchaseInstrument(instrumentPrice, bankAccount);
+        System.out.println("\nAfter your purchase, you have $" + df.format(bankBalanceAfterPurchase) + " left "
+                + "in your bank account.");
 
         return true;
 

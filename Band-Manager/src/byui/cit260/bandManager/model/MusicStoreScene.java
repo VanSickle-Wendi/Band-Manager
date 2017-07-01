@@ -24,34 +24,34 @@ public class MusicStoreScene extends Scene implements Serializable {
         setSceneDescription("Welcome to the Music Store.");
 
         guitar = new Instrument[4];
-        guitar[0] = new Instrument(InstrumentType.Guitar, "Squire Bullet", 149.99, 10);
-        guitar[1] = new Instrument(InstrumentType.Guitar, "Sennheiser MD421", 599.99, 20);
-        guitar[2] = new Instrument(InstrumentType.Guitar, "Rode NTK", 529.00, 40);
-        guitar[3] = new Instrument(InstrumentType.Guitar, "Neuman TLM 102", 699.95, 80);
+        guitar[0] = new Instrument(InstrumentType.Guitar, "Squire Bullet", 400, 10);
+        guitar[1] = new Instrument(InstrumentType.Guitar, "Sennheiser MD421", 900, 20);
+        guitar[2] = new Instrument(InstrumentType.Guitar, "Rode NTK", 1600, 40);
+        guitar[3] = new Instrument(InstrumentType.Guitar, "Neuman TLM 102", 2000, 80);
 
         keyboard = new Instrument[4];
-        keyboard[0] = new Instrument(InstrumentType.Keyboard, "Yamaha YPG 235 76", 235.69, 10);
-        keyboard[1] = new Instrument(InstrumentType.Keyboard, "Roland RD 700", 719.99, 20);
-        keyboard[2] = new Instrument(InstrumentType.Keyboard, "Korg SV1 73 Stage", 1499.99, 40);
-        keyboard[3] = new Instrument(InstrumentType.Keyboard, "Nord Electro 5D", 2199.00, 80);
+        keyboard[0] = new Instrument(InstrumentType.Keyboard, "Yamaha YPG 235 76", 400, 10);
+        keyboard[1] = new Instrument(InstrumentType.Keyboard, "Roland RD 700", 900, 20);
+        keyboard[2] = new Instrument(InstrumentType.Keyboard, "Korg SV1 73 Stage", 1600, 40);
+        keyboard[3] = new Instrument(InstrumentType.Keyboard, "Nord Electro 5D", 2000, 80);
 
         bass = new Instrument[4];
-        bass[0] = new Instrument(InstrumentType.Bass, "Ibanez GSR20TR", 199.99, 10);
-        bass[1] = new Instrument(InstrumentType.Bass, "Fender Precision", 369.99, 20);
-        bass[2] = new Instrument(InstrumentType.Bass, "Gibson EB", 749.95, 40);
-        bass[3] = new Instrument(InstrumentType.Bass, "Rickenbacker 403", 1499.99, 80);
+        bass[0] = new Instrument(InstrumentType.Bass, "Ibanez GSR20TR", 400, 10);
+        bass[1] = new Instrument(InstrumentType.Bass, "Fender Precision", 900, 20);
+        bass[2] = new Instrument(InstrumentType.Bass, "Gibson EB", 1600, 40);
+        bass[3] = new Instrument(InstrumentType.Bass, "Rickenbacker 403", 2000, 80);
 
         drums = new Instrument[4];
-        drums[0] = new Instrument(InstrumentType.Drums, "Yamaha Stage", 499.99, 10);
-        drums[1] = new Instrument(InstrumentType.Drums, "Pearl Masters", 749.50, 20);
-        drums[2] = new Instrument(InstrumentType.Drums, "Tama Silverstar", 1099.99, 40);
-        drums[3] = new Instrument(InstrumentType.Drums, "DW Performance", 1665.98, 80);
+        drums[0] = new Instrument(InstrumentType.Drums, "Yamaha Stage", 400, 10);
+        drums[1] = new Instrument(InstrumentType.Drums, "Pearl Masters", 900, 20);
+        drums[2] = new Instrument(InstrumentType.Drums, "Tama Silverstar", 1600, 40);
+        drums[3] = new Instrument(InstrumentType.Drums, "DW Performance", 2000, 80);
 
         mic = new Instrument[4];
-        mic[0] = new Instrument(InstrumentType.Mic, "Shure SM58", 99.00, 10);
-        mic[1] = new Instrument(InstrumentType.Mic, "Sennheiser", 379.95, 20);
-        mic[2] = new Instrument(InstrumentType.Mic, "Rode NTK", 529.00, 40);
-        mic[3] = new Instrument(InstrumentType.Mic, "Neuman TLM 102", 699.95, 80);
+        mic[0] = new Instrument(InstrumentType.Mic, "Shure SM58", 400, 10);
+        mic[1] = new Instrument(InstrumentType.Mic, "Sennheiser", 900, 20);
+        mic[2] = new Instrument(InstrumentType.Mic, "Rode NTK", 1600, 40);
+        mic[3] = new Instrument(InstrumentType.Mic, "Neuman TLM 102", 2000, 80);
     }
 
 
