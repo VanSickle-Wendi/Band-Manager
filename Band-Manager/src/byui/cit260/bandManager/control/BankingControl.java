@@ -39,21 +39,27 @@ public class BankingControl {
     }
 
     public double calcBandSalary(double venuePayment, double equipmentCost,
-            double hotelCost, double salaryPercentage, double bankAccount) {
+            double hotelCost, double salaryPercentage, double bankAccount) throws BankControlException {
 
         if (salaryPercentage < .20 || salaryPercentage > .50) {
-            return -999;
+            //return -999;
+            throw new BankControlException("\nSalaryPercentage must be greater than"
+                    + " .20 and less than .50" + "\nCheck your numbers and try again.");
         }
 
         if (venuePayment < (equipmentCost + hotelCost)) {
-            return -999;
+            //return -999;
+            throw new BankControlException("Your equipment and hotel cost more than "
+                    + "you made for the gig." +  "\nCheck your numbers and try again.");
         }
 
         double netIncome = (venuePayment) - (equipmentCost + hotelCost);
         double bandSalary = netIncome * salaryPercentage;
 
         if (bandSalary > bankAccount) {
-            return -999;
+            //return -999;
+            throw new BankControlException("You don't have enough in your bank account"
+                    + " to pay the band." + "\nAre you sure your numbers are correct?");
         } else {
             return bandSalary;
         }

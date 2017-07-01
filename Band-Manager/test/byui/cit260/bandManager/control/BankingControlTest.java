@@ -106,7 +106,7 @@ public class BankingControlTest {
      * Test of calcBandSalary method, of class BankingControl.
      */
     @Test
-    public void testCalcBandSalary() {
+    public void testCalcBandSalary() throws BankControlException {
         System.out.println("calcBandSalary");
          // Test Case 1
         System.out.println("\tTestCase1");
