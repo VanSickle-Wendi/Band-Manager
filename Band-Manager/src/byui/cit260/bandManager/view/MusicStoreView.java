@@ -7,6 +7,7 @@ package byui.cit260.bandManager.view;
 
 import byui.cit260.bandManager.control.BankingControl;
 import byui.cit260.bandManager.control.EquipmentControl;
+import byui.cit260.bandManager.exceptions.EquipmentControlException;
 import java.text.DecimalFormat;
 
 /**
@@ -34,19 +35,37 @@ public class MusicStoreView extends InteractiveView {
 
     @Override
     public boolean doAction(String value) {
-        //Format 
-        DecimalFormat df = new DecimalFormat("#.00");         
-        // prompt user for inputs, change the user input from String to double
-        double instrumentPrice = Double.parseDouble(getInput("How much does the instrument "
+        double instrumentPrice = 0;
+        double bankAccount = 0;
+        
+        //Format bank balance to 2 decimal places 
+        DecimalFormat df = new DecimalFormat("#.00");     
+        
+        // prompt user for instrument price, change the user input from String to double
+        try {
+        instrumentPrice = Double.parseDouble(getInput("How much does the instrument "
                 + "you would like to purchase cost?"));
-        double bankAccount = Double.parseDouble(getInput("How much is in your bank account?"));        
+        } catch (NumberFormatException nf) { 
+                    System.out.println("\nYou must enter a valid number.");            
+        } 
+        
+        // prompt user for bank account balance, change the user input from String to double
+        try {        
+        bankAccount = Double.parseDouble(getInput("How much is in your bank account?")); 
+        } catch (NumberFormatException nf) { 
+                    System.out.println("\nYou must enter a valid number.");            
+        }        
 
         // new instance of EquipmentControl class
         EquipmentControl purchase = new EquipmentControl();
 
+        try {
         double bankBalanceAfterPurchase = purchase.calcPurchaseInstrument(instrumentPrice, bankAccount);
         System.out.println("\nAfter your purchase, you have $" + df.format(bankBalanceAfterPurchase) + " left "
                 + "in your bank account.");
+        } catch (EquipmentControlException ece) {
+                System.out.println(ece.getMessage());
+        }
 
         return true;
 
