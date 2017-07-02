@@ -6,6 +6,7 @@
 package byui.cit260.bandManager.view;
 
 import byui.cit260.bandManager.control.BankingControl;
+import byui.cit260.bandManager.exceptions.BankControlException;
 import java.util.Scanner;
 
 /**
@@ -21,9 +22,10 @@ public class HotelCheckInView extends InteractiveView {
                 + "\n-------------------------------------------------"
                 + "\n  You have the following room options:           "
                 + "\n                                                 "
-                + "\n  Regular rooms with two queen beds:  |$99 each |"
-                + "\n  Regular room with one King bed:     |$109 each|"
-                + "\n  Party Suite with 3 bedrooms:        |$995     |"
+                + "\n  Regular rooms with two queen beds:  |$200 each |"
+                + "\n  Regular room with one King bed:     |$500 each|"
+                + "\n  Studio suite with two queen beds    |$800 each |"
+                + "\n  Party Suite with 3 bedrooms:        |$1000     |"
                 + "\n-------------------------------------------------"
         );
     }
@@ -35,21 +37,45 @@ public class HotelCheckInView extends InteractiveView {
 
     @Override
     public boolean doAction(String value) {
+        double roomCharge = 0;
+        double bankAccount = 0;
+        double quantity = 0; 
+        double payHotelCost = 0;
+        int a = 1;
+        int b = 1;
+        int c = 1;
+        
         // prompt user for 5 inputs, change the user input from String to double
-        double quantity = Double.parseDouble(getInput("How many rooms would you like to rent?"));
-        double roomCharge = Double.parseDouble(getInput("Enter the cost of the rooms you would like to rent."));
-        double bankAccount = Double.parseDouble(getInput("How much is in your bank account?"));
+         
+        try {
+         quantity = Double.parseDouble(getInput("How many rooms would you like to rent?"));
+         
+        } catch (NumberFormatException nf) {
+            System.out.println("\n you must enter a valid number");
+        } 
+        
+        try {
+         roomCharge = Double.parseDouble(getInput("Enter the cost of the rooms you would like to rent."));
+         
+        } catch (NumberFormatException nf) {
+            System.out.println("\n you must enter a valid number");
+        }
+        
+        try {
+         bankAccount = Double.parseDouble(getInput("How much is in your bank account?"));
+         
+        } catch (NumberFormatException nf) {
+            System.out.println("\n you must enter a valid number");
+        }
 
         // new instance of BankingControl class
         BankingControl hotel = new BankingControl();
-
-        double payHotelCost = hotel.calcHotelCost(roomCharge, bankAccount, quantity);
-
-        if (payHotelCost == -999) {
-            System.out.println("\nYou don't have enough for that purchase, try again.");
-
-        } else {
-            System.out.println("\nYou have " + payHotelCost + " left in your bank account");
+         
+        try { 
+        payHotelCost = hotel.calcHotelCost(roomCharge, bankAccount, quantity);
+        } catch(BankControlException bce) {
+        
+        System.out.println(bce.getMessage());
         }
 
         return true;

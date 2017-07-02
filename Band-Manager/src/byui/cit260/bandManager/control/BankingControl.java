@@ -16,9 +16,9 @@ public class BankingControl {
     public double calcLoanPayment(double loanBalance, double extraPrinciple) throws BankControlException {
 
         if (loanBalance < 0 || loanBalance > 25000) {
-           // return -999;
-           throw new BankControlException("Loan balance must be more than 0 and less than"
-                   + " 25000. Try again.");
+            // return -999;
+            throw new BankControlException("Loan balance must be more than 0 and less than"
+                    + " 25000. Try again.");
         }
 
         if (extraPrinciple < 0 || extraPrinciple > 25000) {
@@ -50,7 +50,7 @@ public class BankingControl {
         if (venuePayment < (equipmentCost + hotelCost)) {
             //return -999;
             throw new BankControlException("Your equipment and hotel cost more than "
-                    + "you made for the gig." +  "\nCheck your numbers and try again.");
+                    + "you made for the gig." + "\nCheck your numbers and try again.");
         }
 
         double netIncome = (venuePayment) - (equipmentCost + hotelCost);
@@ -86,16 +86,22 @@ public class BankingControl {
         return newVehicleCost;
     }
 
-    public double calcHotelCost(double roomcharge, double bankAccount, double quantity) {
+    public double calcHotelCost(double roomCharge, double bankAccount, double quantity) throws BankControlException {
 
-        if (roomcharge > bankAccount) {
-
-            return -999;
-
+        if (roomCharge != 200 && roomCharge != 500 && roomCharge != 800 && roomCharge != 1000) {
         }
-        double newAccountBalance = (bankAccount) - (quantity * roomcharge);
-        return newAccountBalance;
+    
+
+        if (roomCharge * quantity > bankAccount) {
+
+     
+
+            throw new BankControlException("Room charge must be less than your bank account balance. Try again ");
 
     }
+    double newAccountBalance = (bankAccount) - (quantity * roomCharge);
+    return newAccountBalance ;
+
+}
 
 }
