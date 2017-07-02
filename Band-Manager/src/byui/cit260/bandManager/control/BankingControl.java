@@ -66,15 +66,18 @@ public class BankingControl {
 
     }
 
-    public double calcNewVehicleCost(double originalVehicleCost, double currentPerformancePoints, double newVehiclePrice) {
+    public double calcNewVehicleCost(double originalVehicleCost, double currentPerformancePoints, double newVehiclePrice) throws BankControlException {
 
-        if (originalVehicleCost != 5000 || originalVehicleCost != 30000 || originalVehicleCost != 60000 || originalVehicleCost != 100000) {
+        if (originalVehicleCost != 5000 && originalVehicleCost != 30000 && originalVehicleCost != 60000 && originalVehicleCost != 100000) {
+            throw new BankControlException ("\n Your orignial vehicle's worth must be 5000, 30000, 60000 or 100000");
         };
 
         if (currentPerformancePoints < 0) {
+            throw new BankControlException ("\n You don't have any performance points yet");
         };
 
-        if (newVehiclePrice != 5000 || originalVehicleCost != 30000 || originalVehicleCost != 60000 || originalVehicleCost != 100000) {
+        if (newVehiclePrice != 5000 && newVehiclePrice != 30000 && newVehiclePrice != 60000 && newVehiclePrice != 100000) {
+            throw new BankControlException ("\n Please check the cost again. Your new vehicle should cost 5000, 30000, 60000 or 100000");
         };
 
         double ppDiscounts = .00003;

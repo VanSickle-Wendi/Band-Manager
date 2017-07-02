@@ -30,6 +30,7 @@ public class CarLotMenuView extends MenuView {
                 + "\nB -- See what we have on lot Two"
                 + "\nC -- See what we have on lot Three"
                 + "\nD -- See what we have on lot Four"
+                + "\nK -- Trade in your car and get a discount"              
                 + "\nQ -- Leave Car Lot"
                 + "\n-------------------------------------------------"
                 + "\n"
@@ -54,6 +55,9 @@ public class CarLotMenuView extends MenuView {
                 break;
             case "D": //  View Car Lot Four
                 this.viewListOfLevelFourVehicle(scene.getLevelFourVehicle());
+                break;
+            case "K": //  got to Car Lot View
+                this.tradeIn();
                 break;
             case "Q": // Quit
                 return true;
@@ -172,6 +176,11 @@ public class CarLotMenuView extends MenuView {
 
         }
 
+    }
+
+    private void tradeIn() {
+        CarLotView carLot = new CarLotView();
+        carLot.display();
     }
     
     
