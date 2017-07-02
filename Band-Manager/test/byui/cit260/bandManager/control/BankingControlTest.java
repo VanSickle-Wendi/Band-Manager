@@ -182,7 +182,7 @@ public class BankingControlTest {
      * Test of calcNewVehicleCost method, of class BankingControl.
      */
     @Test
-    public void testCalcNewVehicleCost() {
+    public void testCalcNewVehicleCost() throws BankControlException {
         System.out.println("CalcNewVehicleCost");
         //Test Case 1
         System.out.println("\tTestCase1");

@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.control;
 
+import byui.cit260.bandManager.exceptions.PerformanceControlException;
 import java.util.Random;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -23,7 +24,10 @@ public class PerformanceControlTest {
      * Test of calcAuditionPoints method, of class PerformanceControl.
      */
     @Test
-    public void testCalcAuditionPoints() {
+    public void testCalcAuditionPoints() throws PerformanceControlException {
+        double skillLevel = 0;
+        double instrumentQuality = 0;
+        double issueCost = 0;     
         
         PerformanceControl instance = new PerformanceControl();
         //Assign "random" numbers for test #1 (1 number less than actual test numbers)
@@ -36,9 +40,9 @@ public class PerformanceControlTest {
          * Test Case #1
          ****************************/
         System.out.println("\tTest Case #1");
-        double skillLevel = 250;
-        double instrumentQuality = 362;
-        double issueCost = 58;
+        skillLevel = 250;
+        instrumentQuality = 362;
+        issueCost = 58;
         double expResult = 653.5;
         double result = instance.calcAuditionPoints(skillLevel, instrumentQuality, issueCost);
         assertEquals(expResult, result, 0.0);

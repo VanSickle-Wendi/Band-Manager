@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.control;
 
+import byui.cit260.bandManager.exceptions.PerformanceControlException;
 import java.util.Random;
 
 /**
@@ -21,18 +22,24 @@ public class PerformanceControl {
         this.randomGenerator = randomGenerator;
     }
 
-    public double calcAuditionPoints(double skillLevel, double instrumentQuality, double issueCost) {
+    public double calcAuditionPoints(double skillLevel, double instrumentQuality, double issueCost) throws PerformanceControlException{
 
         if (skillLevel != 250 && skillLevel != 500 && skillLevel != 750 && skillLevel != 1000) {
-            return -999;
+            //return -999;
+           throw new PerformanceControlException("Skill Level must be either "
+                   + " 250, 500, 750, or 1000.");             
         }
 
         if (instrumentQuality < 250 || instrumentQuality > 500) {
-            return -999;
+            //return -999;
+           throw new PerformanceControlException("Instrument Quality must be either "
+                   + " more than 250 and less than 500.");              
         }
 
         if (issueCost < 1 || issueCost > 500) {
-            return -999;
+            //return -999;
+           throw new PerformanceControlException("Issue Cost must be either "
+                   + " more than 1 and less than 500.");            
         }
 
         // Assign randomGenerator, with range 1 to 4, to tempInstrumentQuality variable
