@@ -76,6 +76,7 @@ public class HotelCheckInView extends InteractiveView {
          
         try { 
         payHotelCost = hotel.calcHotelCost(roomCharge, bankAccount, quantity);
+        System.out.println("\nYou have" + payHotelCost + "in your bank account");
         } catch(BankControlException bce) {
         
         System.out.println(bce.getMessage());
