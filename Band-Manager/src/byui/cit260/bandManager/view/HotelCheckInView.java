@@ -46,28 +46,31 @@ public class HotelCheckInView extends InteractiveView {
         int c = 1;
         
         // prompt user for 5 inputs, change the user input from String to double
-         
+         do {
         try {
          quantity = Double.parseDouble(getInput("How many rooms would you like to rent?"));
-         
+         a = 2;
         } catch (NumberFormatException nf) {
             System.out.println("\n you must enter a valid number");
         } 
-        
+         } while(a == 1);
+        do {
         try {
          roomCharge = Double.parseDouble(getInput("Enter the cost of the rooms you would like to rent."));
-         
+         b = 2;
         } catch (NumberFormatException nf) {
             System.out.println("\n you must enter a valid number");
         }
-        
+        } while(b == 1);
+        do {
         try {
          bankAccount = Double.parseDouble(getInput("How much is in your bank account?"));
+         c = 2;
          
         } catch (NumberFormatException nf) {
             System.out.println("\n you must enter a valid number");
         }
-
+        } while(c == 1);
         // new instance of BankingControl class
         BankingControl hotel = new BankingControl();
          
