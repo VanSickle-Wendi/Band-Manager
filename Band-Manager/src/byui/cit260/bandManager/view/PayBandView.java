@@ -45,9 +45,9 @@ public class PayBandView extends InteractiveView {
         int c = 1;
         int d = 1;
         int e = 1;
-        int f = 1;
+       
 
-        // while (f == 1) {
+        
         do {
             // prompt user for 5 inputs, change the user input from String to double
             try {
@@ -111,7 +111,7 @@ public class PayBandView extends InteractiveView {
 
             payBandSalary = salary.calcBandSalary(venuePayment, equipmentCost, hotelCost, salaryPercentage, bankAccount);
             System.out.println("\nYou owe the band " + payBandSalary);
-            f = 2;
+           
 
         } catch (BankControlException bce) {
             System.out.println(bce.getMessage());
@@ -119,7 +119,7 @@ public class PayBandView extends InteractiveView {
 
         return true;
 
-        //return true;
+        
     }
 
 }
