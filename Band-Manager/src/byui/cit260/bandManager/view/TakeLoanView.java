@@ -13,12 +13,11 @@ import java.util.Scanner;
  * @author Crazian
  */
 public class TakeLoanView extends InteractiveView {
- 
+
     public TakeLoanView() {
-        
+
         this.displayBanner();
     }
-    
 
     private void displayBanner() {
 
@@ -31,16 +30,26 @@ public class TakeLoanView extends InteractiveView {
                 + "\n-------------------------------------------------"
         );
     }
-    
+
     public void display() {
         doAction(null);
     }
-    
-      public boolean doAction(String value) {
+
+    @Override
+    public boolean doAction(String value) {
+        double initialLoan = 0;
+        int z = 1;
         // prompt user for 5 inputs, change the user input from String to double
-        double initialLoan = Double.parseDouble(getInput("Please enter the amount you would like to request for a loan"));
-        
-        System.out.println("\nHere is your loan of " + initialLoan);
+        do {
+        try {
+            initialLoan = Double.parseDouble(getInput("Please enter the amount you would like to request for a loan"));
+            z = 2;
+        } catch (NumberFormatException nf) {
+
+            System.out.println("\nYou must enter a valid number.");
+
+        }
+        }while (z == 1);
 
         return true;
     }
