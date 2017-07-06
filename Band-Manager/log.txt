@@ -1,0 +1,9 @@
+byui.cit260.bandManager.view.PayBandView - 
+You must enter a valid number.
+byui.cit260.bandManager.view.PayBandView - 
+You must enter a valid number.
+byui.cit260.bandManager.view.PayBandView - 
+Invalid value: value can not be blank
+byui.cit260.bandManager.view.PayBandView - 
+SalaryPercentage must be greater than .20 and less than .50
+Check your numbers and try again.
