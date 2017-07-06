@@ -32,8 +32,8 @@ public class PossibleBandNamesView extends InteractiveView {
 
         // Display array here
         for (BandNames l : bandNameList) {
-            //this.console
-            System.out.println(l.getNamesOfBands());
+
+            this.console.println(l.getNamesOfBands());
         }
     }
 
@@ -47,8 +47,7 @@ public class PossibleBandNamesView extends InteractiveView {
         // prompt user for band name
         String bandName = getInput("What name are you thinking about for your band?");
 
-        //this.console
-        System.out.println("\n" + bandName + " Hmmm! Is it easy to say?          "
+        this.console.println("\n" + bandName + " Hmmm! Is it easy to say?          "
                 + "\n"
                 + "\n Remember, what ever name you choose      "
                 + "\n you could be stuck with for years!       "
@@ -60,8 +59,8 @@ public class PossibleBandNamesView extends InteractiveView {
         // Display alphabetized Array
         IdeaControl.sortAlphaBackwards(bandNameList);
         for (BandNames byLength : bandNameList) {
-            //this.console
-            System.out.println(byLength.getNamesOfBands());
+
+            this.console.println(byLength.getNamesOfBands());
         }
 
         return false;
@@ -69,4 +68,3 @@ public class PossibleBandNamesView extends InteractiveView {
     }
 
 }
-

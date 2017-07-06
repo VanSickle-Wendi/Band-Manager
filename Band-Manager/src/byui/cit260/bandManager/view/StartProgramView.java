@@ -16,9 +16,8 @@ import java.util.Scanner;
 public class StartProgramView extends MenuView {
 
     //private String promptMessage;
-
     public StartProgramView() {
-            super("\n                 Band Manager Game                            "
+        super("\n                 Band Manager Game                            "
                 + "\n**************************************************************"
                 + "\n*                                                            *"
                 + "\n* In this game you will take on the role of a band           *"
@@ -63,9 +62,8 @@ public class StartProgramView extends MenuView {
     public boolean doAction(String playersName) {
 
         if (playersName.length() < 2) {
-            //ErrorView.display(this.getClass().getName(),
-            System.out.println("\nInvalid players name: "
-                    + "The name must be greater than one character in length");
+            ErrorView.display(this.getClass().getName(),
+                    "\nInvalid players name: " + "The name must be greater than one character in length");
             return false;
         }
 
@@ -73,8 +71,7 @@ public class StartProgramView extends MenuView {
         Player player = GameControl.createPlayer(playersName);
 
         if (player == null) { // if successfull
-            //ErrorView.display(this.getClass().getName(),
-            System.out.println("\nError creating the player.");
+            ErrorView.display(this.getClass().getName(),"\nError creating the player.");
             return false;
         }
 
@@ -86,8 +83,8 @@ public class StartProgramView extends MenuView {
 
     private void displayNextView(Player player) {
 
-        //this.console
-        System.out.println("\n=========================================="
+        
+        this.console.println("\n=========================================="
                 + "\n Welcome to the game " + player.getPlayersName()
                 + "\n We hope you have a lot of fun!"
                 + "\n=========================================="

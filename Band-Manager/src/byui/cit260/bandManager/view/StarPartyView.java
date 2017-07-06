@@ -45,8 +45,8 @@ public class StarPartyView extends InteractiveView {
         // prompt user for band name
         String celebrity = getInput("Who is your favorite celebrity?");
                 
-        //this.console
-        System.out.println("\n" + celebrity + " is walking towards you with an    "
+      
+       this.console.println("\n" + celebrity + " is walking towards you with an    "
                           +"\n outstretched hand, ready to shake yours. Just as   "
                           +"\n you're about to make contact, Bob, your accountant,"
                           +"\n dives between the two of you and drags you to a    "
@@ -62,8 +62,8 @@ public class StarPartyView extends InteractiveView {
     }  
     // TODO Move function to a Control class once it's created
     public void finalNetWorth() {
-        //this.console
-        System.out.println("*** finalNetWorth function called ***");
+        
+        this.console.println("*** finalNetWorth function called ***");
     }
     
 }
