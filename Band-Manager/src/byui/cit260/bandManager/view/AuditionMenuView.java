@@ -72,7 +72,8 @@ public class AuditionMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
 
@@ -80,20 +81,27 @@ public class AuditionMenuView extends MenuView {
     }
 
     private String getUserInput(String prompt) {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+
         String value = ""; // value to be returned
         boolean valid = false; // initialize to not valid
+        try {
 
         while (!valid) { // loop while an invalid value is entered
+            //this.console
             System.out.println("\n" + prompt);
-            value = keyboard.nextLine(); // get next line typed on keyboard
+            value = this.keyboard.readLine(); // get next line typed on keyboard
             value = value.trim(); // trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
+                //this.console
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println("\nInvalid value: value can not be blank");
                 continue;
             }
             break; // end the loop
+        }
+        } catch (Exception e) {
+            System.out.println("Error reading input: " + e.getMessage());
         }
 
         return value; // return the value entered
@@ -106,6 +114,7 @@ public class AuditionMenuView extends MenuView {
         BandMember drummer = auditionControl.createBandMember("Drummer", drummersName, drummersIssue);
         game.getBand().setDrummer(drummer);
 
+        //this.console
         System.out.println(drummer);
     }
 
@@ -116,6 +125,7 @@ public class AuditionMenuView extends MenuView {
         BandMember singer = auditionControl.createBandMember("Singer", singersName, singersIssue);
         game.getBand().setSinger(singer);
 
+        //this.console
         System.out.println(singer);
     }
 
@@ -126,6 +136,7 @@ public class AuditionMenuView extends MenuView {
         BandMember guitarPlayer = auditionControl.createBandMember("Guitar Player", guitarPlayersName, guitarPlayersIssue);
         game.getBand().setGuitarPlayer(guitarPlayer);
 
+        //this.console
         System.out.println(guitarPlayer);
     }
 
@@ -136,6 +147,7 @@ public class AuditionMenuView extends MenuView {
         BandMember bassPlayer = auditionControl.createBandMember("Bass Player", bassPlayersName, bassPlayersIssue);
         game.getBand().setBassPlayer(bassPlayer);
 
+        //this.console
         System.out.println(bassPlayer);
     }
 
@@ -146,10 +158,12 @@ public class AuditionMenuView extends MenuView {
         BandMember keyboardPlayer = auditionControl.createBandMember("Keyboard Player", keyboardPlayersName, keyboardPlayersIssue);
         game.getBand().setKeyboardPlayer(keyboardPlayer);
 
+        //this.console
         System.out.println(keyboardPlayer);
     }
 
     private void calculateBandAuditionPoints() {
+        //this.console
         System.out.println("*** calculateBandAuditionPoints function called ***");
     }
 

@@ -59,6 +59,7 @@ public class IdeaMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
@@ -78,6 +79,7 @@ public class IdeaMenuView extends MenuView {
 
     private void possibleRadioShows() {
         // display the pay band view
+        //this.console
         System.out.println("*** possibleBandNames function called ***");
     }
 

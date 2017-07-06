@@ -62,6 +62,7 @@ public class BankMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
@@ -70,6 +71,7 @@ public class BankMenuView extends MenuView {
     }
 
     private void viewBankAccount() {
+        //this.console
         System.out.println("*** viewBankAccount function called ***");
     }
 

@@ -50,6 +50,7 @@ public class MusicStoreView extends InteractiveView {
                 + "you would like to purchase cost?"));
             a = 2;
         } catch (NumberFormatException nf) { 
+                    //ErrorView.display(this.getClass().getName(),
                     System.out.println("\nYou must enter a valid number.");            
         }
         } while (a == 1);
@@ -60,6 +61,7 @@ public class MusicStoreView extends InteractiveView {
         bankAccount = Double.parseDouble(getInput("How much is in your bank account?")); 
             b = 2;
         } catch (NumberFormatException nf) { 
+                    //ErrorView.display(this.getClass().getName(),
                     System.out.println("\nYou must enter a valid number.");            
         }
         } while (b == 1);
@@ -69,9 +71,11 @@ public class MusicStoreView extends InteractiveView {
 
         try {
         double bankBalanceAfterPurchase = purchase.calcPurchaseInstrument(instrumentPrice, bankAccount);
+        //this.console
         System.out.println("\nAfter your purchase, you have $" + df.format(bankBalanceAfterPurchase) + " left "
                 + "in your bank account.");
         } catch (EquipmentControlException ece) {
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println(ece.getMessage());
         }
 

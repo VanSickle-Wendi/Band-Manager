@@ -5,7 +5,13 @@
  */
 package byui.cit260.bandManager.view;
 
+import band.manager.BandManager;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,6 +20,9 @@ import java.util.Scanner;
 public abstract class InteractiveView implements ViewInterface {
 
     protected String display;
+    
+    protected final BufferedReader keyboard = BandManager.getInFile();
+    protected final PrintWriter console = BandManager.getOutFile();
 
     public InteractiveView() {
 
@@ -37,31 +46,30 @@ public abstract class InteractiveView implements ViewInterface {
 
     @Override
     public String getInput(String prompt) {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+
         String value = ""; // value to be returned
         boolean valid = false; // initialize to not valid
+        try {
 
         while (!valid) { // loop while an invalid value is entered
             System.out.println("\n" + prompt);
 
-            value = keyboard.nextLine(); // get next line typed on keyboard
+            value = keyboard.readLine(); // get next line typed on keyboard
             value = value.trim(); // trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println("\nInvalid value: value can not be blank");
                 continue;
 
             }
             valid = true; // End the loop
         }
+        } catch (Exception e) {
+            System.out.println("Error reading input: " + e.getMessage());
+        }
+                
         return value; // return the value entered
     }
 
-    /* public double getDouble(String prompt) {
-        String number = getInput(prompt);
-        
-        return Double.parseDouble(number);
-        
-        
-    }*/
 }

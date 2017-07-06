@@ -62,6 +62,7 @@ public class CarLotMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
@@ -74,12 +75,14 @@ public class CarLotMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
+        //this.console
         System.out.println("\n         List of vehicles in Lot One");
         line = new StringBuilder("                                     ");
         line.insert(0, "Vehicle Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
+        //this.console
         System.out.println(line.toString());
 
         // for each loop to display the levelOneCar    
@@ -91,6 +94,7 @@ public class CarLotMenuView extends MenuView {
             line.insert(50, carOne.getPerformancePoints());
 
             // Display the line
+            //this.console
             System.out.println(line.toString());
 
         }
@@ -101,12 +105,14 @@ public class CarLotMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
+        //this.console
         System.out.println("\n         List of vehicles in Lot Two");
         line = new StringBuilder("                                     ");
         line.insert(0, "Vehicle Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
+        //this.console
         System.out.println(line.toString());
 
         // for each loop to display the levelTwoCar    
@@ -118,6 +124,7 @@ public class CarLotMenuView extends MenuView {
             line.insert(50, carTwo.getPerformancePoints());
 
             // Display the line
+            //this.console
             System.out.println(line.toString());
 
         }
@@ -128,12 +135,14 @@ public class CarLotMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
+        //this.console
         System.out.println("\n         List of vehicles in Lot Three");
         line = new StringBuilder("                                     ");
         line.insert(0, "Vehicle Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
+        //this.console
         System.out.println(line.toString());
 
         // for each loop to display the levelThreeCar    
@@ -145,6 +154,7 @@ public class CarLotMenuView extends MenuView {
             line.insert(50, carThree.getPerformancePoints());
 
             // Display the line
+            //this.console
             System.out.println(line.toString());
 
         }
@@ -155,12 +165,14 @@ public class CarLotMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
+        //this.console
         System.out.println("\n         List of vehicles in Lot Three");
         line = new StringBuilder("                                     ");
         line.insert(0, "Vehicle Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
+        //this.console
         System.out.println(line.toString());
 
         // for each loop to display the levelFourCar    
@@ -172,6 +184,7 @@ public class CarLotMenuView extends MenuView {
             line.insert(50, carFour.getPerformancePoints());
 
             // Display the line
+            //this.console
             System.out.println(line.toString());
 
         }

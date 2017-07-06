@@ -38,6 +38,7 @@
      public boolean doAction(String value) {
          String radioShow = getInput("What is the name of the radio show?");
  
+         //this.console
          System.out.println("\n You had a great interview on " + radioShow
                  + "\n! Let's see how you did."
                  + "\n");
@@ -50,6 +51,7 @@
      }
     //TODO Move function to PerformanceControl when it's created 
     public void radioInterviewResult() {
+        //this.console
         System.out.println("*** radioInterviewResult function called ***");
     }     
  

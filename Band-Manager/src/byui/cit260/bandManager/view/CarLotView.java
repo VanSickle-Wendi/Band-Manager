@@ -71,6 +71,7 @@ public class CarLotView extends InteractiveView {
 
                 } catch (NumberFormatException nf) {
 
+                    //ErrorView.display(this.getClass().getName(),
                     System.out.println("\nYou must enter a valid number.");
                 }
             } while (y == 1);
@@ -82,6 +83,7 @@ public class CarLotView extends InteractiveView {
 
                 } catch (NumberFormatException nf) {
 
+                    //ErrorView.display(this.getClass().getName(),
                     System.out.println("\nYou must enter a valid number.");
                 }
             } while (z == 1);
@@ -93,6 +95,7 @@ public class CarLotView extends InteractiveView {
                 x = 2;
             } catch (NumberFormatException nf) {
 
+                //ErrorView.display(this.getClass().getName(),//ErrorView.display(this.getClass().getName(),
                 System.out.println("\nYou must enter a valid number.");
 
             }
@@ -111,10 +114,12 @@ public class CarLotView extends InteractiveView {
             double newVehicleCost;
 
             newVehicleCost = carCost.calcNewVehicleCost(originalVehicleCost, newVehiclePrice,currentPerformancePoints);
+            //this.console
             System.out.println("\n Your new vehicle costs" + newVehicleCost);
           
             
            } catch (BankControlException bce) {
+            //ErrorView.display(this.getClass().getName(),
             System.out.println(bce.getMessage());
         }
         }

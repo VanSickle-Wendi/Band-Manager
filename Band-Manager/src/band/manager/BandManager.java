@@ -19,6 +19,10 @@ import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.SpendingScene;
 import byui.cit260.bandManager.model.Vehicle;
 import byui.cit260.bandManager.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 /**
  *
@@ -28,16 +32,52 @@ public class BandManager {
 
     private static Game currentGame = null;
     private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
 
     public static void main(String[] args) {
 
-        StartProgramView startProgramView = new StartProgramView();
         try {
+            // open character stream files for end user input and output
+            BandManager.inFile = 
+                    new BufferedReader(new InputStreamReader(System.in));
+            
+            BandManager.outFile = new PrintWriter(System.out, true);
+            
+            // open log file
+            String filePath = "log.txt";
+            BandManager.logFile = new PrintWriter(filePath);
+            
+        StartProgramView startProgramView = new StartProgramView();            
         startProgramView.display();
+        return;
+        
         }catch (Throwable te) {
-            System.out.println(te.getMessage());
+            
+            System.out.println("Exception: " + te.toString() +
+                               "\nCause: " + te.getCause() +
+                               "\nMessage: " + te.getMessage());
             te.printStackTrace();
-            startProgramView.display();
+        }
+        
+        finally { 
+            try {
+                if (BandManager.inFile != null)
+                    BandManager.inFile.close();
+                
+                if (BandManager.outFile != null)
+                    BandManager.outFile.close();
+                
+                if (BandManager.logFile != null)
+                    BandManager.logFile.close();
+                
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }          
         }
     }
 
@@ -57,4 +97,31 @@ public class BandManager {
         BandManager.player = player;
     }
 
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        BandManager.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        BandManager.inFile = inFile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        BandManager.logFile = logFile;
+    }
+
+
+
+    
 }

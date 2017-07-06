@@ -20,12 +20,13 @@ public class MapView {
     }
     
     public void displayMap() {
-       //System.out.println("***displayMap stub function called***");
+
        Game game = BandManager.getCurrentGame();
         Map map = game.getMap();
         Location[] locations = map.getLocations();
         
         for (int i=0; i < locations.length; i++){
+            //this.console
             System.out.println("Location " + locations[i].getName() + "! "
                                + locations[i].getScene().getSceneDescription());
         }

@@ -42,6 +42,7 @@ public class RehearsalView extends InteractiveView {
         // prompt user for band name
         String bandName = getInput("What is the name of the band?");
                 
+        //this.console
         System.out.println("\n" + bandName + " is a great name for a band!"
                           +"\n They'd better get busy if they want to be"
                           +"\n ready for their first gig!"
@@ -55,6 +56,7 @@ public class RehearsalView extends InteractiveView {
     }  
     //TODO Move function to PerformanceControl when created.
     public void firstRehearsal() {
+        //this.console
         System.out.println("*** firstRehearsal function called ***");
     }    
 }

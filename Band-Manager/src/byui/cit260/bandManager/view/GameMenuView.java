@@ -111,6 +111,7 @@ public class GameMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
@@ -184,6 +185,7 @@ private void viewAssetMenu() {
     }
 
     private void travelToNewLocation() {
+        //this.console
         System.out.println("*** travelToNewLocation function called ***");
     }
 
@@ -203,6 +205,7 @@ private void viewAssetMenu() {
     }
 
     private void bandMemberStatus() {
+        //this.console
         System.out.println("*** bandMemberStatus function called ***");
     }
     private void listsOfIdeas() {

@@ -45,6 +45,7 @@ public class BigGigView extends InteractiveView {
         // prompt user the Big gig
         String bigGigName = getInput("What is the name if this big event again?");
                 
+        //this.console
         System.out.println("\n The " + bigGigName + " announces your band."
                           +"\n Everyone is in their places,and              "
                           +"\n the cheer that comes is deafening            "
@@ -59,6 +60,7 @@ public class BigGigView extends InteractiveView {
     
     //TODO Move function to PerformanceControl when it's created
     public void bigGigResult() {
+        //this.console
         System.out.println("*** bigGig function called ***");
     }    
 } 

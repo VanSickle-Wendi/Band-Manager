@@ -31,6 +31,7 @@ public class PossibleIssuesView extends InteractiveView {
 
         // Display array here
         for (Issues s : issueList) {
+            //this.console
             System.out.println(s.getIssueDescription());
         }
     }
@@ -45,6 +46,7 @@ public class PossibleIssuesView extends InteractiveView {
         // prompt user for band name
         String issueName = getInput("What issue would you assign?");
 
+        //this.console
         System.out.println("\n" + issueName + "! How annoying!          "
                 + "\n"
                 + "\n When you audition the band, you can      "
@@ -56,6 +58,7 @@ public class PossibleIssuesView extends InteractiveView {
         // Display alphabetized Array
         IdeaControl.alphabetizeIssues(issueList);
         for (Issues sorted : issueList) {
+            //this.console
             System.out.println(sorted.getIssueDescription());
         }
 

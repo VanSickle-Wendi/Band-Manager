@@ -21,6 +21,7 @@ public class TakeLoanView extends InteractiveView {
 
     private void displayBanner() {
 
+        //this.console
         System.out.println("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  It's time to get a loan                      |"
@@ -46,6 +47,7 @@ public class TakeLoanView extends InteractiveView {
             z = 2;
         } catch (NumberFormatException nf) {
 
+            //ErrorView.display(this.getClass().getName(),
             System.out.println("\nYou must enter a valid number.");
 
         }

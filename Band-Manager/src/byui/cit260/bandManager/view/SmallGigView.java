@@ -43,6 +43,7 @@ public class SmallGigView extends InteractiveView {
         // prompt user the small gig
         String smallGigName = getInput("What is the name if this smallish estsablishment again?");
                 
+        //this.console
         System.out.println("\n The " + smallGigName + " announces your band."
                           +"\n Everyone is in their places,and              "
                           +"\n you feel as confident as you should be.      ");
@@ -56,6 +57,7 @@ public class SmallGigView extends InteractiveView {
     
     //TODO Move function to PerformanceControl when it's created
     public void smallgGigResult() {
+         //this.console
          System.out.println("*** smallGig function called ***");
     }    
 } 

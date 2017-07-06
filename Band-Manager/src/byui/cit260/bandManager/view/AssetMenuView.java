@@ -52,7 +52,8 @@ public class AssetMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");         
                 break;
         }
 
@@ -60,7 +61,7 @@ public class AssetMenuView extends MenuView {
     }
 
     private void viewCurrentAssets() {
-        System.out.println("*** viewCurrentAssets function called ***");
+        this.console.println("*** viewCurrentAssets function called ***");
     }
 
     private void purchaseUpgradeInstruments() {
@@ -69,11 +70,11 @@ public class AssetMenuView extends MenuView {
     }
 
     private void purchaseUpgradeVehicle() {
-        System.out.println("*** purchaseUpgradeVehicle function called ***");
+        this.console.println("*** purchaseUpgradeVehicle function called ***");
     }
 
     private void viewPerformancePoints() {
-        System.out.println("*** viewPerformancePoints function called ***");
+        this.console.println("*** viewPerformancePoints function called ***");
     }
 
     

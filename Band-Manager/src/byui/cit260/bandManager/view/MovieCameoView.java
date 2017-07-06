@@ -43,6 +43,7 @@ public class MovieCameoView extends InteractiveView {
         // prompt user for band name
         String movieSpot = getInput("What is the name of the Movie?");
                 
+        //this.console
         System.out.println("\n" + movieSpot + " hit the theaters today! "
                           +"\n If the movie is a success, the band could"
                           +"\n be super stars over night!               "
@@ -57,6 +58,7 @@ public class MovieCameoView extends InteractiveView {
     }  
     // TODO Move function to PerformanceControl when it's created
     public void movieResults() {
+        //this.console
         System.out.println("*** movieResult function called ***");
     }    
 }

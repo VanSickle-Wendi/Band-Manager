@@ -28,6 +28,7 @@ public class LoanPaymentView extends InteractiveView {
 
     private void displayBanner() {
 
+        //this.console
         System.out.println("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  It's time to make a loan payment.            |"
@@ -64,6 +65,7 @@ public class LoanPaymentView extends InteractiveView {
 
                 } catch (NumberFormatException nf) {
 
+                    //ErrorView.display(this.getClass().getName(),
                     System.out.println("\nYou must enter a valid number.");
                 }
             } while (x == 1);
@@ -76,6 +78,7 @@ public class LoanPaymentView extends InteractiveView {
 
                 } catch (NumberFormatException nf) {
 
+                    //ErrorView.display(this.getClass().getName(),
                     System.out.println("\nYou must enter a valid number.");
                 }
             } while (y == 1);
@@ -86,10 +89,12 @@ public class LoanPaymentView extends InteractiveView {
             try {
                 double makeLoanPayment;
                 makeLoanPayment = payLoan.calcLoanPayment(loanBalance, extraPrinciple);
+                //this.console
                 System.out.println("\nYour loan payment is " + makeLoanPayment);
                 z = 2;
 
             } catch (BankControlException bce) {
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println(bce.getMessage());
 
             }

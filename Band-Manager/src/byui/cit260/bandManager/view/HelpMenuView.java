@@ -47,6 +47,7 @@ public class HelpMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
+                //ErrorView.display(this.getClass().getName(),
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
@@ -55,6 +56,7 @@ public class HelpMenuView extends MenuView {
     }
 
     private void goalOfGame() {
+        //this.console
         System.out.println("\n"
                 + "\n--------------------------------------------------"
                 + "\n The goal of the game is to take your band to     "
@@ -65,6 +67,7 @@ public class HelpMenuView extends MenuView {
     }
 
     private void payOnLoan() {
+        //this.console
         System.out.println("\n"
                 + "\n--------------------------------------------------"
                 + "\n Loan payments are due at the completion of each  "
@@ -75,6 +78,7 @@ public class HelpMenuView extends MenuView {
     }
 
     private void upgradeInstruments() {
+        //this.console
         System.out.println("\n"
                 + "\n--------------------------------------------------"
                 + "\n After the band members are selected or a level is"

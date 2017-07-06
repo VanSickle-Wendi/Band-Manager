@@ -51,6 +51,7 @@ public class HotelCheckInView extends InteractiveView {
          quantity = Double.parseDouble(getInput("How many rooms would you like to rent?"));
          a = 2;
         } catch (NumberFormatException nf) {
+            //ErrorView.display(this.getClass().getName(),
             System.out.println("\n you must enter a valid number");
         } 
          } while(a == 1);
@@ -59,6 +60,7 @@ public class HotelCheckInView extends InteractiveView {
          roomCharge = Double.parseDouble(getInput("Enter the cost of the rooms you would like to rent."));
          b = 2;
         } catch (NumberFormatException nf) {
+            //ErrorView.display(this.getClass().getName(),
             System.out.println("\n you must enter a valid number");
         }
         } while(b == 1);
@@ -68,6 +70,7 @@ public class HotelCheckInView extends InteractiveView {
          c = 2;
          
         } catch (NumberFormatException nf) {
+            //ErrorView.display(this.getClass().getName(),
             System.out.println("\n you must enter a valid number");
         }
         } while(c == 1);
@@ -76,9 +79,11 @@ public class HotelCheckInView extends InteractiveView {
          
         try { 
         payHotelCost = hotel.calcHotelCost(roomCharge, bankAccount, quantity);
+        //this.console
         System.out.println("\nYou have" + payHotelCost + "in your bank account");
         } catch(BankControlException bce) {
         
+        //ErrorView.display(this.getClass().getName(),
         System.out.println(bce.getMessage());
         }
 
