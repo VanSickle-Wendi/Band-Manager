@@ -16,9 +16,9 @@ import java.util.Scanner;
  * @author Crazian
  */
 public class SmallGigView extends InteractiveView {
-    
+
     private Game game;
-    
+
     public SmallGigView() {
         super("\n"
                 + "\n-------------------------------------------------"
@@ -28,36 +28,34 @@ public class SmallGigView extends InteractiveView {
                 + "\n to recall the name of this establishment.       "
                 + "\n-------------------------------------------------");
     }
-    
+
     public void setGame(Game game) {
         this.game = game;
     }
-    
+
     @Override
     public void display() {
         doAction(null);
     }
-    
+
     @Override
     public boolean doAction(String value) {
         // prompt user the small gig
         String smallGigName = getInput("What is the name if this smallish estsablishment again?");
-                
-        //this.console
-        System.out.println("\n The " + smallGigName + " announces your band."
-                          +"\n Everyone is in their places,and              "
-                          +"\n you feel as confident as you should be.      ");
-        
+
+        this.console.println("\n The " + smallGigName + " announces your band."
+                + "\n Everyone is in their places,and              "
+                + "\n you feel as confident as you should be.      ");
+
         //PerformanceControl smallgig = new PerformanceControl();        
-        
         smallgGigResult();
 
-        return true;     
-    }  
-    
+        return true;
+    }
+
     //TODO Move function to PerformanceControl when it's created
     public void smallgGigResult() {
-         //this.console
-         System.out.println("*** smallGig function called ***");
-    }    
-} 
+
+        this.console.println("*** smallGig function called ***");
+    }
+}

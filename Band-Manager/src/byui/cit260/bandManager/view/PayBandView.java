@@ -15,7 +15,6 @@ import java.util.Scanner;
  */
 public class PayBandView extends InteractiveView {
 
-
     public PayBandView() {
 
         super("\n"
@@ -45,9 +44,7 @@ public class PayBandView extends InteractiveView {
         int c = 1;
         int d = 1;
         int e = 1;
-       
 
-        
         do {
             // prompt user for 5 inputs, change the user input from String to double
             try {
@@ -55,8 +52,8 @@ public class PayBandView extends InteractiveView {
                 a = 2;
             } catch (NumberFormatException nf) {
 
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\nYou must enter a valid number.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number.");
 
             }
         } while (a == 1);
@@ -67,8 +64,8 @@ public class PayBandView extends InteractiveView {
                 b = 2;
             } catch (NumberFormatException nf) {
 
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\nYou must enter a valid number.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number.");
             }
         } while (b == 1);
 
@@ -79,8 +76,8 @@ public class PayBandView extends InteractiveView {
 
             } catch (NumberFormatException nf) {
 
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\nYou must enter a valid number.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number.");
             }
         } while (c == 1);
 
@@ -91,8 +88,8 @@ public class PayBandView extends InteractiveView {
 
             } catch (NumberFormatException nf) {
 
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\nYou must enter a valid number.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number.");
             }
         } while (d == 1);
 
@@ -103,8 +100,8 @@ public class PayBandView extends InteractiveView {
 
             } catch (NumberFormatException nf) {
 
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\nYou must enter a valid number.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number.");
             }
         } while (e == 1);
 
@@ -115,18 +112,15 @@ public class PayBandView extends InteractiveView {
             double payBandSalary;
 
             payBandSalary = salary.calcBandSalary(venuePayment, equipmentCost, hotelCost, salaryPercentage, bankAccount);
-            //this.console
-            System.out.println("\nYou owe the band " + payBandSalary);
-           
+            
+            this.console.println("\nYou owe the band " + payBandSalary);
 
         } catch (BankControlException bce) {
-            //ErrorView.display(this.getClass().getName(),
-            System.out.println(bce.getMessage());
+            ErrorView.display(this.getClass().getName(),bce.getMessage());
         }
 
         return true;
 
-        
     }
 
 }

@@ -43,7 +43,7 @@ public class TVAppearanceView extends InteractiveView {
         String tvShow = getInput("What show is the band appearing on?");
                 
         //this.console
-        System.out.println("\n" + tvShow + " will air tonight!"
+        this.console.println("\n" + tvShow + " will air tonight!"
                           +"\n How well did the band perform?"
                           +"\n Let's find out!"
                           +"\n");
@@ -56,7 +56,7 @@ public class TVAppearanceView extends InteractiveView {
     }  
     //TODO Move function to PerformanceControl when it's created
     public void tvAppearanceResult() {
-        //this.console
-        System.out.println("*** tvAppearanceResult function called ***");
+        
+        this.console.println("*** tvAppearanceResult function called ***");
     }    
 }
