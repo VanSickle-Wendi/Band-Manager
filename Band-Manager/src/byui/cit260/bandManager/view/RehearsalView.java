@@ -10,12 +10,13 @@ import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.BandMember;
 import byui.cit260.bandManager.model.Game;
 import java.util.Scanner;
+
 /**
  *
  * @author Wendi
  */
 public class RehearsalView extends InteractiveView {
-        
+
     private Game game;
 
     public RehearsalView() {
@@ -30,8 +31,8 @@ public class RehearsalView extends InteractiveView {
 
     public void setGame(Game game) {
         this.game = game;
-    }    
-    
+    }
+
     @Override
     public void display() {
         doAction(null);
@@ -41,22 +42,21 @@ public class RehearsalView extends InteractiveView {
     public boolean doAction(String value) {
         // prompt user for band name
         String bandName = getInput("What is the name of the band?");
-                
-        //this.console
-        System.out.println("\n" + bandName + " is a great name for a band!"
-                          +"\n They'd better get busy if they want to be"
-                          +"\n ready for their first gig!"
-                          +"\n");
-        
+
+        this.console.println("\n" + bandName + " is a great name for a band!"
+                + "\n They'd better get busy if they want to be"
+                + "\n ready for their first gig!"
+                + "\n");
+
         //PerformanceControl first = new PerformanceControl();        
-        
         firstRehearsal();
 
         return true;
-    }  
+    }
+
     //TODO Move function to PerformanceControl when created.
     public void firstRehearsal() {
-        //this.console
-        System.out.println("*** firstRehearsal function called ***");
-    }    
+
+        this.console.println("*** firstRehearsal function called ***");
+    }
 }

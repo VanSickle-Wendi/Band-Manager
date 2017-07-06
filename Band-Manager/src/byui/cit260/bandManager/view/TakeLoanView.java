@@ -21,8 +21,7 @@ public class TakeLoanView extends InteractiveView {
 
     private void displayBanner() {
 
-        //this.console
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n-------------------------------------------------"
                 + "\n|  It's time to get a loan                      |"
                 + "\n-------------------------------------------------"
@@ -42,16 +41,16 @@ public class TakeLoanView extends InteractiveView {
         int z = 1;
         // prompt user for 5 inputs, change the user input from String to double
         do {
-        try {
-            initialLoan = Double.parseDouble(getInput("Please enter the amount you would like to request for a loan"));
-            z = 2;
-        } catch (NumberFormatException nf) {
+            try {
+                initialLoan = Double.parseDouble(getInput("Please enter the amount you would like to request for a loan"));
+                z = 2;
+            } catch (NumberFormatException nf) {
 
-            //ErrorView.display(this.getClass().getName(),
-            System.out.println("\nYou must enter a valid number.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number.");
 
-        }
-        }while (z == 1);
+            }
+        } while (z == 1);
 
         return true;
     }
