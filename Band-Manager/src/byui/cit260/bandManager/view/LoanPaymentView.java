@@ -88,8 +88,7 @@ public class LoanPaymentView extends InteractiveView {
             try {
                 double makeLoanPayment;
                 makeLoanPayment = payLoan.calcLoanPayment(loanBalance, extraPrinciple);
-                //this.console
-                System.out.println("\nYour loan payment is " + makeLoanPayment);
+                this.console.println("\nYour loan payment is " + makeLoanPayment);
                 z = 2;
 
             } catch (BankControlException bce) {
