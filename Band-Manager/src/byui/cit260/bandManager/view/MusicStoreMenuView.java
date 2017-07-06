@@ -66,8 +66,8 @@ public class MusicStoreMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
 
@@ -78,15 +78,13 @@ public class MusicStoreMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of Drums");
+        this.console.println("\n         List of Drums");
         line = new StringBuilder("                                     ");
         line.insert(0, "Instrument Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display the drums    
         for (Instrument drum : drums) {
@@ -97,8 +95,7 @@ public class MusicStoreMenuView extends MenuView {
             line.insert(50, drum.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
 
@@ -108,15 +105,13 @@ public class MusicStoreMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of Guitars");
+        this.console.println("\n         List of Guitars");
         line = new StringBuilder("                                     ");
         line.insert(0, "Instrument Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display the guitars    
         for (Instrument guitar : guitars) {
@@ -127,8 +122,7 @@ public class MusicStoreMenuView extends MenuView {
             line.insert(50, guitar.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
     }
@@ -137,15 +131,13 @@ public class MusicStoreMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of Bass Guitars");
+        this.console.println("\n         List of Bass Guitars");
         line = new StringBuilder("                                     ");
         line.insert(0, "Instrument Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display bass guitars    
         for (Instrument bassG : bass) {
@@ -156,8 +148,7 @@ public class MusicStoreMenuView extends MenuView {
             line.insert(50, bassG.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
     }
@@ -166,15 +157,13 @@ public class MusicStoreMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of Keyboards");
+        this.console.println("\n         List of Keyboards");
         line = new StringBuilder("                                     ");
         line.insert(0, "Instrument Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display the keyboards    
         for (Instrument keyboard : keyboards) {
@@ -185,8 +174,7 @@ public class MusicStoreMenuView extends MenuView {
             line.insert(50, keyboard.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
     }
@@ -195,15 +183,13 @@ public class MusicStoreMenuView extends MenuView {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of Microphones");
+        this.console.println("\n         List of Microphones");
         line = new StringBuilder("                                     ");
         line.insert(0, "Instrument Type");
         line.insert(20, "Description");
         line.insert(35, "Price");
         line.insert(45, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display the mics    
         for (Instrument mics : microphones) {
@@ -214,8 +200,7 @@ public class MusicStoreMenuView extends MenuView {
             line.insert(45, mics.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
 

@@ -22,7 +22,7 @@ public class AuditionMenuView extends MenuView {
     private Game game;
 
     public AuditionMenuView() {
-            super("\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n| Audition Menu                                 |"
                 + "\n-------------------------------------------------"
@@ -86,22 +86,21 @@ public class AuditionMenuView extends MenuView {
         boolean valid = false; // initialize to not valid
         try {
 
-        while (!valid) { // loop while an invalid value is entered
-            //this.console
-            System.out.println("\n" + prompt);
-            value = this.keyboard.readLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
+            while (!valid) { // loop while an invalid value is entered
+                this.console.println("\n" + prompt);
+                value = this.keyboard.readLine(); // get next line typed on keyboard
+                value = value.trim(); // trim off leading and trailing blanks
 
-            if (value.length() < 1) { // value is blank
-                //this.console
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
+                if (value.length() < 1) { // value is blank
+                    ErrorView.display(this.getClass().getName(),
+                            "\nInvalid value: value can not be blank");
+                    continue;
+                }
+                break; // end the loop
             }
-            break; // end the loop
-        }
         } catch (Exception e) {
-            System.out.println("Error reading input: " + e.getMessage());
+            ErrorView.display(this.getClass().getName(),
+                    "Error reading input: " + e.getMessage());
         }
 
         return value; // return the value entered
@@ -114,8 +113,7 @@ public class AuditionMenuView extends MenuView {
         BandMember drummer = auditionControl.createBandMember("Drummer", drummersName, drummersIssue);
         game.getBand().setDrummer(drummer);
 
-        //this.console
-        System.out.println(drummer);
+        this.console.println(drummer);
     }
 
     private void auditionSinger() {
@@ -125,8 +123,7 @@ public class AuditionMenuView extends MenuView {
         BandMember singer = auditionControl.createBandMember("Singer", singersName, singersIssue);
         game.getBand().setSinger(singer);
 
-        //this.console
-        System.out.println(singer);
+        this.console.println(singer);
     }
 
     private void auditionGuitarPlayer() {
@@ -136,8 +133,7 @@ public class AuditionMenuView extends MenuView {
         BandMember guitarPlayer = auditionControl.createBandMember("Guitar Player", guitarPlayersName, guitarPlayersIssue);
         game.getBand().setGuitarPlayer(guitarPlayer);
 
-        //this.console
-        System.out.println(guitarPlayer);
+        this.console.println(guitarPlayer);
     }
 
     private void auditionBassPlayer() {
@@ -147,8 +143,7 @@ public class AuditionMenuView extends MenuView {
         BandMember bassPlayer = auditionControl.createBandMember("Bass Player", bassPlayersName, bassPlayersIssue);
         game.getBand().setBassPlayer(bassPlayer);
 
-        //this.console
-        System.out.println(bassPlayer);
+        this.console.println(bassPlayer);
     }
 
     private void auditionKeyboardPlayer() {
@@ -158,13 +153,11 @@ public class AuditionMenuView extends MenuView {
         BandMember keyboardPlayer = auditionControl.createBandMember("Keyboard Player", keyboardPlayersName, keyboardPlayersIssue);
         game.getBand().setKeyboardPlayer(keyboardPlayer);
 
-        //this.console
-        System.out.println(keyboardPlayer);
+        this.console.println(keyboardPlayer);
     }
 
     private void calculateBandAuditionPoints() {
-        //this.console
-        System.out.println("*** calculateBandAuditionPoints function called ***");
+        this.console.println("*** calculateBandAuditionPoints function called ***");
     }
 
 }

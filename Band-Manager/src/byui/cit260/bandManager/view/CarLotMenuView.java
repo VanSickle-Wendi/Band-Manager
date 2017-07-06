@@ -11,16 +11,15 @@ import byui.cit260.bandManager.model.CarLotScene;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Vehicle;
 import java.util.Scanner;
+
 /**
  *
  * @author Crazian
  */
 public class CarLotMenuView extends MenuView {
-    
-    
-    
+
     private final CarLotScene scene = new CarLotScene();
-    
+
     public CarLotMenuView() {
         super("\n"
                 + "\n-------------------------------------------------"
@@ -30,14 +29,14 @@ public class CarLotMenuView extends MenuView {
                 + "\nB -- See what we have on lot Two"
                 + "\nC -- See what we have on lot Three"
                 + "\nD -- See what we have on lot Four"
-                + "\nK -- Trade in your car and get a discount"              
+                + "\nK -- Trade in your car and get a discount"
                 + "\nQ -- Leave Car Lot"
                 + "\n-------------------------------------------------"
                 + "\n"
                 + "\nPlease choose a Car Lot Menu option: ");
 
     }
-    
+
     @Override
     public boolean doAction(String value) {
 
@@ -62,28 +61,25 @@ public class CarLotMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
-        
 
         return false;
     }
-    
+
     private void viewListOfLevelOneVehicle(Vehicle[] levelOneVehicle) {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of vehicles in Lot One");
+        this.console.println("\n         List of vehicles in Lot One");
         line = new StringBuilder("                                     ");
         line.insert(0, "Vehicle Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display the levelOneCar    
         for (Vehicle carOne : levelOneVehicle) {
@@ -94,26 +90,23 @@ public class CarLotMenuView extends MenuView {
             line.insert(50, carOne.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
 
     }
-    
+
     private void viewListOfLevelTwoVehicle(Vehicle[] levelTwoVehicle) {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of vehicles in Lot Two");
+        this.console.println("\n         List of vehicles in Lot Two");
         line = new StringBuilder("                                     ");
         line.insert(0, "Vehicle Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display the levelTwoCar    
         for (Vehicle carTwo : levelTwoVehicle) {
@@ -124,26 +117,23 @@ public class CarLotMenuView extends MenuView {
             line.insert(50, carTwo.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
 
     }
-    
+
     private void viewListOfLevelThreeVehicle(Vehicle[] levelThreeVehicle) {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of vehicles in Lot Three");
+        this.console.println("\n         List of vehicles in Lot Three");
         line = new StringBuilder("                                     ");
         line.insert(0, "Vehicle Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display the levelThreeCar    
         for (Vehicle carThree : levelThreeVehicle) {
@@ -154,26 +144,23 @@ public class CarLotMenuView extends MenuView {
             line.insert(50, carThree.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
 
     }
-    
+
     private void viewListOfLevelFourVehicle(Vehicle[] levelFourVehicle) {
         StringBuilder line;
 
         // Display header
-        //this.console
-        System.out.println("\n         List of vehicles in Lot Three");
+        this.console.println("\n         List of vehicles in Lot Three");
         line = new StringBuilder("                                     ");
         line.insert(0, "Vehicle Type");
         line.insert(20, "Description");
         line.insert(40, "Price");
         line.insert(50, "Performance Points");
-        //this.console
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         // for each loop to display the levelFourCar    
         for (Vehicle carFour : levelFourVehicle) {
@@ -184,8 +171,7 @@ public class CarLotMenuView extends MenuView {
             line.insert(50, carFour.getPerformancePoints());
 
             // Display the line
-            //this.console
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
 
@@ -195,6 +181,5 @@ public class CarLotMenuView extends MenuView {
         CarLotView carLot = new CarLotView();
         carLot.display();
     }
-    
-    
+
 }
