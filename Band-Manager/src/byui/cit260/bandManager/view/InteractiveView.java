@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 public abstract class InteractiveView implements ViewInterface {
 
     protected String display;
-    
+
     protected final BufferedReader keyboard = BandManager.getInFile();
     protected final PrintWriter console = BandManager.getOutFile();
 
@@ -30,7 +30,7 @@ public abstract class InteractiveView implements ViewInterface {
 
     public InteractiveView(String message) {
         this.display = message;
-        System.out.println(message);
+        this.console.println(message);
     }
 
     @Override
@@ -51,24 +51,24 @@ public abstract class InteractiveView implements ViewInterface {
         boolean valid = false; // initialize to not valid
         try {
 
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + prompt);
+            while (!valid) { // loop while an invalid value is entered
+                this.console.println("\n" + prompt);
 
-            value = keyboard.readLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
+                value = keyboard.readLine(); // get next line typed on keyboard
+                value = value.trim(); // trim off leading and trailing blanks
 
-            if (value.length() < 1) { // value is blank
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
+                if (value.length() < 1) { // value is blank
+                    ErrorView.display(this.getClass().getName(),
+                            "\nInvalid value: value can not be blank");
+                    continue;
 
+                }
+                valid = true; // End the loop
             }
-            valid = true; // End the loop
-        }
         } catch (Exception e) {
-            System.out.println("Error reading input: " + e.getMessage());
+            this.console.println("Error reading input: " + e.getMessage());
         }
-                
+
         return value; // return the value entered
     }
 

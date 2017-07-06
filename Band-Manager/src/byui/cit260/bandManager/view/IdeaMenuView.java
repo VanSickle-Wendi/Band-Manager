@@ -19,7 +19,7 @@ public class IdeaMenuView extends MenuView {
     private Game game;
 
     public IdeaMenuView() {
-           super( "\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n| Idea Menu                                      |"
                 + "\n-------------------------------------------------"
@@ -37,7 +37,7 @@ public class IdeaMenuView extends MenuView {
     public void setGame(Game game) {
         this.game = game;
     }
-    
+
     @Override
     public boolean doAction(String value) {
 
@@ -59,8 +59,8 @@ public class IdeaMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
 
@@ -79,13 +79,12 @@ public class IdeaMenuView extends MenuView {
 
     private void possibleRadioShows() {
         // display the pay band view
-        //this.console
-        System.out.println("*** possibleBandNames function called ***");
+        this.console.println("*** possibleBandNames function called ***");
     }
 
     private void possibleTVShows() {
         TakeLoanView loan = new TakeLoanView();
         loan.display();
-        }
-
     }
+
+}

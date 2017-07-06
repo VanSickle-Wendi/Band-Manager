@@ -14,6 +14,7 @@ import java.text.DecimalFormat;
  * @author Crazian
  */
 public class CarLotView extends InteractiveView {
+
     public CarLotView() {
 
         super("\n"
@@ -41,96 +42,74 @@ public class CarLotView extends InteractiveView {
                 + "\n-------------------------------------------------"
         );
     }
-    
-    
-    
+
     @Override
     public void display() {
         doAction(null);
     }
-    
+
     @Override
-    public boolean doAction(String value) {   
+    public boolean doAction(String value) {
         double originalVehicleCost = 0;
         double newVehiclePrice = 0;
         double currentPerformancePoints = 0;
         int x = 1;
         int y = 1;
         int z = 1;
-        
-        
+
         //Format bank balance to 2 decimal places 
-        DecimalFormat df = new DecimalFormat("#.00");   
-        
-        
+        DecimalFormat df = new DecimalFormat("#.00");
+
         {
-        do{ 
-            try {
-                originalVehicleCost = Double.parseDouble(getInput("How much did you pay for your current vehicle?"));
+            do {
+                try {
+                    originalVehicleCost = Double.parseDouble(getInput("How much did you pay for your current vehicle?"));
                     y = 2;
 
                 } catch (NumberFormatException nf) {
 
-                    //ErrorView.display(this.getClass().getName(),
-                    System.out.println("\nYou must enter a valid number.");
+                    ErrorView.display(this.getClass().getName(),
+                            "\nYou must enter a valid number.");
                 }
             } while (y == 1);
-         
-        do{ 
-            try {
-                currentPerformancePoints = Double.parseDouble(getInput("How many performance points have you earned?"));
+
+            do {
+                try {
+                    currentPerformancePoints = Double.parseDouble(getInput("How many performance points have you earned?"));
                     z = 2;
 
                 } catch (NumberFormatException nf) {
 
-                    //ErrorView.display(this.getClass().getName(),
-                    System.out.println("\nYou must enter a valid number.");
+                    ErrorView.display(this.getClass().getName(),
+                            "\nYou must enter a valid number.");
                 }
             } while (z == 1);
-         
-         
-        do {
+
+            do {
+                try {
+                    newVehiclePrice = Double.parseDouble(getInput("How much is the vehicle you would like to buy?"));
+                    x = 2;
+                } catch (NumberFormatException nf) {
+
+                    ErrorView.display(this.getClass().getName(),//ErrorView.display(this.getClass().getName(),
+                            "\nYou must enter a valid number.");
+
+                }
+            } while (x == 1);
+
+            // new instance of BankingControl class
+            BankingControl carCost = new BankingControl();
+
             try {
-                newVehiclePrice = Double.parseDouble(getInput("How much is the vehicle you would like to buy?"));
-                x = 2;
-            } catch (NumberFormatException nf) {
+                double newVehicleCost;
 
-                //ErrorView.display(this.getClass().getName(),//ErrorView.display(this.getClass().getName(),
-                System.out.println("\nYou must enter a valid number.");
+                newVehicleCost = carCost.calcNewVehicleCost(originalVehicleCost, newVehiclePrice, currentPerformancePoints);
+                this.console.println("\n Your new vehicle costs" + newVehicleCost);
 
+            } catch (BankControlException bce) {
+                ErrorView.display(this.getClass().getName(), bce.getMessage());
             }
-        } while (x == 1);
-            
-       
-        
-        
-        
-        
-        
-        // new instance of BankingControl class
-        BankingControl carCost = new BankingControl();
-        
-        try {
-            double newVehicleCost;
-
-            newVehicleCost = carCost.calcNewVehicleCost(originalVehicleCost, newVehiclePrice,currentPerformancePoints);
-            //this.console
-            System.out.println("\n Your new vehicle costs" + newVehicleCost);
-          
-            
-           } catch (BankControlException bce) {
-            //ErrorView.display(this.getClass().getName(),
-            System.out.println(bce.getMessage());
-        }
         }
         return true;
     }
 }
-
-           
-       
-      
-    
-
-    
-

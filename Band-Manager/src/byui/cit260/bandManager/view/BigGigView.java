@@ -16,9 +16,9 @@ import java.util.Scanner;
  * @author Crazian
  */
 public class BigGigView extends InteractiveView {
-    
+
     private Game game;
-    
+
     public BigGigView() {
         super("\n"
                 + "\n-------------------------------------------------"
@@ -30,37 +30,34 @@ public class BigGigView extends InteractiveView {
                 + "\n at a event like this.                           "
                 + "\n-------------------------------------------------");
     }
-    
+
     public void setGame(Game game) {
         this.game = game;
     }
-    
+
     @Override
     public void display() {
         doAction(null);
     }
-    
+
     @Override
     public boolean doAction(String value) {
         // prompt user the Big gig
         String bigGigName = getInput("What is the name if this big event again?");
-                
-        //this.console
-        System.out.println("\n The " + bigGigName + " announces your band."
-                          +"\n Everyone is in their places,and              "
-                          +"\n the cheer that comes is deafening            "
-                          +"\n you feel as confident as you should be.      ");
-        
+
+        this.console.println("\n The " + bigGigName + " announces your band."
+                + "\n Everyone is in their places,and              "
+                + "\n the cheer that comes is deafening            "
+                + "\n you feel as confident as you should be.      ");
+
         //PerformanceControl biggig = new PerformanceControl();        
-        
         bigGigResult();
 
-        return true;     
+        return true;
     }
-    
+
     //TODO Move function to PerformanceControl when it's created
     public void bigGigResult() {
-        //this.console
-        System.out.println("*** bigGig function called ***");
-    }    
-} 
+        this.console.println("*** bigGig function called ***");
+    }
+}

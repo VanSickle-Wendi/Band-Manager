@@ -15,19 +15,19 @@ import java.util.Scanner;
  * @author Wendi
  */
 public abstract class MenuView implements ViewInterface {
-    
+
     protected String promptMessage;
-    
+
     protected final BufferedReader keyboard = BandManager.getInFile();
-    protected final PrintWriter console = BandManager.getOutFile();    
-    
+    protected final PrintWriter console = BandManager.getOutFile();
+
     public MenuView() {
     }
-    
+
     public MenuView(String message) {
         this.promptMessage = message;
     }
-    
+
     @Override
     public void display() {
 
@@ -52,30 +52,30 @@ public abstract class MenuView implements ViewInterface {
         boolean valid = false; // initialize to not valid
         try {
 
-        while (!valid) { // loop while an invalid value is entered
-            //this.console
-            System.out.println("\n" + this.promptMessage);
+            while (!valid) { // loop while an invalid value is entered
 
-            value = keyboard.readLine(); // get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
+                this.console.println("\n" + this.promptMessage);
 
-            if (value.length() < 1) { // value is blank
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
+                value = keyboard.readLine(); // get next line typed on keyboard
+                value = value.trim(); // trim off leading and trailing blanks
 
+                if (value.length() < 1) { // value is blank
+                    ErrorView.display(this.getClass().getName(),
+                            "\nInvalid value: value can not be blank");
+                    continue;
+
+                }
+                valid = true; // End the loop Brother Anderson suggested this instead of break
             }
-            valid = true; // End the loop Brother Anderson suggested this instead of break
-        }
-        }catch (Exception e) {
-            System.out.println("Error reading input: " + e.getMessage());
+        } catch (Exception e) {
+            this.console.println("Error reading input: " + e.getMessage());
         }
         return value; // return the value entered
-    }    
-    
+    }
+
     @Override
     public String getInput(String prompt) {
 
         return null;
-}
+    }
 }

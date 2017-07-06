@@ -10,12 +10,13 @@ import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.BandMember;
 import byui.cit260.bandManager.model.Game;
 import java.util.Scanner;
+
 /**
  *
  * @author Wendi
  */
 public class MovieCameoView extends InteractiveView {
-        
+
     private Game game;
 
     public MovieCameoView() {
@@ -31,8 +32,8 @@ public class MovieCameoView extends InteractiveView {
 
     public void setGame(Game game) {
         this.game = game;
-    }    
-    
+    }
+
     @Override
     public void display() {
         doAction(null);
@@ -42,23 +43,21 @@ public class MovieCameoView extends InteractiveView {
     public boolean doAction(String value) {
         // prompt user for band name
         String movieSpot = getInput("What is the name of the Movie?");
-                
-        //this.console
-        System.out.println("\n" + movieSpot + " hit the theaters today! "
-                          +"\n If the movie is a success, the band could"
-                          +"\n be super stars over night!               "
-                          +"\n Let's read the reviews.                  "
-                          +"\n");
-        
+
+        this.console.println("\n" + movieSpot + " hit the theaters today! "
+                + "\n If the movie is a success, the band could"
+                + "\n be super stars over night!               "
+                + "\n Let's read the reviews.                  "
+                + "\n");
+
         //PerformanceControl movie = new PerformanceControl();        
-        
         movieResults();
 
         return true;
-    }  
+    }
+
     // TODO Move function to PerformanceControl when it's created
     public void movieResults() {
-        //this.console
-        System.out.println("*** movieResult function called ***");
-    }    
+        this.console.println("*** movieResult function called ***");
+    }
 }

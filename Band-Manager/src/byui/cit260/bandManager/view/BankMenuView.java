@@ -20,7 +20,7 @@ public class BankMenuView extends MenuView {
     private Game game;
 
     public BankMenuView() {
-           super( "\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n| Bank Menu                                      |"
                 + "\n-------------------------------------------------"
@@ -40,7 +40,7 @@ public class BankMenuView extends MenuView {
     public void setGame(Game game) {
         this.game = game;
     }
-    
+
     @Override
     public boolean doAction(String value) {
 
@@ -62,8 +62,8 @@ public class BankMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
 
@@ -71,8 +71,7 @@ public class BankMenuView extends MenuView {
     }
 
     private void viewBankAccount() {
-        //this.console
-        System.out.println("*** viewBankAccount function called ***");
+        this.console.println("*** viewBankAccount function called ***");
     }
 
     private void checkLoanStatusPayLoan() {
@@ -89,8 +88,6 @@ public class BankMenuView extends MenuView {
     private void takeLoan() {
         TakeLoanView loan = new TakeLoanView();
         loan.display();
-        }
-
     }
 
-
+}

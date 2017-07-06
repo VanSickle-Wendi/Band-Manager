@@ -39,44 +39,43 @@ public class MusicStoreView extends InteractiveView {
         double bankAccount = 0;
         int a = 1;
         int b = 1;
-        
+
         //Format bank balance to 2 decimal places 
-        DecimalFormat df = new DecimalFormat("#.00");     
-        
+        DecimalFormat df = new DecimalFormat("#.00");
+
         // prompt user for instrument price, change the user input from String to double
         do {
-        try {
-        instrumentPrice = Double.parseDouble(getInput("How much does the instrument "
-                + "you would like to purchase cost?"));
-            a = 2;
-        } catch (NumberFormatException nf) { 
-                    //ErrorView.display(this.getClass().getName(),
-                    System.out.println("\nYou must enter a valid number.");            
-        }
+            try {
+                instrumentPrice = Double.parseDouble(getInput("How much does the instrument "
+                        + "you would like to purchase cost?"));
+                a = 2;
+            } catch (NumberFormatException nf) {
+                ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number.");
+            }
         } while (a == 1);
-        
+
         // prompt user for bank account balance, change the user input from String to double
         do {
-        try {        
-        bankAccount = Double.parseDouble(getInput("How much is in your bank account?")); 
-            b = 2;
-        } catch (NumberFormatException nf) { 
-                    //ErrorView.display(this.getClass().getName(),
-                    System.out.println("\nYou must enter a valid number.");            
-        }
+            try {
+                bankAccount = Double.parseDouble(getInput("How much is in your bank account?"));
+                b = 2;
+            } catch (NumberFormatException nf) {
+                ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number.");
+            }
         } while (b == 1);
 
         // new instance of EquipmentControl class
         EquipmentControl purchase = new EquipmentControl();
 
         try {
-        double bankBalanceAfterPurchase = purchase.calcPurchaseInstrument(instrumentPrice, bankAccount);
-        //this.console
-        System.out.println("\nAfter your purchase, you have $" + df.format(bankBalanceAfterPurchase) + " left "
-                + "in your bank account.");
+            double bankBalanceAfterPurchase = purchase.calcPurchaseInstrument(instrumentPrice, bankAccount);
+
+            this.console.println("\nAfter your purchase, you have $" + df.format(bankBalanceAfterPurchase) + " left "
+                    + "in your bank account.");
         } catch (EquipmentControlException ece) {
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println(ece.getMessage());
+            ErrorView.display(this.getClass().getName(), ece.getMessage());
         }
 
         return true;

@@ -16,7 +16,7 @@ public class HelpMenuView extends MenuView {
     private String promptMessage;
 
     public HelpMenuView() {
-            super("\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n| Help Menu                                     |"
                 + "\n-------------------------------------------------"
@@ -28,7 +28,7 @@ public class HelpMenuView extends MenuView {
                 + "\n"
                 + "\nPlease choose a Help Menu option: ");
     }
-    
+
     @Override
     public boolean doAction(String choice) {
 
@@ -47,8 +47,7 @@ public class HelpMenuView extends MenuView {
             case "Q": // Quit
                 return true;
             default:
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection *** Try again");
                 break;
         }
 
@@ -56,8 +55,7 @@ public class HelpMenuView extends MenuView {
     }
 
     private void goalOfGame() {
-        //this.console
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n--------------------------------------------------"
                 + "\n The goal of the game is to take your band to     "
                 + "\n the highest star status while paying off your    "
@@ -67,8 +65,7 @@ public class HelpMenuView extends MenuView {
     }
 
     private void payOnLoan() {
-        //this.console
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n--------------------------------------------------"
                 + "\n Loan payments are due at the completion of each  "
                 + "\n level. If the band manager doesn’t have enough   "
@@ -78,8 +75,7 @@ public class HelpMenuView extends MenuView {
     }
 
     private void upgradeInstruments() {
-        //this.console
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n--------------------------------------------------"
                 + "\n After the band members are selected or a level is"
                 + "\n completed, the manager is able to upgrade the    "
