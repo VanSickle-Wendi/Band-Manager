@@ -9,12 +9,15 @@ import band.manager.BandManager;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Map;
+import java.io.PrintWriter;
 
 /**
  *
  * @author Wendi
  */
 public class MapView {
+    
+    private final PrintWriter console = BandManager.getOutFile();    
     
     public MapView() {
     }
@@ -26,8 +29,7 @@ public class MapView {
         Location[] locations = map.getLocations();
         
         for (int i=0; i < locations.length; i++){
-            //this.console
-            System.out.println("Location " + locations[i].getName() + "! "
+            this.console.println("Location " + locations[i].getName() + "! "
                                + locations[i].getScene().getSceneDescription());
         }
     }

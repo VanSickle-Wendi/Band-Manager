@@ -68,7 +68,9 @@ public abstract class MenuView implements ViewInterface {
                 valid = true; // End the loop Brother Anderson suggested this instead of break
             }
         } catch (Exception e) {
-            this.console.println("Error reading input: " + e.getMessage());
+
+            ErrorView.display(this.getClass().getName(),
+                    "Error reading input: " + e.getMessage());
         }
         return value; // return the value entered
     }
