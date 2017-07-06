@@ -50,12 +50,15 @@ public class BigGigView extends InteractiveView {
                           +"\n the cheer that comes is deafening            "
                           +"\n you feel as confident as you should be.      ");
         
-        PerformanceControl biggig = new PerformanceControl();        
+        //PerformanceControl biggig = new PerformanceControl();        
         
-        biggig.bigGigResult();
+        bigGigResult();
 
-        return true;
-
-      
+        return true;     
+    }
+    
+    //TODO Move function to PerformanceControl when it's created
+    public void bigGigResult() {
+        System.out.println("*** bigGig function called ***");
     }    
 } 

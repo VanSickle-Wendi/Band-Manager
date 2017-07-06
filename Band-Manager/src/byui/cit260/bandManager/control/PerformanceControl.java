@@ -56,25 +56,5 @@ public class PerformanceControl {
 
         return auditionPoints;
     }
-    
-    public void firstRehearsal() {
-        System.out.println("*** firstRehearsal function called ***");
-    } 
-    public void radioInterviewResult() {
-        System.out.println("*** radioInterviewResult function called ***");
-    }    
-    public void tvAppearanceResult() {
-        System.out.println("*** tvAppearanceResult function called ***");
-    }
-    public void movieResults() {
-        System.out.println("*** movieResult function called ***");
-    }
 
-    public void smallgGigResult() {
-         System.out.println("*** smallGig function called ***");
-    }
-
-    public void bigGigResult() {
-        System.out.println("*** Gig function called ***");
-    }
 }

@@ -47,10 +47,14 @@ public class RehearsalView extends InteractiveView {
                           +"\n ready for their first gig!"
                           +"\n");
         
-        PerformanceControl first = new PerformanceControl();        
+        //PerformanceControl first = new PerformanceControl();        
         
-        first.firstRehearsal();
+        firstRehearsal();
 
         return true;
+    }  
+    //TODO Move function to PerformanceControl when created.
+    public void firstRehearsal() {
+        System.out.println("*** firstRehearsal function called ***");
     }    
 }

@@ -47,10 +47,14 @@ public class TVAppearanceView extends InteractiveView {
                           +"\n Let's find out!"
                           +"\n");
         
-        PerformanceControl tv = new PerformanceControl();        
+        //PerformanceControl tv = new PerformanceControl();        
         
-        tv.tvAppearanceResult();
+        tvAppearanceResult();
 
         return true;
+    }  
+    //TODO Move function to PerformanceControl when it's created
+    public void tvAppearanceResult() {
+        System.out.println("*** tvAppearanceResult function called ***");
     }    
 }

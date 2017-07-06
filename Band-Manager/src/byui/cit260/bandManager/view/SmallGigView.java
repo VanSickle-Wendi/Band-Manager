@@ -47,12 +47,15 @@ public class SmallGigView extends InteractiveView {
                           +"\n Everyone is in their places,and              "
                           +"\n you feel as confident as you should be.      ");
         
-        PerformanceControl smallgig = new PerformanceControl();        
+        //PerformanceControl smallgig = new PerformanceControl();        
         
-        smallgig.smallgGigResult();
+        smallgGigResult();
 
-        return true;
-
-      
+        return true;     
+    }  
+    
+    //TODO Move function to PerformanceControl when it's created
+    public void smallgGigResult() {
+         System.out.println("*** smallGig function called ***");
     }    
 } 

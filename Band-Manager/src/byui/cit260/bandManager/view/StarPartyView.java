@@ -53,10 +53,15 @@ public class StarPartyView extends InteractiveView {
                           +"\n This better be good!                               "
                           +"\n");
         
-        GameControl netWorth = new GameControl();        
+        //GameControl netWorth = new GameControl();        
         
-        netWorth.finalNetWorth();
+        finalNetWorth();
 
         return true;
-    }    
+    }  
+    // TODO Move function to a Control class once it's created
+    public void finalNetWorth() {
+        System.out.println("*** finalNetWorth function called ***");
+    }
+    
 }

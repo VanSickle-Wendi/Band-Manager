@@ -49,10 +49,14 @@ public class MovieCameoView extends InteractiveView {
                           +"\n Let's read the reviews.                  "
                           +"\n");
         
-        PerformanceControl movie = new PerformanceControl();        
+        //PerformanceControl movie = new PerformanceControl();        
         
-        movie.movieResults();
+        movieResults();
 
         return true;
+    }  
+    // TODO Move function to PerformanceControl when it's created
+    public void movieResults() {
+        System.out.println("*** movieResult function called ***");
     }    
 }

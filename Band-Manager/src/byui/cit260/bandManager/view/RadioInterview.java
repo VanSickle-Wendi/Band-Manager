@@ -42,11 +42,15 @@
                  + "\n! Let's see how you did."
                  + "\n");
  
-         PerformanceControl radio = new PerformanceControl();
+         //PerformanceControl radio = new PerformanceControl();
  
-         radio.radioInterviewResult();
+         radioInterviewResult();
  
          return true;
      }
+    //TODO Move function to PerformanceControl when it's created 
+    public void radioInterviewResult() {
+        System.out.println("*** radioInterviewResult function called ***");
+    }     
  
  }

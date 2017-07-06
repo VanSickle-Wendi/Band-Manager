@@ -70,9 +70,4 @@ public class GameControl {
         return null;
     }
     
-
-    public void finalNetWorth() {
-        System.out.println("*** finalNetWorth function called ***");
-    }
-
 }
