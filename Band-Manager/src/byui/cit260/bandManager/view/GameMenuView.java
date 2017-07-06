@@ -39,7 +39,7 @@ public class GameMenuView extends MenuView {
                 + "\nG -- Big Gig Performance"
                 + "\nJ -- Small Gig Performance"
                 + "\nV -- View Band Members and Status"
-                + "\nL -- Lists of Ideas"                
+                + "\nL -- Lists of Ideas"
                 + "\nQ -- Quit the Game Menu"
                 + "\n-------------------------------------------------"
                 + "\n"
@@ -107,25 +107,24 @@ public class GameMenuView extends MenuView {
                 break;
             case "L": // Ideas for the game
                 this.listsOfIdeas();
-                break;                  
+                break;
             case "Q": // Quit
                 return true;
             default:
-                //ErrorView.display(this.getClass().getName(),
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
 
         return false;
-    }            
+    }
 
     private void viewMap() {
         MapView showMap = new MapView();
         showMap.displayMap();
     }
 
-
-private void viewAssetMenu() {
+    private void viewAssetMenu() {
         // display the asset menu
         AssetMenuView assetMenu = new AssetMenuView();
         assetMenu.display();
@@ -149,11 +148,12 @@ private void viewAssetMenu() {
         MusicStoreMenuView musicMenu = new MusicStoreMenuView();
         musicMenu.display();
     }
-    
+
     private void goToCarLot() {
         CarLotMenuView carMenu = new CarLotMenuView();
         carMenu.display();
     }
+
     private void rehearsal() {
         // display the RehearsalView
         RehearsalView onlyRehearsal = new RehearsalView();
@@ -185,8 +185,7 @@ private void viewAssetMenu() {
     }
 
     private void travelToNewLocation() {
-        //this.console
-        System.out.println("*** travelToNewLocation function called ***");
+        this.console.println("*** travelToNewLocation function called ***");
     }
 
     private void checkInHotel() {
@@ -205,12 +204,12 @@ private void viewAssetMenu() {
     }
 
     private void bandMemberStatus() {
-        //this.console
-        System.out.println("*** bandMemberStatus function called ***");
+        this.console.println("*** bandMemberStatus function called ***");
     }
+
     private void listsOfIdeas() {
         IdeaMenuView ideaMenu = new IdeaMenuView();
         ideaMenu.display();
-    }       
+    }
 
 }
