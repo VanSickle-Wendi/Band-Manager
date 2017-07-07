@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.view;
 
+import band.manager.BandManager;
 import byui.cit260.bandManager.model.Game;
 import java.util.Scanner;
 
@@ -204,7 +205,11 @@ public class GameMenuView extends MenuView {
     }
 
     private void bandMemberStatus() {
-        this.console.println("*** bandMemberStatus function called ***");
+        console.println("Drummer: " + BandManager.getCurrentGame().getBand().getDrummer().getMusicianName());
+        console.println("Keyboards: " + BandManager.getCurrentGame().getBand().getKeyboardPlayer().getMusicianName());
+        console.println("Guitar: " + BandManager.getCurrentGame().getBand().getGuitarPlayer().getMusicianName());
+        console.println("Bass: " + BandManager.getCurrentGame().getBand().getBassPlayer().getMusicianName());
+        console.print("Singer: " + BandManager.getCurrentGame().getBand().getSinger().getMusicianName());
     }
 
     private void listsOfIdeas() {

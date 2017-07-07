@@ -76,10 +76,10 @@ public class MainMenuView extends MenuView {
         boolean valid = false;
         try {
             while (!valid) {
-        // prompt for and get the name of the file the game is saved in
-        this.console.println("\n\nEnter the file path for the file where the game "
-                            + "is saved.");
-        
+                // prompt for and get the name of the file the game is saved in
+                this.console.println("\n\nEnter the file path for the file where the game "
+                        + "is saved.");
+
                 value = keyboard.readLine();
                 value = value.trim();
 
@@ -94,14 +94,14 @@ public class MainMenuView extends MenuView {
             ErrorView.display(this.getClass().getName(),
                     "Error reading input: " + e.getMessage());
         }
-        
+
         try {
             // start a saved game
             GameControl.getSavedGame(value);
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
-        
+
         // display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
@@ -130,18 +130,15 @@ public class MainMenuView extends MenuView {
             ErrorView.display(this.getClass().getName(),
                     "Error reading input: " + e.getMessage());
         }
-       // return value; // return the value entered
 
-         //String filePath = value;
         try {
             // save the game to the specified file
             GameControl.saveGame(BandManager.getCurrentGame(), value);
         } catch (Exception e) {
             ErrorView.display("MainMenuView", e.getMessage());
         }
-       // return null;
-    }
 
+    }
 
     private void displayHelpMenu() {
 
