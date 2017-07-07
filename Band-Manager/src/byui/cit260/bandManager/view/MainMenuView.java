@@ -72,7 +72,22 @@ public class MainMenuView extends MenuView {
     }
 
     private void startExistingGame() {
-        this.console.println("*** startExistingGame function called ***");
+
+        // prompt for and get the name of the file the game is saved in
+        this.console.println("\n\nEnter the file path for the file where the game "
+                            + "is saved.");
+        String filePath = this.getInput();
+        
+        try {
+            // start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        // display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void saveGame() {
