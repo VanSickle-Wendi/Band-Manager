@@ -66,12 +66,14 @@ public class GameControl {
     }
    
     public static MusicStoreScene[] MusicStoreScene() {
-        System.out.println("called MusicStoreScene");
+        BandManager.getOutFile().println("called MusicStoreScene");
+        BandManager.getLogFile().println("called MusicStoreScene");
         return null;
     }
     
     public static CarLotScene[] CarLotScene() {
-        System.out.println("called CarLotScene");
+        BandManager.getOutFile().println("called CarLotScene");
+        BandManager.getLogFile().println("called CarLotScene");
         return null;
     }
 
@@ -84,7 +86,7 @@ public class GameControl {
             output.writeObject(game); // write the game object out to file
         }
         catch (Exception e) {
-            throw new GameControlException(e.getMessage());
+            throw new GameControlException(e);
         }
     }
 

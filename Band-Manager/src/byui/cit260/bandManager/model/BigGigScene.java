@@ -5,11 +5,13 @@
  */
 package byui.cit260.bandManager.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Wendi
  */
-public class BigGigScene extends Scene {
+public class BigGigScene extends Scene implements Serializable {
     
     public BigGigScene() {
         setSceneDescription("You've made to the Big Gig");

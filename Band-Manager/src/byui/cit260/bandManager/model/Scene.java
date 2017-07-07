@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author shaza
  */
-public abstract class Scene {
+public abstract class Scene implements Serializable {
 
     // class instance variables
     private String sceneDescription;

@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author Crazian
  */
-public enum VehicleType {
+public enum VehicleType implements Serializable {
     LevelOneVehicle,
     LevelTwoVehicle,
     LevelThreeVehicle,

@@ -5,11 +5,13 @@
  */
 package byui.cit260.bandManager.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Wendi
  */
-public class HotelScene extends Scene {
+public class HotelScene extends Scene implements Serializable {
     
     public HotelScene() {
         setSceneDescription("Welcome to the Hotel");  

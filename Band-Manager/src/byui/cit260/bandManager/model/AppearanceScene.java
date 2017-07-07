@@ -5,11 +5,13 @@
  */
 package byui.cit260.bandManager.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Wendi
  */
-public class AppearanceScene extends Scene {
+public class AppearanceScene extends Scene implements Serializable {
     
     public AppearanceScene() {
         setSceneDescription("Rehearsal, Radio, TV, Movie, Star Party");

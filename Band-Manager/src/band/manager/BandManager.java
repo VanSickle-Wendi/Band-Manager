@@ -18,6 +18,7 @@ import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.SpendingScene;
 import byui.cit260.bandManager.model.Vehicle;
+import byui.cit260.bandManager.view.ErrorView;
 import byui.cit260.bandManager.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -59,7 +60,8 @@ public class BandManager {
         
         }catch (Throwable te) {
             
-            System.out.println("Exception: " + te.toString() +
+            ErrorView.display(BandManager.class.getName(),
+                               "Exception: " + te.toString() +
                                "\nCause: " + te.getCause() +
                                "\nMessage: " + te.getMessage());
             te.printStackTrace();
