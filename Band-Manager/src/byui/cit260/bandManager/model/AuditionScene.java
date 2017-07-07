@@ -5,11 +5,13 @@
  */
 package byui.cit260.bandManager.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Wendi
  */
-public class AuditionScene extends Scene {
+public class AuditionScene extends Scene implements Serializable {
 
     public AuditionScene() {
         setSceneDescription("Audition Drummer, Singer, Guitar Player, Bass Player, Keyboard Player");
