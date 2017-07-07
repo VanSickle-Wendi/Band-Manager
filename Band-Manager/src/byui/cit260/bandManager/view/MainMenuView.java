@@ -76,18 +76,40 @@ public class MainMenuView extends MenuView {
     }
 
     private void saveGame() {
-        // prompt for and get the name of the file to save the game in
-        this.console.println("\n\nEnter the file path for file where the game"
-                + " is to be saved.");
-        String filePath = this.getInput();
-        
+        String value = null;
+        boolean valid = false;
+        try {
+            while (!valid) {
+                // prompt for and get the name of the file to save the game in
+                this.console.println("\n\nEnter the file path for file where the game"
+                        + " is to be saved.");
+
+                value = keyboard.readLine();
+                value = value.trim();
+
+                if (value.length() < 1) { // value is blank
+                    ErrorView.display(this.getClass().getName(),
+                            "\nInvalid value: value can not be blank");
+                    continue;
+                }
+                valid = true;
+            }
+        } catch (Exception e) {
+            ErrorView.display(this.getClass().getName(),
+                    "Error reading input: " + e.getMessage());
+        }
+       // return value; // return the value entered
+
+         //String filePath = value;
         try {
             // save the game to the specified file
-            GameControl.saveGame(BandManager.getCurrentGame(), filePath);
+            GameControl.saveGame(BandManager.getCurrentGame(), value);
         } catch (Exception e) {
             ErrorView.display("MainMenuView", e.getMessage());
         }
+       // return null;
     }
+
 
     private void displayHelpMenu() {
 
