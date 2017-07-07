@@ -6,12 +6,15 @@
 package byui.cit260.bandManager.control;
 
 import band.manager.BandManager;
+import byui.cit260.bandManager.exceptions.GameControlException;
 import byui.cit260.bandManager.model.CarLotScene;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.InstrumentType;
 import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.MusicStoreScene;
 import byui.cit260.bandManager.model.Player;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 /**
  *
@@ -69,5 +72,20 @@ public class GameControl {
         System.out.println("called CarLotScene");
         return null;
     }
+
+    public static void saveGame(Game game, String filePath) 
+        throws GameControlException {
+        
+        try( FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(game); // write the game object out to file
+        }
+        catch (Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+    }
+         
+    }
     
-}
+
