@@ -79,7 +79,7 @@ public class BandManager {
                     BandManager.logFile.close();
                 
             } catch (IOException ex) {
-                System.out.println("Error closing files");
+                ErrorView.display(BandManager.class.getName(),"Error closing files");
                 return;
             }          
         }

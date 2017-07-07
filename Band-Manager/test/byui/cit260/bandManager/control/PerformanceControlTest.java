@@ -5,7 +5,9 @@
  */
 package byui.cit260.bandManager.control;
 
+import band.manager.BandManager;
 import byui.cit260.bandManager.exceptions.PerformanceControlException;
+import java.io.PrintWriter;
 import java.util.Random;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -16,6 +18,8 @@ import teacherhelps.RandomMock;
  * @author Wendi
  */
 public class PerformanceControlTest {
+    
+    protected final PrintWriter console = BandManager.getOutFile();    
     
     public PerformanceControlTest() {
     }
@@ -35,11 +39,11 @@ public class PerformanceControlTest {
         
         instance.setRandomGenerator(testRandom);         
         
-        System.out.println("calcAuditionPoints");
+        console.println("calcAuditionPoints");
         /****************************
          * Test Case #1
          ****************************/
-        System.out.println("\tTest Case #1");
+        console.println("\tTest Case #1");
         skillLevel = 250;
         instrumentQuality = 362;
         issueCost = 58;
@@ -50,7 +54,7 @@ public class PerformanceControlTest {
         /****************************
          * Test Case #2
          ****************************/
-        System.out.println("\tTest Case #2");
+        console.println("\tTest Case #2");
         //Assign "random" numbers for test #2 (1 number less than actual test numbers)
         testRandom.setSequence(3,0);
         
@@ -64,7 +68,7 @@ public class PerformanceControlTest {
         /****************************
          * Test Case #3
          ****************************/
-        System.out.println("\tTest Case #3");
+        console.println("\tTest Case #3");
         //Assign "random" numbers for test #3 (1 number less than actual test numbers)
         testRandom.setSequence(1,1);
         
@@ -78,7 +82,7 @@ public class PerformanceControlTest {
         /****************************
          * Test Case #4
          ****************************/
-        System.out.println("\tTest Case #4");
+        console.println("\tTest Case #4");
         //Assign "random" numbers for test #4 (1 number less than actual test numbers)
         testRandom.setSequence(2,0);
         
@@ -92,7 +96,7 @@ public class PerformanceControlTest {
         /****************************
          * Test Case #5
          ****************************/
-        System.out.println("\tTest Case #5");
+        console.println("\tTest Case #5");
         //Assign "random" numbers for test #5 (1 number less than actual test numbers)
         testRandom.setSequence(0,1);
         
@@ -106,7 +110,7 @@ public class PerformanceControlTest {
         /****************************
          * Test Case #6
          ****************************/
-        System.out.println("\tTest Case #6");
+        console.println("\tTest Case #6");
         //Assign "random" numbers for test #6 (1 number less than actual test numbers)
         testRandom.setSequence(1,0);
         
@@ -120,7 +124,7 @@ public class PerformanceControlTest {
         /****************************
          * Test Case #7
          ****************************/
-        System.out.println("\tTest Case #7");
+        console.println("\tTest Case #7");
         //Assign "random" numbers for test #7 (1 number less than actual test numbers)
         testRandom.setSequence(0,0);
         
@@ -134,7 +138,7 @@ public class PerformanceControlTest {
         /****************************
          * Test Case #8
          ****************************/
-        System.out.println("\tTest Case #8");
+        console.println("\tTest Case #8");
         //Assign "random" numbers for test #8 (1 number less than actual test numbers)
         testRandom.setSequence(3,1);
         

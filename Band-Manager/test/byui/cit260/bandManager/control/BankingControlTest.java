@@ -5,7 +5,9 @@
  */
 package byui.cit260.bandManager.control;
 
+import band.manager.BandManager;
 import byui.cit260.bandManager.exceptions.BankControlException;
+import java.io.PrintWriter;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -15,6 +17,8 @@ import static org.junit.Assert.*;
  */
 public class BankingControlTest {
     
+    protected final PrintWriter console = BandManager.getOutFile();    
+    
     public BankingControlTest() {
     }
 
@@ -23,9 +27,9 @@ public class BankingControlTest {
      */
     @Test
     public void testCalcLoanPayment() throws BankControlException {
-        System.out.println("calcLoanPayment");
+        console.println("calcLoanPayment");
         // Test Case 1
-        System.out.println("\tTestCase1");
+        console.println("\tTestCase1");
         
         double loanBalance = 2000;
         double extraPrinciple = 1000;
@@ -37,7 +41,7 @@ public class BankingControlTest {
     
     
         // Test Case 2
-        System.out.println("\tTestCase2");
+        console.println("\tTestCase2");
         
         loanBalance = -1;
         extraPrinciple = 0;
@@ -48,7 +52,7 @@ public class BankingControlTest {
         
  
         // Test Case 3
-        System.out.println("\tTestCase3");
+        console.println("\tTestCase3");
         
         loanBalance = 500000;
         extraPrinciple = 0;
@@ -59,7 +63,7 @@ public class BankingControlTest {
        
         
         // Test Case 4
-        System.out.println("\tTestCase4");
+        console.println("\tTestCase4");
         
         loanBalance = 10000;
         extraPrinciple = -1;
@@ -70,7 +74,7 @@ public class BankingControlTest {
         
         
         // Test Case 5
-        System.out.println("\tTestCase5");
+        console.println("\tTestCase5");
         
         loanBalance = 20000;
         extraPrinciple = 30000;
@@ -81,7 +85,7 @@ public class BankingControlTest {
         
         
         // Test Case 6
-        System.out.println("\tTestCase6");
+        console.println("\tTestCase6");
         
         loanBalance = 0;
         extraPrinciple = 0;
@@ -92,7 +96,7 @@ public class BankingControlTest {
         
         
         // Test Case 7
-        System.out.println("\tTestCase7");
+        console.println("\tTestCase7");
         
         loanBalance = 25000;
         extraPrinciple = 25000;
@@ -107,9 +111,9 @@ public class BankingControlTest {
      */
     @Test
     public void testCalcBandSalary() throws BankControlException {
-        System.out.println("calcBandSalary");
+        console.println("calcBandSalary");
          // Test Case 1
-        System.out.println("\tTestCase1");
+        console.println("\tTestCase1");
         double venuePayment = 2500.00;
         double equipmentCost = 600.00;
         double hotelCost = 550.00;
@@ -121,7 +125,7 @@ public class BankingControlTest {
         assertEquals(expResult, result, 0.0001);
         
         // Test Case 2
-        System.out.println("\tTestCase2");
+        console.println("\tTestCase2");
         venuePayment = 3500.00;
         equipmentCost = 425.00;
         hotelCost = 969.00;
@@ -132,7 +136,7 @@ public class BankingControlTest {
         assertEquals(expResult, result, 0.0001);
 
         // Test Case 3
-        System.out.println("\tTestCase3");
+        console.println("\tTestCase3");
         venuePayment = 4300.00;
         equipmentCost = 1850.00;
         hotelCost = 435.00;
@@ -143,7 +147,7 @@ public class BankingControlTest {
         assertEquals(expResult, result, 0.0001);
         
         // Test Case 4
-        System.out.println("\tTestCase4");
+        console.println("\tTestCase4");
         venuePayment = 2200.00;
         equipmentCost = 1900.00;
         hotelCost = 500.00;
@@ -154,7 +158,7 @@ public class BankingControlTest {
         assertEquals(expResult, result, 0.0001);    
         
         // Test Case 5
-        System.out.println("\tTestCase5");
+        console.println("\tTestCase5");
         venuePayment = 24000.00;
         equipmentCost = 14400.00;
         hotelCost = 2100.00;
@@ -165,7 +169,7 @@ public class BankingControlTest {
         assertEquals(expResult, result, 0.0001);
         
         // Test Case 6
-        System.out.println("\tTestCase6");
+        console.println("\tTestCase6");
         venuePayment = 2300.00;
         equipmentCost = 653.00;
         hotelCost = 497.00;
@@ -183,9 +187,9 @@ public class BankingControlTest {
      */
     @Test
     public void testCalcNewVehicleCost() throws BankControlException {
-        System.out.println("CalcNewVehicleCost");
+        console.println("CalcNewVehicleCost");
         //Test Case 1
-        System.out.println("\tTestCase1");
+        console.println("\tTestCase1");
         
         double originalVehicleCost = 5000;
         double currentPerformancePoints = 1000;
@@ -198,7 +202,7 @@ public class BankingControlTest {
         
         
         //Test Case 2
-        System.out.println("\tTestCase2");
+        console.println("\tTestCase2");
         
         originalVehicleCost = 10000;
         currentPerformancePoints = 2000;
@@ -210,7 +214,7 @@ public class BankingControlTest {
         
         
         //Test Case 3
-        System.out.println("\tTestCase3");
+        console.println("\tTestCase3");
         
         originalVehicleCost = 5000;
         currentPerformancePoints = 3500;
@@ -222,7 +226,7 @@ public class BankingControlTest {
         
         
         //Test Case 4
-        System.out.println("\tTestCase4");
+        console.println("\tTestCase4");
         
         originalVehicleCost = 5000;
         currentPerformancePoints = -1;
@@ -234,7 +238,7 @@ public class BankingControlTest {
         
         
         //Test Case 5
-        System.out.println("\tTestCase5");
+        console.println("\tTestCase5");
         
         originalVehicleCost = 5000;
         currentPerformancePoints = 10000;
@@ -246,7 +250,7 @@ public class BankingControlTest {
         
         
         //Test Case 6
-        System.out.println("\tTestCase6");
+        console.println("\tTestCase6");
         
         originalVehicleCost = 30000;
         currentPerformancePoints = 20000;
@@ -257,7 +261,7 @@ public class BankingControlTest {
         // TODO review the generated test code and remove the default call to fail.
         
          //Test Case 7
-        System.out.println("\tTestCase7");
+        console.println("\tTestCase7");
         
         originalVehicleCost = 5000;
         currentPerformancePoints = 1;
@@ -269,7 +273,7 @@ public class BankingControlTest {
         
         
          //Test Case 8
-        System.out.println("\tTestCase8");
+        console.println("\tTestCase8");
         
         originalVehicleCost = 60000;
         currentPerformancePoints = 500000;
