@@ -13,7 +13,9 @@ import byui.cit260.bandManager.model.InstrumentType;
 import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.MusicStoreScene;
 import byui.cit260.bandManager.model.Player;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 /**
@@ -84,6 +86,22 @@ public class GameControl {
         catch (Exception e) {
             throw new GameControlException(e.getMessage());
         }
+    }
+
+    public static void getSavedGame(String filePath) throws GameControlException {
+        
+        Game game = null;
+        
+        try( FileInputStream fips = new FileInputStream(filePath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
+            
+            game = (Game) input.readObject(); // read the game object from file
+        } catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+        
+        // close the output file
+        BandManager.setCurrentGame(game); // save in BandManager      
     }
          
     }
