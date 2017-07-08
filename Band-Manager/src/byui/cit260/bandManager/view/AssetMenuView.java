@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.view;
 
+import band.manager.BandManager;
 import java.util.Scanner;
 
 /**
@@ -21,7 +22,7 @@ public class AssetMenuView extends MenuView {
                 + "\n| Asset Menu                                      |"
                 + "\n-------------------------------------------------"
                 + "\nC -- Current Assets"
-                + "\nI -- Purchase / Upgrade Instruments"
+                + "\nI -- Display Instruments you own"
                 + "\nV -- Purchase / Upgrade Vehicle"
                 + "\nP -- View Performance Points"
                 + "\nQ -- Quit the Asset Menu"
@@ -41,7 +42,7 @@ public class AssetMenuView extends MenuView {
                 this.viewCurrentAssets();
                 break;
             case "I": // Purchase / Upgrade Instruments
-                this.purchaseUpgradeInstruments();
+                this.displayInstrumentAssets();
                 break;
             case "V": // Purchase / Upgrade Vehicle
                 this.purchaseUpgradeVehicle();
@@ -64,9 +65,8 @@ public class AssetMenuView extends MenuView {
         this.console.println("*** viewCurrentAssets function called ***");
     }
 
-    private void purchaseUpgradeInstruments() {
-        MusicStoreView buyIt = new MusicStoreView();
-        buyIt.display();
+    private void displayInstrumentAssets() {
+        console.println(BandManager.getCurrentGame().getInstruments());
     }
 
     private void purchaseUpgradeVehicle() {
