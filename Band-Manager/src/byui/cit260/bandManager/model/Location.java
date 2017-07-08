@@ -23,9 +23,10 @@ public class Location implements Serializable {
     public Location() {
     }
 
-    public Location(String locationName) {
+    public Location(String locationName, double number) {
         // convenience constructor
         name = locationName;
+        locationNumber = number;
     }
     
     public String getName() {
