@@ -17,15 +17,17 @@ public class Instrument implements Serializable {
     String description;
     double price;
     double performancePoints;
+    String level;
 
     // Constructor
     public Instrument(InstrumentType typeOf, String descriptionOf, double priceOf,
-            double performPoints) {
+            double performPoints, String levelOf) {
         
         type = typeOf;
         description = descriptionOf;
         price = priceOf;
         performancePoints = performPoints;
+        level = levelOf;
 
     }
 
@@ -61,4 +63,14 @@ public class Instrument implements Serializable {
         this.performancePoints = performancePoints;
     }
 
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    
+    
 }
