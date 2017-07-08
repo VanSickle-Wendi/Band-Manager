@@ -27,7 +27,7 @@ public class GameMenuView extends MenuView {
                 + "\nM -- View Map"
                 + "\nA -- Asset Menu"
                 + "\nB -- Bank Menu"
-                + "\nH -- Hold Auditions"
+                + "\nH -- Audition Menu"
                 + "\nZ -- Music Store"
                 + "\nK -- Car Lot"
                 + "\nR -- Rehearsal"
@@ -39,7 +39,7 @@ public class GameMenuView extends MenuView {
                 + "\nC -- Check into a New Hotel"
                 + "\nG -- Big Gig Performance"
                 + "\nJ -- Small Gig Performance"
-                + "\nV -- View Band Members and Status"
+                + "\nV -- View Band Members and Status Menu"
                 + "\nL -- Lists of Ideas"
                 + "\nQ -- Quit the Game Menu"
                 + "\n-------------------------------------------------"
@@ -205,11 +205,8 @@ public class GameMenuView extends MenuView {
     }
 
     private void bandMemberStatus() {
-        console.println("Drummer: " + BandManager.getCurrentGame().getBand().getDrummer().getMusicianName());
-        console.println("Keyboards: " + BandManager.getCurrentGame().getBand().getKeyboardPlayer().getMusicianName());
-        console.println("Guitar: " + BandManager.getCurrentGame().getBand().getGuitarPlayer().getMusicianName());
-        console.println("Bass: " + BandManager.getCurrentGame().getBand().getBassPlayer().getMusicianName());
-        console.print("Singer: " + BandManager.getCurrentGame().getBand().getSinger().getMusicianName());
+        MemberStatusMenuView MemberStatusMenu = new MemberStatusMenuView();
+        MemberStatusMenu.display(); 
     }
 
     private void listsOfIdeas() {
