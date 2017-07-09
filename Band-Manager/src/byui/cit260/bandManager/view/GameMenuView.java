@@ -41,6 +41,7 @@ public class GameMenuView extends MenuView {
                 + "\nJ -- Small Gig Performance"
                 + "\nV -- View Band Members and Status Menu"
                 + "\nL -- Lists of Ideas"
+                + "\nD -- Report Menu"
                 + "\nQ -- Quit the Game Menu"
                 + "\n-------------------------------------------------"
                 + "\n"
@@ -109,6 +110,9 @@ public class GameMenuView extends MenuView {
             case "L": // Ideas for the game
                 this.listsOfIdeas();
                 break;
+            case "D": // Reports
+                this.reportMenu();
+                break;                
             case "Q": // Quit
                 return true;
             default:
@@ -212,6 +216,11 @@ public class GameMenuView extends MenuView {
     private void listsOfIdeas() {
         IdeaMenuView ideaMenu = new IdeaMenuView();
         ideaMenu.display();
+    }
+
+    private void reportMenu() {
+        ReportMenuView reportsMenu = new ReportMenuView();
+        reportsMenu.display();        
     }
 
 }
