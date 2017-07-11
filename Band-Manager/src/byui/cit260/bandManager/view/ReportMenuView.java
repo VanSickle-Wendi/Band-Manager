@@ -29,7 +29,7 @@ public class ReportMenuView extends MenuView {
                 + "\nQ -- Quit the Game Menu"
                 + "\n-------------------------------------------------"
                 + "\n"
-                + "\nPlease choose a Game Menu option: ");
+                + "\nPlease choose a Report Menu option: ");
 
     }
 

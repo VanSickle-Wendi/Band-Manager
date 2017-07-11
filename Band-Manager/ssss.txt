@@ -1,0 +1,25 @@
+Bank! Welcome to the Bank.
+Audition Drummer! Audition Band Members
+Audition Singer! Audition Band Members
+Audition Guitar Player! Audition Band Members
+Audition Bass Player! Audition Band Members
+Audition Keyboard Player! Audition Band Members
+Car Lot! Welcome to the Car Lot.
+Music Store! Welcome to the Music Store.
+Level 1 Hotel! Welcome to the Hotel
+Level 2 Hotel! Welcome to the Hotel
+Level 3 Hotel! Welcome to the Hotel
+Level 4 Hotel! Welcome to the Hotel
+Rehearsal! Rehearsal, Radio, TV, Movie, Star Party
+Level 1 Small Gig! You'd better do great at this small gig!
+Level 1 Big Gig! You've made to the Big Gig
+Radio Interview! Rehearsal, Radio, TV, Movie, Star Party
+Level 2 Small Gig! You'd better do great at this small gig!
+Level 2 Big Gig! You've made to the Big Gig
+TV Appearance! Rehearsal, Radio, TV, Movie, Star Party
+Level 3 Small Gig! You'd better do great at this small gig!
+Level 3 Big Gig! You've made to the Big Gig
+Movie Cameo! Rehearsal, Radio, TV, Movie, Star Party
+Level 4 Small Gig! You'd better do great at this small gig!
+Level 4 Small Gig! You've made to the Big Gig
+Star Party! Rehearsal, Radio, TV, Movie, Star Party

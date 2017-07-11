@@ -11,6 +11,7 @@ import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.CarLotScene;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.InstrumentType;
+import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.MusicStoreScene;
 import byui.cit260.bandManager.model.Player;
@@ -109,11 +110,14 @@ public class GameControl {
         // close the output file
         BandManager.setCurrentGame(game); // save in BandManager      
     }
-    //TODO change to a map report
-    public static void mapReport(Band band, String filePath)
+
+    public static void mapReport(Location[] locations, String filePath)
             throws GameControlException, IOException {
         PrintWriter reportFile = new PrintWriter(new FileWriter(filePath));
-        reportFile.println(band);
+        for (int i = 0; i < locations.length; i++) {
+            reportFile.println(locations[i].getName() + "! "
+                    + locations[i].getScene().getSceneDescription());
+        }
         reportFile.close();
     }
     

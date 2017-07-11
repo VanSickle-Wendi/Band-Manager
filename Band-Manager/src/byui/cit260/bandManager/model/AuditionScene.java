@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class AuditionScene extends Scene implements Serializable {
 
     public AuditionScene() {
-        setSceneDescription("Audition Drummer, Singer, Guitar Player, Bass Player, Keyboard Player");
+        setSceneDescription("Audition Band Members");
    
    }
     

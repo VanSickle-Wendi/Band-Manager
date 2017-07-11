@@ -57,7 +57,7 @@ public class MapReportView extends InteractiveView {
 
         try {
             // save the report to the specified file TODO change to a map report
-            GameControl.mapReport(BandManager.getCurrentGame().getBand(), value);
+            GameControl.mapReport(BandManager.getCurrentGame().getMap().getLocations(), value);
         } catch (Exception e) {
             ErrorView.display("MapReportView", e.getMessage());
         }
