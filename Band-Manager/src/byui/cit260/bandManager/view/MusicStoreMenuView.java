@@ -79,7 +79,7 @@ public class MusicStoreMenuView extends MenuView {
         this.game = game;
     }    
 
-    private void viewListOfDrums(Instrument[] drums) {
+    public void viewListOfDrums(Instrument[] drums) {
         StringBuilder line;
 
         // Display header
@@ -108,7 +108,7 @@ public class MusicStoreMenuView extends MenuView {
 
     }
 
-    private void viewListofGuitars(Instrument[] guitars) {
+    public void viewListofGuitars(Instrument[] guitars) {
         StringBuilder line;
 
         // Display header
@@ -136,7 +136,7 @@ public class MusicStoreMenuView extends MenuView {
         }
     }
 
-    private void viewListOfBassGuitars(Instrument[] bass) {
+    public void viewListOfBassGuitars(Instrument[] bass) {
         StringBuilder line;
 
         // Display header
@@ -164,7 +164,7 @@ public class MusicStoreMenuView extends MenuView {
         }
     }
 
-    private void viewListOfKeyboards(Instrument[] keyboards) {
+    public void viewListOfKeyboards(Instrument[] keyboards) {
         StringBuilder line;
 
         // Display header
@@ -192,7 +192,7 @@ public class MusicStoreMenuView extends MenuView {
         }
     }
 
-    private void viewListOfMicrophones(Instrument[] microphones) {
+    public void viewListOfMicrophones(Instrument[] microphones) {
         StringBuilder line;
 
         // Display header
@@ -223,14 +223,10 @@ public class MusicStoreMenuView extends MenuView {
 
     private void purchaseUpgradeInstruments() {
         
-         // display the BuyInstrumentsMenuView (July 7 - Shannon is still working on this)
-      //  BuyInstrumentsMenuView buyInstrumentsMenu = new BuyInstrumentsMenuView();
-      //  buyInstrumentsMenu.setGame(game);
-      //  buyInstrumentsMenu.display();
-        
-        
-        MusicStoreView buyIt = new MusicStoreView();
-        buyIt.display();
+         // display the BuyInstrumentsMenuView
+        BuyInstrumentsMenuView buyInstrumentsMenu = new BuyInstrumentsMenuView();
+        buyInstrumentsMenu.setGame(game);
+        buyInstrumentsMenu.display();
     }
 
 }
