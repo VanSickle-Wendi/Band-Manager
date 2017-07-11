@@ -16,22 +16,22 @@ import java.io.PrintWriter;
  * @author Wendi
  */
 public class MapView {
-    
-    private final PrintWriter console = BandManager.getOutFile();    
-    
+
+    private final PrintWriter console = BandManager.getOutFile();
+
     public MapView() {
     }
-    
+
     public void displayMap() {
 
-       Game game = BandManager.getCurrentGame();
+        Game game = BandManager.getCurrentGame();
         Map map = game.getMap();
         Location[] locations = map.getLocations();
-        
-        for (int i=0; i < locations.length; i++){
+
+        for (int i = 0; i < locations.length; i++) {
             this.console.println("Location " + locations[i].getName() + "! "
-                               + locations[i].getScene().getSceneDescription());
+                    + locations[i].getScene().getSceneDescription());
         }
     }
-    
+
 }
