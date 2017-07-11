@@ -5,14 +5,16 @@
  */
 package byui.cit260.bandManager.view;
 
+import band.manager.BandManager;
 import byui.cit260.bandManager.model.Game;
+import java.io.PrintWriter;
 
 /**
  *
  * @author Wendi
  */
 public class ReportMenuView extends MenuView {
-    
+
     private String menu;
     private String promptMessage;
     private Game game;
@@ -29,7 +31,8 @@ public class ReportMenuView extends MenuView {
                 + "\n"
                 + "\nPlease choose a Game Menu option: ");
 
-    }    
+    }
+
     public void setGame(Game game) {
         this.game = game;
     }
@@ -43,9 +46,9 @@ public class ReportMenuView extends MenuView {
             case "M": // View Map Report
                 this.mapReport();
                 break;
-            case "D": // Band Report
+            case "B": // Band Report
                 this.bandReport();
-                break;                
+                break;
             case "Q": // Quit
                 return true;
             default:
@@ -55,13 +58,15 @@ public class ReportMenuView extends MenuView {
         }
 
         return false;
-    }    
-
-    private void mapReport() {
-        this.console.println("*** mapReport function called ***");
     }
 
-    private void bandReport() {
-        this.console.println("*** bandReport function called ***");
+    private void mapReport() {
+        MapReportView reportForMap = new MapReportView();
+        reportForMap.display();
+    }
+
+    private void bandReport() {    
+        BandReportView reportForBand = new BandReportView();
+        reportForBand.display();
     }
 }
