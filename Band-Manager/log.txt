@@ -1,5 +1,0 @@
-called MusicStoreScene
-called CarLotScene
-byui.cit260.bandManager.view.MemberStatusMenuView - Return to the Audition Menu to audition a guitar player.null
-byui.cit260.bandManager.view.MemberStatusMenuView - Return to the Audition Menu to audition a bass player.null
-byui.cit260.bandManager.view.MemberStatusMenuView - Return to the Audition Menu to audition a keyboard player.null
