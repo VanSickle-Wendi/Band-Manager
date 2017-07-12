@@ -32,7 +32,7 @@ public class MusicStoreMenuView extends MenuView {
                 + "\nB -- View List of Bass Guitars"
                 + "\nK -- View List of Keyboards"
                 + "\nM -- View List of Microphones"
-                + "\nI -- Purchase/Upgrade Equipment"
+                + "\nP -- Purchase Instruments"
                 + "\nQ -- Leave Music Store"
                 + "\n-------------------------------------------------"
                 + "\n"
@@ -61,7 +61,7 @@ public class MusicStoreMenuView extends MenuView {
             case "M": // View Performance Points
                 this.viewListOfMicrophones(scene.getMic());
                 break;
-            case "I": // Purchase / Upgrade Instruments
+            case "P": // Purchase / Upgrade Instruments
                 this.purchaseUpgradeInstruments();
                 break;
             case "Q": // Quit
