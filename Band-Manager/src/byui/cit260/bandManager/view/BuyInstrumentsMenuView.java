@@ -11,6 +11,7 @@ import byui.cit260.bandManager.exceptions.EquipmentControlException;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.MusicStoreScene;
+import java.io.PrintWriter;
 
 /**
  *
@@ -140,6 +141,12 @@ public class BuyInstrumentsMenuView extends MenuView {
             item = bought.drumAsset(buyDrums);
             bandDrums = drums[item];
 
+            PrintWriter pw = new PrintWriter(console);
+
+            pw.printf("You have purchased %s, ", bandDrums.getType());
+            pw.printf("%s, ", bandDrums.getDescription());
+            pw.printf("$%s%n", bandDrums.getPrice());
+
         } catch (EquipmentControlException ece) {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
         }
@@ -172,6 +179,12 @@ public class BuyInstrumentsMenuView extends MenuView {
 
             item = bought.guitarAsset(buyGuitar);
             bandGuitar = guitar[item];
+
+            PrintWriter pw = new PrintWriter(console);
+
+            pw.printf("You have purchased %s, ", bandGuitar.getType());
+            pw.printf("%s, ", bandGuitar.getDescription());
+            pw.printf("$%s%n", bandGuitar.getPrice());
 
         } catch (EquipmentControlException ece) {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
@@ -207,6 +220,12 @@ public class BuyInstrumentsMenuView extends MenuView {
             item = bought.bassAsset(buyBass);
             bandBass = bass[item];
 
+            PrintWriter pw = new PrintWriter(console);
+
+            pw.printf("You have purchased %s, ", bandBass.getType());
+            pw.printf("%s, ", bandBass.getDescription());
+            pw.printf("$%s%n", bandBass.getPrice());
+
         } catch (EquipmentControlException ece) {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
         }
@@ -240,6 +259,12 @@ public class BuyInstrumentsMenuView extends MenuView {
             item = bought.keyboardAsset(buyKeyboards);
             bandKeyboards = keyboard[item];
 
+            PrintWriter pw = new PrintWriter(console);
+
+            pw.printf("You have purchased %s, ", bandKeyboards.getType());
+            pw.printf("%s, ", bandKeyboards.getDescription());
+            pw.printf("$%s%n", bandKeyboards.getPrice());
+
         } catch (EquipmentControlException ece) {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
         }
@@ -256,8 +281,8 @@ public class BuyInstrumentsMenuView extends MenuView {
         showMicrophones.viewListOfMicrophones(scene.getMic());
         do {
             try {
-        buyMic = Integer.parseInt(getUserInput("Please enter the level of the microphone "
-                + "\nyou would like to purchase (1, 2, 3, or 4): "));
+                buyMic = Integer.parseInt(getUserInput("Please enter the level of the microphone "
+                        + "\nyou would like to purchase (1, 2, 3, or 4): "));
                 a = 2;
             } catch (NumberFormatException nf) {
                 ErrorView.display(this.getClass().getName(),
@@ -272,6 +297,12 @@ public class BuyInstrumentsMenuView extends MenuView {
 
             item = bought.micAsset(buyMic);
             bandMic = mic[item];
+            
+              PrintWriter pw = new PrintWriter(console);
+            
+            pw.printf("You have purchased %s, ", bandMic.getType());
+            pw.printf("%s, ", bandMic.getDescription());
+            pw.printf("$%s%n", bandMic.getPrice());
 
         } catch (EquipmentControlException ece) {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
