@@ -30,9 +30,9 @@ public class MapControl {
         locations[0] = new Location("Bank", 1);
         locations[1] = new Location("Audition Drummer", 2);
         locations[2] = new Location("Audition Singer", 3);
-        locations[3] = new Location("Audition Guitar Player", 4);
-        locations[4] = new Location("Audition Bass Player", 5);
-        locations[5] = new Location("Audition Keyboard Player", 6);
+        locations[3] = new Location("Audition Guitarist", 4);
+        locations[4] = new Location("Audition Bassist", 5);
+        locations[5] = new Location("Audition Keyboardist", 6);
         locations[6] = new Location("Car Lot", 7);
         locations[7] = new Location("Music Store", 8);
         locations[8] = new Location("Level 1 Hotel", 9);
@@ -50,7 +50,7 @@ public class MapControl {
         locations[20] = new Location("Level 3 Big Gig", 21);
         locations[21] = new Location("Movie Cameo", 22);
         locations[22] = new Location("Level 4 Small Gig", 23);
-        locations[23] = new Location("Level 4 Small Gig", 24);
+        locations[23] = new Location("Level 4 Big Gig", 24);
         locations[24] = new Location("Star Party", 25);
         map.setLocations(locations);
                

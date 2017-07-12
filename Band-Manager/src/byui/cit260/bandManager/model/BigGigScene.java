@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class BigGigScene extends Scene implements Serializable {
     
     public BigGigScene() {
-        setSceneDescription("You've made to the Big Gig");
+        setSceneDescription("You made it to the Big Gig");
    
    }    
     
