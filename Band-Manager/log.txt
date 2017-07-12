@@ -1,4 +1,2 @@
 called MusicStoreScene
 called CarLotScene
-byui.cit260.bandManager.view.GameMenuView - 
-*** Invalid selection *** Try again
