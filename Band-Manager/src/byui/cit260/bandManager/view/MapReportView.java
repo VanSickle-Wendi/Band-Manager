@@ -9,6 +9,8 @@ import band.manager.BandManager;
 import byui.cit260.bandManager.control.GameControl;
 import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.Game;
+import byui.cit260.bandManager.model.Location;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 
 /**
@@ -57,7 +59,7 @@ public class MapReportView extends InteractiveView {
 
         try {
             // save the report to the specified file TODO change to a map report
-            GameControl.mapReport(BandManager.getCurrentGame().getMap().getLocations(), value);
+            mapReport(BandManager.getCurrentGame().getMap().getLocations(), value);
         } catch (Exception e) {
             ErrorView.display("MapReportView", e.getMessage());
         }
@@ -65,4 +67,23 @@ public class MapReportView extends InteractiveView {
         return false;
 
     }
+    public static void mapReport(Location[] locations, String filePath)  {
+
+        try (PrintWriter reportFile = new PrintWriter(new FileWriter(filePath))) {
+
+            //Print title and column headings
+            reportFile.println("\n\n                          Map Report                      ");
+            reportFile.printf("%n%-25s%-45s%-10s%n", "Scene", "Scene Description", "Location #");
+            reportFile.printf("%n%-25s%-45s%-10s%n", "-----", "-----------------", "----------");
+            for (int i = 0; i < locations.length; i++) {
+                reportFile.printf("%n%-25s%-45s%-10s%n", locations[i].getName(),
+                         locations[i].getScene().getSceneDescription(),
+                         locations[i].getLocationNumber());
+            }
+            reportFile.close();
+        } catch (Exception e) {
+            ErrorView.display("MapReportView", e.getMessage());
+        }
+    }    
+    
 }

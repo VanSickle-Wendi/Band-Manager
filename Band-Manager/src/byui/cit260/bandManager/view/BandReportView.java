@@ -9,6 +9,8 @@ import band.manager.BandManager;
 import byui.cit260.bandManager.control.GameControl;
 import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.Game;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
@@ -65,4 +67,12 @@ public class BandReportView extends InteractiveView {
         return false;
 
     }
+    
+    //TODO put Band Member info into an Array
+    public static void bandReport(Band band, String filePath) throws IOException {
+        PrintWriter reportFile = new PrintWriter(new FileWriter(filePath));
+        reportFile.println(band);
+        reportFile.close();
+    }    
+    
 }
