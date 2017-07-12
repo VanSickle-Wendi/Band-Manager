@@ -64,12 +64,16 @@ public class MapReportView extends InteractiveView {
             ErrorView.display("MapReportView", e.getMessage());
         }
 
+        console.println("Your report was succesfully saved to " + value);
         return false;
 
     }
-    public static void mapReport(Location[] locations, String filePath)  {
 
-        try (PrintWriter mapReportFile = new PrintWriter(new FileWriter(filePath))) {
+    public static void mapReport(Location[] locations, String filePath) {
+        PrintWriter mapReportFile = null;
+        try {
+            mapReportFile = new PrintWriter(new FileWriter(filePath));
+           
 
             //Print title and column headings
             mapReportFile.println("\n\n                          Map Report                      ");
@@ -77,13 +81,22 @@ public class MapReportView extends InteractiveView {
             mapReportFile.printf("%n%-25s%-45s%-10s%n", "-----", "-----------------", "----------");
             for (int i = 0; i < locations.length; i++) {
                 mapReportFile.printf("%n%-25s%-45s%-10s%n", locations[i].getName(),
-                         locations[i].getScene().getSceneDescription(),
-                         locations[i].getLocationNumber());
+                        locations[i].getScene().getSceneDescription(),
+                        locations[i].getLocationNumber());
             }
-            mapReportFile.close();
+            mapReportFile.flush();
+
         } catch (Exception e) {
             ErrorView.display("MapReportView", e.getMessage());
+        } finally {
+            if (mapReportFile != null) {
+                try {
+                    mapReportFile.close();
+                } catch (Exception e1) {
+            ErrorView.display("Error closing file: ", e1.getMessage());
+                }
+            }
         }
-    }    
-    
+    }
+
 }
