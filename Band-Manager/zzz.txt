@@ -1,0 +1,1 @@
+Band{drummer=null, singer=null, guitarPlayer=null, bassPlayer=null, keyboardPlayer=null, vehiclePoints=0.0, bandName=null}

@@ -58,7 +58,7 @@ public class MapReportView extends InteractiveView {
         }
 
         try {
-            // save the report to the specified file TODO change to a map report
+
             mapReport(BandManager.getCurrentGame().getMap().getLocations(), value);
         } catch (Exception e) {
             ErrorView.display("MapReportView", e.getMessage());
@@ -69,18 +69,18 @@ public class MapReportView extends InteractiveView {
     }
     public static void mapReport(Location[] locations, String filePath)  {
 
-        try (PrintWriter reportFile = new PrintWriter(new FileWriter(filePath))) {
+        try (PrintWriter mapReportFile = new PrintWriter(new FileWriter(filePath))) {
 
             //Print title and column headings
-            reportFile.println("\n\n                          Map Report                      ");
-            reportFile.printf("%n%-25s%-45s%-10s%n", "Scene", "Scene Description", "Location #");
-            reportFile.printf("%n%-25s%-45s%-10s%n", "-----", "-----------------", "----------");
+            mapReportFile.println("\n\n                          Map Report                      ");
+            mapReportFile.printf("%n%-25s%-45s%-10s%n", "Scene", "Scene Description", "Location #");
+            mapReportFile.printf("%n%-25s%-45s%-10s%n", "-----", "-----------------", "----------");
             for (int i = 0; i < locations.length; i++) {
-                reportFile.printf("%n%-25s%-45s%-10s%n", locations[i].getName(),
+                mapReportFile.printf("%n%-25s%-45s%-10s%n", locations[i].getName(),
                          locations[i].getScene().getSceneDescription(),
                          locations[i].getLocationNumber());
             }
-            reportFile.close();
+            mapReportFile.close();
         } catch (Exception e) {
             ErrorView.display("MapReportView", e.getMessage());
         }

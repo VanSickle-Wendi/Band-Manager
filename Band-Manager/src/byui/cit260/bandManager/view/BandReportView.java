@@ -59,7 +59,7 @@ public class BandReportView extends InteractiveView {
 
         try {
             // save the report to the specified file
-            GameControl.bandReport(BandManager.getCurrentGame().getBand(), value);
+            bandReport(BandManager.getCurrentGame().getBand(), value);
         } catch (Exception e) {
             ErrorView.display("BandReportView", e.getMessage());
         }
@@ -70,9 +70,9 @@ public class BandReportView extends InteractiveView {
     
     //TODO put Band Member info into an Array
     public static void bandReport(Band band, String filePath) throws IOException {
-        PrintWriter reportFile = new PrintWriter(new FileWriter(filePath));
-        reportFile.println(band);
-        reportFile.close();
+        PrintWriter bandReportFile = new PrintWriter(new FileWriter(filePath));
+        bandReportFile.println(band);
+        bandReportFile.close();
     }    
     
 }
