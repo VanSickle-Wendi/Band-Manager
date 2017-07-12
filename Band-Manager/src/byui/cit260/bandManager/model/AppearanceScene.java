@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class AppearanceScene extends Scene implements Serializable {
     
     public AppearanceScene() {
-        setSceneDescription("Rehearsal, Radio, TV, Movie, Star Party");
+        setSceneDescription("Rehearsal, or Big Appearance");
    
    }
     

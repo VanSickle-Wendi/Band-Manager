@@ -15,6 +15,7 @@ import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.MusicStoreScene;
 import byui.cit260.bandManager.model.Player;
+import byui.cit260.bandManager.view.ErrorView;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -113,19 +114,29 @@ public class GameControl {
 
     public static void mapReport(Location[] locations, String filePath)
             throws GameControlException, IOException {
-        PrintWriter reportFile = new PrintWriter(new FileWriter(filePath));
-        for (int i = 0; i < locations.length; i++) {
-            reportFile.println(locations[i].getName() + "! "
-                    + locations[i].getScene().getSceneDescription());
+
+        try (PrintWriter reportFile = new PrintWriter(new FileWriter(filePath))) {
+
+            //Print title and column headings
+            reportFile.println("\n\n                          Map Report                      ");
+            reportFile.printf("%n%-25s%-45s%-10s%n", "Scene", "Scene Description", "Location #");
+            reportFile.printf("%n%-25s%-45s%-10s%n", "-----", "-----------------", "----------");
+            for (int i = 0; i < locations.length; i++) {
+                reportFile.printf("%n%-25s%-45s%-10s%n", locations[i].getName(),
+                         locations[i].getScene().getSceneDescription(),
+                         locations[i].getLocationNumber());
+            }
+            reportFile.close();
+        } catch (Exception e) {
+            throw new GameControlException(e.getMessage());
         }
-        reportFile.close();
     }
-    
+
     public static void bandReport(Band band, String filePath)
             throws GameControlException, IOException {
         PrintWriter reportFile = new PrintWriter(new FileWriter(filePath));
         reportFile.println(band);
         reportFile.close();
-    }    
+    }
 
 }

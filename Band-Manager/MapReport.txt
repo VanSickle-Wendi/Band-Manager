@@ -1,0 +1,57 @@
+
+
+                      Map Report                          
+
+Scene                    Scene Description                            Location #
+
+-----                    -----------------                            ----------
+
+Bank                     Welcome to the Bank.                         1.0       
+
+Audition Drummer         Audition Band Members                        2.0       
+
+Audition Singer          Audition Band Members                        3.0       
+
+Audition Guitarist       Audition Band Members                        4.0       
+
+Audition Bassist         Audition Band Members                        5.0       
+
+Audition Keyboardist     Audition Band Members                        6.0       
+
+Car Lot                  Welcome to the Car Lot.                      7.0       
+
+Music Store              Welcome to the Music Store.                  8.0       
+
+Level 1 Hotel            Welcome to the Hotel                         9.0       
+
+Level 2 Hotel            Welcome to the Hotel                         10.0      
+
+Level 3 Hotel            Welcome to the Hotel                         11.0      
+
+Level 4 Hotel            Welcome to the Hotel                         12.0      
+
+Rehearsal                Rehearsal, or Big Appearance                 13.0      
+
+Level 1 Small Gig        You'd better do great at this small gig!     14.0      
+
+Level 1 Big Gig          You made it to the Big Gig                   15.0      
+
+Radio Interview          Rehearsal, or Big Appearance                 16.0      
+
+Level 2 Small Gig        You'd better do great at this small gig!     17.0      
+
+Level 2 Big Gig          You made it to the Big Gig                   18.0      
+
+TV Appearance            Rehearsal, or Big Appearance                 19.0      
+
+Level 3 Small Gig        You'd better do great at this small gig!     20.0      
+
+Level 3 Big Gig          You made it to the Big Gig                   21.0      
+
+Movie Cameo              Rehearsal, or Big Appearance                 22.0      
+
+Level 4 Small Gig        You'd better do great at this small gig!     23.0      
+
+Level 4 Big Gig          You made it to the Big Gig                   24.0      
+
+Star Party               Rehearsal, or Big Appearance                 25.0      

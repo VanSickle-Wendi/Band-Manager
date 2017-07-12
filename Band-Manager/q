@@ -1,1 +1,57 @@
-Band{drummer=BandMember{bandPosition=Drummer, musicianName=Roger Taylor, issueDescription=Shy, skillLevel=1000.0, instrumentQuality=396.0, issueCost=393.0}, singer=BandMember{bandPosition=Singer, musicianName=Simon Le Bon, issueDescription=Loud, skillLevel=750.0, instrumentQuality=338.0, issueCost=47.0}, guitarPlayer=BandMember{bandPosition=Guitar Player, musicianName=Andy Taylor, issueDescription=Short, skillLevel=1000.0, instrumentQuality=330.0, issueCost=267.0}, bassPlayer=BandMember{bandPosition=Bass Player, musicianName=John Taylor, issueDescription=Tall, skillLevel=250.0, instrumentQuality=301.0, issueCost=39.0}, keyboardPlayer=BandMember{bandPosition=Keyboard Player, musicianName=Nick Rhodes, issueDescription=Looks like the Joker, skillLevel=750.0, instrumentQuality=411.0, issueCost=167.0}, vehiclePoints=0.0, bandName=null}
+
+
+              Map Report                   
+
+Scene                    Scene Description   Location #
+
+-----                    -----------------   ----------
+
+Bank                     Welcome to the Bank.1.0       
+
+Audition Drummer         Audition Band Members2.0       
+
+Audition Singer          Audition Band Members3.0       
+
+Audition Guitarist       Audition Band Members4.0       
+
+Audition Bassist         Audition Band Members5.0       
+
+Audition Keyboardist     Audition Band Members6.0       
+
+Car Lot                  Welcome to the Car Lot.7.0       
+
+Music Store              Welcome to the Music Store.8.0       
+
+Level 1 Hotel            Welcome to the Hotel9.0       
+
+Level 2 Hotel            Welcome to the Hotel10.0      
+
+Level 3 Hotel            Welcome to the Hotel11.0      
+
+Level 4 Hotel            Welcome to the Hotel12.0      
+
+Rehearsal                Rehearsal, Radio, TV, Movie, Star Party13.0      
+
+Level 1 Small Gig        You'd better do great at this small gig!14.0      
+
+Level 1 Big Gig          You've made to the Big Gig15.0      
+
+Radio Interview          Rehearsal, Radio, TV, Movie, Star Party16.0      
+
+Level 2 Small Gig        You'd better do great at this small gig!17.0      
+
+Level 2 Big Gig          You've made to the Big Gig18.0      
+
+TV Appearance            Rehearsal, Radio, TV, Movie, Star Party19.0      
+
+Level 3 Small Gig        You'd better do great at this small gig!20.0      
+
+Level 3 Big Gig          You've made to the Big Gig21.0      
+
+Movie Cameo              Rehearsal, Radio, TV, Movie, Star Party22.0      
+
+Level 4 Small Gig        You'd better do great at this small gig!23.0      
+
+Level 4 Small Gig        You've made to the Big Gig24.0      
+
+Star Party               Rehearsal, Radio, TV, Movie, Star Party25.0      
