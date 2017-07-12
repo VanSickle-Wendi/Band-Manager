@@ -116,12 +116,22 @@ public class BuyInstrumentsMenuView extends MenuView {
     private Instrument buyDrums(Instrument[] drums) {
         Instrument bandDrums = null;
         MusicStoreMenuView showDrums = new MusicStoreMenuView();
+        int buyDrums = 0;
+        int a = 1;
 
         showDrums.viewListOfDrums(scene.getDrums());
+        do {
+            try {
+                buyDrums = Integer.parseInt(getUserInput("Please enter the level of drums "
+                        + "\nyou would like to purchase (1, 2, 3, or 4): "));
+                a = 2;
 
-        int buyDrums = Integer.parseInt(getUserInput("Please enter the level of drums "
-                + "\nyou would like to purchase (1, 2, 3, or 4): "));
+            } catch (NumberFormatException nf) {
+                ErrorView.display(this.getClass().getName(),
+                        "\nPlease type a 1, 2, 3, or 4");
+            }
 
+        } while (a == 1);
         // new instance of BankingControl class
         EquipmentControl bought = new EquipmentControl();
 
@@ -133,7 +143,6 @@ public class BuyInstrumentsMenuView extends MenuView {
         } catch (EquipmentControlException ece) {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
         }
-        // Instrument pick = drums[0];
 
         return bandDrums;
     }
@@ -141,12 +150,21 @@ public class BuyInstrumentsMenuView extends MenuView {
     private Instrument buyGuitar(Instrument[] guitar) {
         Instrument bandGuitar = null;
         MusicStoreMenuView showGuitars = new MusicStoreMenuView();
+        int buyGuitar = 0;
+        int a = 1;
 
         showGuitars.viewListofGuitars(scene.getGuitar());
+        do {
+            try {
+                buyGuitar = Integer.parseInt(getUserInput("Please enter the level of the guitar "
+                        + "\nyou would like to purchase (1, 2, 3, or 4): "));
+                a = 2;
+            } catch (NumberFormatException nf) {
+                ErrorView.display(this.getClass().getName(),
+                        "\nPlease type a 1, 2, 3, or 4");
+            }
 
-        int buyGuitar = Integer.parseInt(getUserInput("Please enter the level of the guitar "
-                + "\nyou would like to purchase (1, 2, 3, or 4): "));
-
+        } while (a == 1);
         // new instance of BankingControl class
         EquipmentControl bought = new EquipmentControl();
 
@@ -166,12 +184,21 @@ public class BuyInstrumentsMenuView extends MenuView {
     private Instrument buyBassGuitar(Instrument[] bass) {
         Instrument bandBass = null;
         MusicStoreMenuView showBassGuitars = new MusicStoreMenuView();
+        int buyBass = 0;
+        int a = 1;
 
         showBassGuitars.viewListOfBassGuitars(scene.getBass());
+        do {
+            try {
+                buyBass = Integer.parseInt(getUserInput("Please enter the level of the bass guitar "
+                        + "\nyou would like to purchase (1, 2, 3, or 4): "));
+                a = 2;
+            } catch (NumberFormatException nf) {
+                ErrorView.display(this.getClass().getName(),
+                        "\nPlease type a 1, 2, 3, or 4");
+            }
 
-        int buyBass = Integer.parseInt(getUserInput("Please enter the level of the bass guitar "
-                + "\nyou would like to purchase (1, 2, 3, or 4): "));
-        
+        } while (a == 1);
         // new instance of BankingControl class
         EquipmentControl bought = new EquipmentControl();
 
@@ -184,18 +211,27 @@ public class BuyInstrumentsMenuView extends MenuView {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
         }
 
-        return bandBass;        
+        return bandBass;
     }
 
     private Instrument buyKeyboards(Instrument[] keyboard) {
         Instrument bandKeyboards = null;
         MusicStoreMenuView showKeyboards = new MusicStoreMenuView();
+        int buyKeyboards = 0;
+        int a = 1;
 
         showKeyboards.viewListOfKeyboards(scene.getKeyboard());
+        do {
+            try {
+                buyKeyboards = Integer.parseInt(getUserInput("Please enter the level of keyboards "
+                        + "\nyou would like to purchase (1, 2, 3, or 4):  "));
+                a = 2;
+            } catch (NumberFormatException nf) {
+                ErrorView.display(this.getClass().getName(),
+                        "\nPlease type a 1, 2, 3, or 4");
+            }
 
-        int buyKeyboards = Integer.parseInt(getUserInput("Please enter the level of keyboards "
-                + "\nyou would like to purchase (1, 2, 3, or 4):  "));
-        
+        } while (a == 1);
         // new instance of BankingControl class
         EquipmentControl bought = new EquipmentControl();
 
@@ -208,18 +244,27 @@ public class BuyInstrumentsMenuView extends MenuView {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
         }
 
-        return bandKeyboards;        
+        return bandKeyboards;
     }
 
     private Instrument buyMicrophone(Instrument[] mic) {
         Instrument bandMic = null;
         MusicStoreMenuView showMicrophones = new MusicStoreMenuView();
+        int buyMic = 0;
+        int a = 1;
 
         showMicrophones.viewListOfMicrophones(scene.getMic());
-
-        int buyMic = Integer.parseInt(getUserInput("Please enter the level of the microphone "
+        do {
+            try {
+        buyMic = Integer.parseInt(getUserInput("Please enter the level of the microphone "
                 + "\nyou would like to purchase (1, 2, 3, or 4): "));
-        
+                a = 2;
+            } catch (NumberFormatException nf) {
+                ErrorView.display(this.getClass().getName(),
+                        "\nPlease type a 1, 2, 3, or 4");
+            }
+
+        } while (a == 1);
         // new instance of BankingControl class
         EquipmentControl bought = new EquipmentControl();
 
@@ -232,8 +277,8 @@ public class BuyInstrumentsMenuView extends MenuView {
             ErrorView.display(this.getClass().getName(), ece.getMessage());
         }
 
-        return bandMic;         
-        
+        return bandMic;
+
     }
 
     private void printList() {
@@ -250,4 +295,3 @@ public class BuyInstrumentsMenuView extends MenuView {
     }
 
 }
-
