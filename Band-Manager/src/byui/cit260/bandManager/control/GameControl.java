@@ -111,32 +111,4 @@ public class GameControl {
         // close the output file
         BandManager.setCurrentGame(game); // save in BandManager      
     }
-
-    public static void mapReport(Location[] locations, String filePath)
-            throws GameControlException, IOException {
-
-        try (PrintWriter reportFile = new PrintWriter(new FileWriter(filePath))) {
-
-            //Print title and column headings
-            reportFile.println("\n\n                          Map Report                      ");
-            reportFile.printf("%n%-25s%-45s%-10s%n", "Scene", "Scene Description", "Location #");
-            reportFile.printf("%n%-25s%-45s%-10s%n", "-----", "-----------------", "----------");
-            for (int i = 0; i < locations.length; i++) {
-                reportFile.printf("%n%-25s%-45s%-10s%n", locations[i].getName(),
-                         locations[i].getScene().getSceneDescription(),
-                         locations[i].getLocationNumber());
-            }
-            reportFile.close();
-        } catch (Exception e) {
-            throw new GameControlException(e.getMessage());
-        }
-    }
-
-    public static void bandReport(Band band, String filePath)
-            throws GameControlException, IOException {
-        PrintWriter reportFile = new PrintWriter(new FileWriter(filePath));
-        reportFile.println(band);
-        reportFile.close();
-    }
-
 }
