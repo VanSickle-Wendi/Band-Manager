@@ -5,7 +5,7 @@
  */
 package byui.cit260.bandManager.view;
 
-import band.manager.BandManager;
+
 import static byui.cit260.bandManager.control.GameControl.MusicStoreScene;
 import byui.cit260.bandManager.model.MusicStoreScene;
 import byui.cit260.bandManager.model.Game;

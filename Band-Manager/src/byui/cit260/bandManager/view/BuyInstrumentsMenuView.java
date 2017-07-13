@@ -114,7 +114,7 @@ public class BuyInstrumentsMenuView extends MenuView {
         return value; // return the value entered
     }
 
-    private Instrument buyDrums(Instrument[] drums) {
+    public Instrument buyDrums(Instrument[] drums) {
         Instrument bandDrums = null;
         MusicStoreMenuView showDrums = new MusicStoreMenuView();
         int buyDrums = 0;
@@ -138,7 +138,7 @@ public class BuyInstrumentsMenuView extends MenuView {
 
         try {
 
-            item = bought.drumAsset(buyDrums);
+            item = bought.asset(buyDrums);
             bandDrums = drums[item];
 
             PrintWriter pw = new PrintWriter(console);
@@ -177,7 +177,7 @@ public class BuyInstrumentsMenuView extends MenuView {
 
         try {
 
-            item = bought.guitarAsset(buyGuitar);
+            item = bought.asset(buyGuitar);
             bandGuitar = guitar[item];
 
             PrintWriter pw = new PrintWriter(console);
@@ -217,7 +217,7 @@ public class BuyInstrumentsMenuView extends MenuView {
 
         try {
 
-            item = bought.bassAsset(buyBass);
+            item = bought.asset(buyBass);
             bandBass = bass[item];
 
             PrintWriter pw = new PrintWriter(console);
@@ -256,7 +256,7 @@ public class BuyInstrumentsMenuView extends MenuView {
 
         try {
 
-            item = bought.keyboardAsset(buyKeyboards);
+            item = bought.asset(buyKeyboards);
             bandKeyboards = keyboard[item];
 
             PrintWriter pw = new PrintWriter(console);
@@ -295,7 +295,7 @@ public class BuyInstrumentsMenuView extends MenuView {
 
         try {
 
-            item = bought.micAsset(buyMic);
+            item = bought.asset(buyMic);
             bandMic = mic[item];
             
               PrintWriter pw = new PrintWriter(console);
