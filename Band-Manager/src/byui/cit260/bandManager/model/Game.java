@@ -72,7 +72,7 @@ public class Game implements Serializable {
     public MusicStoreScene[] getInstruments() {
         return instruments;
     }
-
+    
     public void setInstruments(MusicStoreScene[] instruments) {
         this.instruments = instruments;
     }
@@ -80,7 +80,7 @@ public class Game implements Serializable {
     public CarLotScene[] getVehicles() {
         return vehicles;
     }
-
+   
     public void setVehicles(CarLotScene[] vehicles) {
         this.vehicles = vehicles;
     }
