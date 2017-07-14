@@ -19,6 +19,7 @@ import java.util.Scanner;
 public class CarLotMenuView extends MenuView {
 
     private final CarLotScene scene = new CarLotScene();
+    private Game game;
 
     public CarLotMenuView() {
         super("\n"
@@ -29,6 +30,7 @@ public class CarLotMenuView extends MenuView {
                 + "\nB -- See what we have on lot Two"
                 + "\nC -- See what we have on lot Three"
                 + "\nD -- See what we have on lot Four"
+                + "\nP -- Purchase a Vehicle"
                 + "\nK -- Trade in your car and get a discount"
                 + "\nQ -- Leave Car Lot"
                 + "\n-------------------------------------------------"
@@ -55,6 +57,9 @@ public class CarLotMenuView extends MenuView {
             case "D": //  View Car Lot Four
                 this.viewListOfLevelFourVehicle(scene.getLevelFourVehicle());
                 break;
+            case "P": //  View Car Lot Four
+                this.purchaseUpgradeVehicle();
+                break;
             case "K": //  got to Car Lot View
                 this.tradeIn();
                 break;
@@ -69,7 +74,7 @@ public class CarLotMenuView extends MenuView {
         return false;
     }
 
-    private void viewListOfLevelOneVehicle(Vehicle[] levelOneVehicle) {
+    public void viewListOfLevelOneVehicle(Vehicle[] levelOneVehicle) {
         StringBuilder line;
 
         // Display header
@@ -96,7 +101,7 @@ public class CarLotMenuView extends MenuView {
 
     }
 
-    private void viewListOfLevelTwoVehicle(Vehicle[] levelTwoVehicle) {
+    public void viewListOfLevelTwoVehicle(Vehicle[] levelTwoVehicle) {
         StringBuilder line;
 
         // Display header
@@ -123,7 +128,7 @@ public class CarLotMenuView extends MenuView {
 
     }
 
-    private void viewListOfLevelThreeVehicle(Vehicle[] levelThreeVehicle) {
+    public void viewListOfLevelThreeVehicle(Vehicle[] levelThreeVehicle) {
         StringBuilder line;
 
         // Display header
@@ -150,7 +155,7 @@ public class CarLotMenuView extends MenuView {
 
     }
 
-    private void viewListOfLevelFourVehicle(Vehicle[] levelFourVehicle) {
+    public void viewListOfLevelFourVehicle(Vehicle[] levelFourVehicle) {
         StringBuilder line;
 
         // Display header
@@ -180,6 +185,13 @@ public class CarLotMenuView extends MenuView {
     private void tradeIn() {
         CarLotView carLot = new CarLotView();
         carLot.display();
+    }
+        private void purchaseUpgradeVehicle() {
+        
+         // display the CarLotView
+        BuyVehicleMenuView buyVehicleMenu = new BuyVehicleMenuView();
+        buyVehicleMenu.setGame(game);
+        buyVehicleMenu.display();
     }
 
 }
