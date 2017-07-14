@@ -35,7 +35,7 @@ public class EquipmentControl {
        
     }
     
-  public int drumAsset(int level) throws EquipmentControlException {
+  public int asset(int level) throws EquipmentControlException {
 
         int pick1 = 0;
         int pick2 = 1;
@@ -54,91 +54,7 @@ public class EquipmentControl {
             default:
                 throw new EquipmentControlException("Please type a 1, 2, 3, or 4");
         }
-    }
-    
-    public int guitarAsset(int level) throws EquipmentControlException {
-
-        int pick1 = 0;
-        int pick2 = 1;
-        int pick3 = 2;
-        int pick4 = 3;
-
-        switch (level) {
-            case 1:
-                return pick1;
-            case 2:
-                return pick2;
-            case 3:
-                return pick3;
-            case 4:
-                return pick4;
-            default:
-                throw new EquipmentControlException("Please type a 1, 2, 3, or 4");
-        }
-    }
-    
-    public int bassAsset(int level) throws EquipmentControlException {
-
-        int pick1 = 0;
-        int pick2 = 1;
-        int pick3 = 2;
-        int pick4 = 3;
-
-        switch (level) {
-            case 1:
-                return pick1;
-            case 2:
-                return pick2;
-            case 3:
-                return pick3;
-            case 4:
-                return pick4;
-            default:
-                throw new EquipmentControlException("Please type a 1, 2, 3, or 4");
-        }
-    }  
-    
-    public int keyboardAsset(int level) throws EquipmentControlException {
-
-        int pick1 = 0;
-        int pick2 = 1;
-        int pick3 = 2;
-        int pick4 = 3;
-
-        switch (level) {
-            case 1:
-                return pick1;
-            case 2:
-                return pick2;
-            case 3:
-                return pick3;
-            case 4:
-                return pick4;
-            default:
-                throw new EquipmentControlException("Please type a 1, 2, 3, or 4");
-        }
-    } 
-
-    public int micAsset(int level) throws EquipmentControlException {
-
-        int pick1 = 0;
-        int pick2 = 1;
-        int pick3 = 2;
-        int pick4 = 3;
-
-        switch (level) {
-            case 1:
-                return pick1;
-            case 2:
-                return pick2;
-            case 3:
-                return pick3;
-            case 4:
-                return pick4;
-            default:
-                throw new EquipmentControlException("Please type a 1, 2, 3, or 4");
-        }
-    }     
+    }    
 
     public static void saveReport(Game game, String filePath)
             throws EquipmentControlException {

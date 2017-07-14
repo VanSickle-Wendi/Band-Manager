@@ -7,6 +7,7 @@ package byui.cit260.bandManager.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.ArrayList;
 
 /**
  *
@@ -22,6 +23,7 @@ public class Band implements Serializable {
     private BandMember keyboardPlayer;
     private double vehiclePoints;
     private String bandName;
+    private ArrayList PurchasedInstruments;
 
     public Band() {
     }
@@ -81,6 +83,16 @@ public class Band implements Serializable {
     public void setBandName(String bandName) {
         this.bandName = bandName;
     }
+
+    public ArrayList getPurchasedInstruments() {
+        return PurchasedInstruments;
+    }
+
+    public void setPurchasedInstruments(ArrayList PurchasedInstruments) {
+        this.PurchasedInstruments = PurchasedInstruments;
+    }
+    
+    
 
     @Override
     public int hashCode() {

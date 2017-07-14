@@ -78,7 +78,7 @@ public class InstrumentReportView extends InteractiveView {
             ErrorView.display("InstrumentReportView", e.getMessage());
         }
 
-        this.console.println("Success! Your report file was saved to: " + value);
+        this.console.println("\nSuccess! Your report file was saved to: " + value);
 
         return false;
 
@@ -92,7 +92,7 @@ public class InstrumentReportView extends InteractiveView {
             out = new PrintWriter(filePath);
 
             out.println("\n\n                           Instrument Report                         ");
-            out.printf("%n%-25s%-45s%-10s%n", "Type", "Description", "Price #");
+            out.printf("%n%-25s%-45s%-10s%n", "Type", "Description", "Price");
             out.printf("%n%-25s%-45s%-10s%n", "-----", "-----------------", "----------");
             for (int i = 0; i < drums.length; i++) {
                 out.printf("%n%-25s%-45s%-10s%n", drums[i].getType(),

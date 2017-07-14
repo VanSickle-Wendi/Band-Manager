@@ -6,12 +6,17 @@
 package byui.cit260.bandManager.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
+import byui.cit260.bandManager.model.SmallGigScene;
 
 /**
  *
  * @author Wendi
  */
 public class AppearanceScene extends Scene implements Serializable {
+    
+   
     
     public AppearanceScene() {
         setSceneDescription("Rehearsal, or Big Appearance");
