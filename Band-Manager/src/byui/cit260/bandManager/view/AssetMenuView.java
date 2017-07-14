@@ -23,6 +23,7 @@ public class AssetMenuView extends MenuView {
                 + "\n-------------------------------------------------"
                 + "\nC -- Current Assets"
                 + "\nI -- Display Instruments you own"
+                + "\nK -- Display Vehicle you own"    
                 + "\nV -- Purchase / Upgrade Vehicle"
                 + "\nP -- View Performance Points"
                 + "\nQ -- Quit the Asset Menu"
@@ -47,6 +48,9 @@ public class AssetMenuView extends MenuView {
             case "V": // Purchase / Upgrade Vehicle
                 this.purchaseUpgradeVehicle();
                 break;
+            case "K": // Purchase / Upgrade Vehicle
+                this.displayVehicleAssets();
+                break;
             case "P": // View Performance Points
                 this.viewPerformancePoints();
                 break;
@@ -63,6 +67,10 @@ public class AssetMenuView extends MenuView {
 
     private void viewCurrentAssets() {
         this.console.println("*** viewCurrentAssets function called ***");
+    }
+    
+    private void displayVehicleAssets(){
+        console.println(BandManager.getCurrentGame().getVehicles());
     }
 
     private void displayInstrumentAssets() {

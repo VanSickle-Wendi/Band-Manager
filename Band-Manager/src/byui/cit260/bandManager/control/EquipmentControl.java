@@ -35,6 +35,35 @@ public class EquipmentControl {
        
     }
     
+    public double calcPurchaseVehicle(double vehiclePrice, double bankAccount) throws EquipmentControlException{
+       if (vehiclePrice != 5000 && vehiclePrice != 30000 && vehiclePrice != 50000 && vehiclePrice !=100000) {
+        
+           throw new EquipmentControlException("Vehicle prices must be either "
+                   + " 5000, 30000, 50000, or 100000. Try again.");  
+           
+       }
+        double newAccountBalance = bankAccount - vehiclePrice;
+        return newAccountBalance;
+    }
+    
+    public int vehicleAssets(int level) throws EquipmentControlException {
+        
+        int pick1 = 0;
+        int pick2 = 1;
+        int pick3 = 2;
+        
+        switch (level) {
+            case 1:
+                return pick1;
+            case 2:
+                return pick2;
+            case 3:
+                return pick3;
+            default:
+                throw new EquipmentControlException("Please type a 1, 2, or 3");
+        }
+    }
+    
   public int asset(int level) throws EquipmentControlException {
 
         int pick1 = 0;
