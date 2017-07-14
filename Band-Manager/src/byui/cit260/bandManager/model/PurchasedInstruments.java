@@ -13,8 +13,9 @@ import java.util.ArrayList;
 /**
  *
  * @author shaza
+ * @param <E>
  */
-public class PurchasedInstruments implements Serializable {
+public class PurchasedInstruments<E> extends ArrayList<E> implements Serializable {
    // private final MusicStoreScene scene = new MusicStoreScene();
     private Game game;
 
@@ -25,21 +26,19 @@ public class PurchasedInstruments implements Serializable {
         this.game = game;
     } 
     
-    public ArrayList<MusicStoreScene> addPurchasedInstruments() {
+    public ArrayList addPurchasedInstruments() {
         BuyInstrumentsMenuView showDrums = new BuyInstrumentsMenuView();
         MusicStoreMenuView showDrums1 = new MusicStoreMenuView();
-        Instrument dumb = null;
         
-        ArrayList<MusicStoreScene> bandInstruments = new ArrayList<>();
+        
+        ArrayList<Instrument[]> bandInstruments = new ArrayList<>();
          
-        
-       // bandInstrument.add(new MusicStoreScene(showDrums.buyDrums(drums)
-        
-        return null;
         
        
         
+        return bandInstruments;
+        
+            
     }
-    
-    
+       
 }

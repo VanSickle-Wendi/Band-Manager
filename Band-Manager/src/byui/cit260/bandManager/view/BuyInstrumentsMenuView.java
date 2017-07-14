@@ -11,7 +11,9 @@ import byui.cit260.bandManager.exceptions.EquipmentControlException;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.MusicStoreScene;
+import byui.cit260.bandManager.model.PurchasedInstruments;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 /**
  *
@@ -24,6 +26,7 @@ public class BuyInstrumentsMenuView extends MenuView {
     private final MusicStoreScene scene = new MusicStoreScene();
     private Game game;
     int item;
+    private Instrument bandDrums = null;
 
     public BuyInstrumentsMenuView() {
         super("\n"
@@ -115,7 +118,7 @@ public class BuyInstrumentsMenuView extends MenuView {
     }
 
     public Instrument buyDrums(Instrument[] drums) {
-        Instrument bandDrums = null;
+        // Instrument bandDrums = null;
         MusicStoreMenuView showDrums = new MusicStoreMenuView();
         int buyDrums = 0;
         int a = 1;
@@ -297,9 +300,9 @@ public class BuyInstrumentsMenuView extends MenuView {
 
             item = bought.asset(buyMic);
             bandMic = mic[item];
-            
-              PrintWriter pw = new PrintWriter(console);
-            
+
+            PrintWriter pw = new PrintWriter(console);
+
             pw.printf("You have purchased %s, ", bandMic.getType());
             pw.printf("%s, ", bandMic.getDescription());
             pw.printf("$%s%n", bandMic.getPrice());
@@ -321,8 +324,15 @@ public class BuyInstrumentsMenuView extends MenuView {
     private void goToAssetMenu() {
 
         AssetMenuView assetMenu = new AssetMenuView();
-        // assetMenu.setGame(game);
         assetMenu.display();
+    }
+
+    public Instrument getBandDrums() {
+        return bandDrums;
+    }
+
+    public void setBandDrums(Instrument bandDrums) {
+        this.bandDrums = bandDrums;
     }
 
 }
