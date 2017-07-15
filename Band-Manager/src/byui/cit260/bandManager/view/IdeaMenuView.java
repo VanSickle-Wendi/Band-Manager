@@ -83,8 +83,8 @@ public class IdeaMenuView extends MenuView {
     }
 
     private void possibleTVShows() {
-        TakeLoanView loan = new TakeLoanView();
-        loan.display();
+        PossibleTVShowsView tv = new PossibleTVShowsView();
+        tv.display();
     }
 
 }
